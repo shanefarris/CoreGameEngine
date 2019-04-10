@@ -1,3 +1,6 @@
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=UMRqh6vEGNc
+" target="_blank"><img src="http://img.youtube.com/vi/UMRqh6vEGNc/0.jpg" 
+width="240" height="180" border="10" /></a>
 
 ## Building Core: ##
 
@@ -148,3 +151,40 @@ To build Lua yourself in VS you need three projects:
 
 #### Assimp: ####
 In cmake, the zlib.lib file needs to be specified, not the directory location.  The boost include directory is required, not the library.  The assimp library is created in the build/code/ directory (weird), the INSTALL project doesn't actually install anything.  Cmake for OgreAssimp is a joke, just create your own project, add assimpd.lib, ogremain_d.lib, add ogre_includes, core_includes, and assimp includes.
+
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=8-1n1xL8iho
+" target="_blank"><img src="http://img.youtube.com/vi/8-1n1xL8iho/0.jpg" 
+width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=u9tCuy1IkJg
+" target="_blank"><img src="http://img.youtube.com/vi/u9tCuy1IkJg/0.jpg" 
+width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=oNT_E3Q6mzs
+" target="_blank"><img src="http://img.youtube.com/vi/oNT_E3Q6mzs/0.jpg" 
+width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=GElnrPAkt1M
+" target="_blank"><img src="http://img.youtube.com/vi/GElnrPAkt1M/0.jpg" 
+width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=S81Xu1jGaYo
+" target="_blank"><img src="http://img.youtube.com/vi/S81Xu1jGaYo/0.jpg" 
+width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=9OOdc-sIyJg
+" target="_blank"><img src="http://img.youtube.com/vi/9OOdc-sIyJg/0.jpg" 
+width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=u1kogNuS7dk
+" target="_blank"><img src="http://img.youtube.com/vi/u1kogNuS7dk/0.jpg" 
+width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=IHf6DsvVCGI
+" target="_blank"><img src="http://img.youtube.com/vi/IHf6DsvVCGI/0.jpg" 
+width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=lV0q4mp6rzg
+" target="_blank"><img src="http://img.youtube.com/vi/lV0q4mp6rzg/0.jpg" 
+width="240" height="180" border="10" /></a>
