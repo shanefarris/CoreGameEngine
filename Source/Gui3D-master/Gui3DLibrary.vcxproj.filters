@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Includes">
+      <UniqueIdentifier>{72bcf850-1f5c-4e83-b62f-f832f2c73c6e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3D.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DButton.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DCaption.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DCheckbox.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DCheckboxSprite.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DCheckboxText.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DClock.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DCombobox.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DConfig.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DContainer.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DDebugPanelColors.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DFunctorBase.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DInlineSelector.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DListbox.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DMemberFunction.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DMultipleElementsSelector.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DPanel.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DPanelColors.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DPanelContainer.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DPanelElement.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DPanelElementCallback.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DProgressBar.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DScreenPanel.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DScrollBar.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DStringCursorEdit.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DTextZone.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DUtils.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gui3DVerticalSelector.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Gui3D\Gorilla.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Gorilla.cpp" />
+    <ClCompile Include="Gui3D.cpp" />
+    <ClCompile Include="Gui3DButton.cpp" />
+    <ClCompile Include="Gui3DCaption.cpp" />
+    <ClCompile Include="Gui3DCheckbox.cpp" />
+    <ClCompile Include="Gui3DCheckboxSprite.cpp" />
+    <ClCompile Include="Gui3DCheckboxText.cpp" />
+    <ClCompile Include="Gui3DClock.cpp" />
+    <ClCompile Include="Gui3DCombobox.cpp" />
+    <ClCompile Include="Gui3DContainer.cpp" />
+    <ClCompile Include="Gui3DDebugPanelColors.cpp" />
+    <ClCompile Include="Gui3DInlineSelector.cpp" />
+    <ClCompile Include="Gui3DListbox.cpp" />
+    <ClCompile Include="Gui3DMultipleElementsSelector.cpp" />
+    <ClCompile Include="Gui3DPanel.cpp" />
+    <ClCompile Include="Gui3DPanelContainer.cpp" />
+    <ClCompile Include="Gui3DPanelElement.cpp" />
+    <ClCompile Include="Gui3DProgressBar.cpp" />
+    <ClCompile Include="Gui3DScreenPanel.cpp" />
+    <ClCompile Include="Gui3DScrollBar.cpp" />
+    <ClCompile Include="Gui3DStringCursorEdit.cpp" />
+    <ClCompile Include="Gui3DTextZone.cpp" />
+    <ClCompile Include="Gui3DVerticalSelector.cpp" />
+  </ItemGroup>
+</Project>

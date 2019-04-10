@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Includes">
+      <UniqueIdentifier>{3abf5219-4c29-43e9-9c24-34d4563af6f9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\Caelum\Astronomy.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\Caelum.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\CaelumExceptions.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\CaelumPlugin.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\CaelumPrecompiled.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\CaelumPrerequisites.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\CaelumScriptTranslator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\CaelumSystem.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\CameraBoundElement.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\CloudSystem.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\DepthComposer.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\FastGpuParamRef.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\FlatCloudLayer.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\GroundFog.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\ImageStarfield.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\InternalUtilities.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\Moon.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\PointStarfield.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\PrecipitationController.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\PrivatePtr.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\SkyDome.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\SkyLight.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\Sun.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\TypeDescriptor.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Caelum\UniversalClock.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Astronomy.cpp" />
+    <ClCompile Include="BrightStarCatalogue.cpp" />
+    <ClCompile Include="CaelumDefaultTypeDescriptorData.cpp" />
+    <ClCompile Include="CaelumPlugin.cpp" />
+    <ClCompile Include="CaelumPrecompiled.cpp" />
+    <ClCompile Include="CaelumScriptTranslator.cpp" />
+    <ClCompile Include="CaelumSystem.cpp" />
+    <ClCompile Include="CameraBoundElement.cpp" />
+    <ClCompile Include="CloudSystem.cpp" />
+    <ClCompile Include="DepthComposer.cpp" />
+    <ClCompile Include="FastGpuParamRef.cpp" />
+    <ClCompile Include="FlatCloudLayer.cpp" />
+    <ClCompile Include="GroundFog.cpp" />
+    <ClCompile Include="ImageStarfield.cpp" />
+    <ClCompile Include="InternalUtilities.cpp" />
+    <ClCompile Include="Moon.cpp" />
+    <ClCompile Include="PointStarfield.cpp" />
+    <ClCompile Include="PrecipitationController.cpp" />
+    <ClCompile Include="SkyDome.cpp" />
+    <ClCompile Include="SkyLight.cpp" />
+    <ClCompile Include="Sun.cpp" />
+    <ClCompile Include="TypeDescriptor.cpp" />
+    <ClCompile Include="UniversalClock.cpp" />
+  </ItemGroup>
+</Project>

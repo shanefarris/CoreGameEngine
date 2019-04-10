@@ -1,0 +1,353 @@
+/*
+// This source file is a part of Monkeys in the Dark.
+// Monkeys in the Dark is a game demo made with Monster Enigine by
+// Erik Johansson, Joel Jonasson, Magnus Ekström, Markus Persson, 
+// Kalle Wirén, Sebastian Camitz and and Tommy Olofsson.
+// For more information please visit http://www.monsterengine.org or http://sourceforge.net/projects/monsterengine.
+//
+// This software is provided 'as-is', without any express or implied
+// warranty. In no event will the authors be held liable for any
+// damages arising from the use of this software.
+//
+// Permission is granted to anyone to use this software for any
+// purpose, including commercial applications, and to alter it and
+// redistribute it freely.
+// 
+// If you use this software, please send us a mail describing your project.
+// Contact information can be found at http://www.monsterengine.org or http://sourceforge.net/projects/monsterengine.
+*/
+#pragma once
+#include "ogre.h"
+#include "commoninclude.h"
+
+class MLight;
+class RayLight;
+
+struct ShootEffectElement
+{
+	Ogre::SceneNode* rayNode;
+	Ogre::Entity* entity;
+	RayLight* rayLight;
+	float timeToLive;
+	float turnTime;
+	float power;
+	float rScale;
+	float lScale;
+	float light;
+};
+
+class Shoot
+{
+public:
+	Shoot();
+	virtual ~Shoot();
+
+	void shoot(int worldID, float damage);
+
+	bool update( float deltaTime );
+
+	void makeEffect(float damage, const Ogre::Vector3& right, const Ogre::Vector3& start, const Ogre::Vector3& end);
+
+private:
+	Ogre::ParticleSystem* m_rayParticleSystem;
+	Ogre::ParticleSystem* m_rayDistortParticleSystem;
+	Ogre::SceneNode* m_rayNode;
+	int m_curentEffectNode;
+	std::vector< ShootEffectElement* > m_effectNodes;
+};
+
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+#include "shoot.h"
+#include "console.h"
+#include "world.h"
+#include "systemmacros.h"
+#include "aimodule.h"
+#include "modulemanager.h"
+#include "luavariable.h"
+#include "aievent.h"
+#include "physicmodule.h"
+#include "ogremanager.h"
+#include "system.h"
+#include "raytracehitinfo.h"
+#include "MLight.h"
+#include "RayLight.h"
+#include "ogremanager.h"
+
+
+Shoot::Shoot()
+{
+	m_curentEffectNode = 0;
+
+	Ogre::SceneManager* sceneManager = &System::getSingleton().getOgreManager().getNewSceneManager();
+	m_rayNode = sceneManager->createSceneNode( "shootEffectNode" );
+	sceneManager->getRootSceneNode()->addChild(	m_rayNode );
+
+	m_rayParticleSystem = sceneManager->createParticleSystem( "shootParticleSystem1", 1000);
+	m_rayNode->attachObject( m_rayParticleSystem );
+	m_rayParticleSystem->setKeepParticlesInLocalSpace(false);
+	m_rayParticleSystem->setMaterialName("Particle/shoot1");
+	m_rayParticleSystem->setDefaultDimensions(0.01f, 0.01f);
+	Ogre::ParticleAffector* linAff = m_rayParticleSystem->addAffector( "LinearForce" );
+	linAff->setParameter("force_vector", "0.0, -4.0, 0.0");
+
+	m_rayDistortParticleSystem = sceneManager->createParticleSystem( "shootParticleSystem2", 9000);
+	m_rayNode->attachObject( m_rayDistortParticleSystem );
+	m_rayDistortParticleSystem->setKeepParticlesInLocalSpace(false);
+	m_rayDistortParticleSystem->setMaterialName("Particle/RayDistort");
+	m_rayDistortParticleSystem->setDefaultDimensions(0.15f, 0.15f);
+	Ogre::ParticleAffector* linAff2 = m_rayDistortParticleSystem->addAffector( "LinearForce" );
+	linAff2->setParameter("force_vector", "0.0, 3.0, 0.0");
+
+	for( int i = 0; i < 10; i++ )
+	{
+		ShootEffectElement* e = new ShootEffectElement;
+		Ogre::SceneNode* node = sceneManager->createSceneNode( "shootEffectNode" + Ogre::StringConverter::toString(i) );
+		sceneManager->getRootSceneNode()->addChild(	node );
+
+
+		Ogre::Entity* entity = sceneManager->createEntity( "shootEffectEntity" + Ogre::StringConverter::toString(i), "shoot_effect_tube.mesh");
+		node->attachObject( entity );
+		entity->setVisible(false);
+		entity->setMaterialName("fronkdist");
+
+		int numSubEnt = entity->getNumSubEntities();
+		for( int i = 0; i < numSubEnt; i++)
+		{
+			entity->getSubEntity(i)->setCustomParameter( 0, Ogre::Vector4(0.2,0,0,0) );
+		}
+
+		if( System::getSingleton().getOgreManager().getUsingDeferred() )
+		{
+			e->rayLight = System::getSingleton().getOgreManager().getDeferredShadingSystem()->createRayLight();
+			node->attachObject( e->rayLight );
+			e->rayLight->setAttenuation(2.5f, 0.0f, 0.7f, 0.7f);
+			e->rayLight->setDiffuseColour( 0.7f, 1.0f, 1.0f);
+			e->rayLight->setSpecularColour( 0.7f, 1.0f, 1.0f);
+			e->rayLight->setVisible( false );
+		}
+		else
+		{
+			e->rayLight = NULL;
+		}
+
+		e->rayNode = node;
+		e->entity = entity;
+		e->timeToLive = 0.0f;
+		e->power = 0.0f;
+		e->rScale = 1.0f;
+		m_effectNodes.push_back( e );
+	}
+
+}
+
+Shoot::~Shoot()
+{
+	// I dont remove anything here becous Ogre vill do that on program shudown any way
+}
+
+void Shoot::shoot(int worldID, float damage)
+{
+	Ogre::Camera* cam = System::getSingleton().getOgreManager().getNewSceneManager().getCamera("Camera");
+	RaytraceHitInfo rayInfo;
+
+	World* world = getWorld(worldID);
+	if(world == NULL)
+		return;
+
+	PhysicModule* physMod = (PhysicModule*)world->getModuleManager()->getModule("PhysicModule");
+	if(physMod)
+	{
+		if(physMod->raytraceClosestShape(cam->getWorldPosition() + cam->getDerivedDirection(), cam->getDerivedDirection(), rayInfo) == PhysicModule::HIT)
+		{
+			AIModule* aiMod = (AIModule*)world->getModuleManager()->getModule("AIModule");
+			if(aiMod)
+			{
+				LuaVariable* attrib = LuaVariable::getNewLuaVariable();
+				LuaVariable* posTable = LuaVariable::getNewLuaVariable();
+				LuaVariable* rayTable = LuaVariable::getNewLuaVariable();
+				LuaVariable* normTable = LuaVariable::getNewLuaVariable();
+				LuaVariable* localPosTable = LuaVariable::getNewLuaVariable();
+				LuaVariable* localNormTable = LuaVariable::getNewLuaVariable();
+				
+				posTable->convertToTable();
+				posTable->addFloat("x", rayInfo.position.x);
+				posTable->addFloat("y", rayInfo.position.y);
+				posTable->addFloat("z", rayInfo.position.z);
+
+				rayTable->convertToTable();
+				rayTable->addFloat("x", cam->getDerivedDirection().x);
+				rayTable->addFloat("y", cam->getDerivedDirection().y);
+				rayTable->addFloat("z", cam->getDerivedDirection().z);
+
+				normTable->convertToTable();
+				normTable->addFloat("x", rayInfo.hitNormal.x);
+				normTable->addFloat("y", rayInfo.hitNormal.y);
+				normTable->addFloat("z", rayInfo.hitNormal.z);
+
+				localPosTable->convertToTable();
+				localPosTable->addFloat("x", rayInfo.localPosition.x);
+				localPosTable->addFloat("y", rayInfo.localPosition.y);
+				localPosTable->addFloat("z", rayInfo.localPosition.z);
+
+				localNormTable->convertToTable();
+				localNormTable->addFloat("x", rayInfo.localHitNormal.x);
+				localNormTable->addFloat("y", rayInfo.localHitNormal.y);
+				localNormTable->addFloat("z", rayInfo.localHitNormal.z);
+
+				attrib->convertToTable();
+				attrib->addFloat("basedamage", damage);
+				attrib->addString("damagetype", "bullet" );
+				attrib->addString("shapename", rayInfo.shapeName);
+				attrib->addString("actorname", rayInfo.actorName);
+				attrib->addString("materialname", rayInfo.materialName);
+				attrib->addTable("position", posTable);
+				attrib->addTable("hitnormal", normTable);
+				attrib->addTable("raynormal", rayTable);
+				attrib->addTable("localposition", localPosTable);
+				attrib->addTable("localhitnormal", localNormTable);
+
+				int eventID = aiMod->getEventManager().getEventID("takedamage");
+
+				makeEffect(damage, cam->getDerivedRight() , cam->getWorldPosition() + cam->getDerivedDirection(), rayInfo.position );
+
+				AIEvent* event = new AIEvent(worldID, eventID, attrib);
+				aiMod->getEventManager().sendEvent(event, rayInfo.entityID);
+
+			}
+		}
+	}
+}
+
+void Shoot::makeEffect(float damage, const Ogre::Vector3& right, const Ogre::Vector3& start, const Ogre::Vector3& end)
+{
+	int lightParticlesPerMeter = damage/10;
+	int distortPariclesPerMeter = damage/10;
+	float particleSpred = 2.0;
+
+	int particlesTotal; 
+	Ogre::Vector3 startOffset;
+	Ogre::Vector3 rayNormal;
+	Ogre::Vector3 rayVec;
+	Ogre::Vector3 up;
+	float rayLeght;
+
+	// ray calculations
+	startOffset = start + (right*0.5);
+	startOffset.y -= 0.3f;
+	rayNormal = startOffset - end;
+	rayNormal.normalise();
+	startOffset = startOffset - rayNormal;
+	rayVec = end - startOffset;
+	rayLeght = rayVec.length();
+	up = right.crossProduct(rayNormal);
+
+
+
+	// Particle system one	
+	if( damage > 40 )
+	{
+		particlesTotal = lightParticlesPerMeter * rayLeght;
+		for( int i = 0; i<particlesTotal; i++ )
+		{
+			float r1 = Ogre::Math::RangeRandom( -particleSpred, particleSpred ); 
+			float r2 = Ogre::Math::RangeRandom( -particleSpred, particleSpred ); 
+			Ogre::Vector3 randomOffVec = (up*r1) + (right*r2);
+
+			Ogre::Particle* p = m_rayParticleSystem->createParticle();
+			if( !p ) break;
+
+			p->colour = Ogre::ColourValue(1.0f, 0.0f, 0.0f, 1.0f );
+			p->timeToLive = 1.0f;
+			p->position = ((rayVec * (( float)i)/(float)particlesTotal) ) + startOffset;
+			//p->position += randomOffVec;
+			p->direction = randomOffVec;
+		}
+	}
+
+	// Particle system two
+	particlesTotal = distortPariclesPerMeter * rayLeght;
+	for( int i = 0; i<particlesTotal; i++ )
+	{
+		float r1 = Ogre::Math::RangeRandom( -particleSpred, particleSpred ); 
+		float r2 = Ogre::Math::RangeRandom( -particleSpred, particleSpred ); 
+		Ogre::Vector3 randomOffVec = (up*r1) + (right*r2);
+
+		Ogre::Particle* p = m_rayDistortParticleSystem->createParticle();
+		if( !p ) break;
+
+		p->colour = Ogre::ColourValue(0.0f, 0.0f, 0.01f, 0.0f );
+		p->timeToLive = 3.0f;
+		p->position = ((rayVec * (( float)i)/(float)particlesTotal) ) + startOffset;
+		//p->position += randomOffVec;
+		p->direction = randomOffVec * 0.3f;
+	}
+
+
+	// distorsion tube
+	ShootEffectElement* e = m_effectNodes.at(m_curentEffectNode);
+	m_curentEffectNode++;
+	if( m_curentEffectNode >= (int)m_effectNodes.size() )
+		m_curentEffectNode = 0;
+
+	if( damage > 20 )
+		e->entity->setVisible(true);
+	e->rayNode->setPosition(startOffset);
+	e->rayNode->lookAt(end, Ogre::Node::TS_WORLD);
+	e->rayNode->setScale(Ogre::Vector3( 1.0f, 1.0f, rayLeght) );
+	e->timeToLive = 0.3f + damage*0.001f;
+	e->turnTime = 0.15f;
+	e->power = 1.0f + damage/5;
+	e->rScale = 0.1f;
+	e->lScale = rayLeght;
+	e->light = 1;
+	
+
+
+	if( e->rayLight )
+	{
+		e->rayLight->setVisible( true );
+		e->rayLight->setRayLength( rayLeght );
+	}
+
+}
+
+bool Shoot::update( float deltaTime )
+{
+
+	for(std::vector< ShootEffectElement* >::iterator it = m_effectNodes.begin(); it != m_effectNodes.end(); it++ )
+	{
+		if( (*it)->timeToLive > 0.0f )
+		{
+			(*it)->timeToLive -= deltaTime;
+
+			if( (*it)->timeToLive < (*it)->turnTime )
+				(*it)->rScale -= (*it)->power*deltaTime;
+			else 
+				(*it)->rScale += (*it)->power*deltaTime;
+			
+			(*it)->rayNode->setScale(Ogre::Vector3( (*it)->rScale, (*it)->rScale, (*it)->lScale) );
+			(*it)->light -= deltaTime*10.0f;
+			
+			if( (*it)->rayLight )
+			{
+				(*it)->rayLight->setSpecularColour( (*it)->light*0.7f, (*it)->light, (*it)->light);
+				(*it)->rayLight->setDiffuseColour( (*it)->light*0.7f, (*it)->light, (*it)->light);
+			
+				if( (*it)->light < 0.0f  )
+					(*it)->rayLight->setVisible(false);
+			}				
+		
+			if( (*it)->timeToLive <= 0.0f )
+			{
+				(*it)->entity->setVisible(false);
+
+				if( (*it)->rayLight )
+					(*it)->rayLight->setVisible(false);
+			}
+		}
+	}
+
+	return true;
+}

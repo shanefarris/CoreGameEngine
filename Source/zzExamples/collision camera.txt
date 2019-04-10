@@ -1,0 +1,40 @@
+Ogre::Vector3 CameraControlSystem::CollidableCamera::DefaultCollisionDetectionFunction(Ogre::Vector3 cameraTargetPosition, Ogre::Vector3 cameraPosition)
+	{
+		Ogre::Vector3 finalCameraPosition (cameraPosition.x, cameraPosition.y, cameraPosition.z);
+
+		Ogre::Vector3 origin = cameraTargetPosition;		
+		Ogre::Vector3 direction = (cameraPosition - cameraTargetPosition);
+		Ogre::Real maxDistance = direction.length();
+		direction = direction.normalisedCopy();
+		Ogre::RaySceneQuery *raySceneQuery = mCameraCS2->getSceneManager()->createRayQuery(Ogre::Ray(origin, direction));
+
+		Ogre::RaySceneQueryResult &result = raySceneQuery->execute();
+		Ogre::RaySceneQueryResult::iterator itr = result.begin();
+
+		bool intersect = false;
+        Ogre::Real minDistance = std::numeric_limits<Ogre::Real>::max();
+		while (itr != result.end() /*&& !intersect*/)
+		{
+			if(itr->distance < maxDistance
+                && itr->distance < minDistance // take the shorter
+				&& itr->movable->getParentSceneNode() != mCameraCS2->getCameraSceneNode()
+				&& itr->movable->getParentSceneNode() != mCameraCS2->getTargetSceneNode())
+			{
+                minDistance = itr->distance;
+				intersect = true;
+				if(itr->worldFragment)
+				{
+					finalCameraPosition = itr->worldFragment->singleIntersection;
+				}
+				else //if(itr->movable)
+				{					
+					finalCameraPosition = origin + (direction * itr->distance);
+				}
+			}
+			itr++;
+		}
+
+		mCameraCS2->getSceneManager()->destroyQuery(raySceneQuery);
+
+		return finalCameraPosition;
+	}

@@ -1,0 +1,19 @@
+function OnStart()
+	print("OnStart")
+end
+
+function OnPreUpdateGame ( f1 )
+	print("OnPreUpdateGame")
+end
+
+function OnPostUpdateGame ( f1 )
+	print("OnPostUpdateGame")
+end
+
+function OnLoadLevel()
+	print("OnLoadLevel")
+end
+
+function OnUnLoadLevel()
+	print("OnUnLoadLevel")
+end

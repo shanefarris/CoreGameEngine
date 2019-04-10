@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="%40Includes">
+      <UniqueIdentifier>{829c1555-1540-496a-b769-79a556b1ed04}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ConvexShapeObstacle.cpp" />
+    <ClCompile Include="CylinderObstacle.cpp" />
+    <ClCompile Include="DetourAlloc.cpp" />
+    <ClCompile Include="DetourCommon.cpp" />
+    <ClCompile Include="DetourCrowd.cpp" />
+    <ClCompile Include="DetourLocalBoundary.cpp" />
+    <ClCompile Include="DetourNavMesh.cpp" />
+    <ClCompile Include="DetourNavMeshBuilder.cpp" />
+    <ClCompile Include="DetourNavMeshQuery.cpp" />
+    <ClCompile Include="DetourNode.cpp" />
+    <ClCompile Include="DetourObstacleAvoidance.cpp" />
+    <ClCompile Include="DetourPathCorridor.cpp" />
+    <ClCompile Include="DetourPathQueue.cpp" />
+    <ClCompile Include="DetourProximityGrid.cpp" />
+    <ClCompile Include="DetourTileCache.cpp" />
+    <ClCompile Include="DetourTileCacheBuilder.cpp" />
+    <ClCompile Include="fastlz.c" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="OgreDetourCrowd.cpp" />
+    <ClCompile Include="OgreDetourTileCache.cpp" />
+    <ClCompile Include="OgreRecast.cpp" />
+    <ClCompile Include="OgreRecastNavmeshPruner.cpp" />
+    <ClCompile Include="Recast.cpp" />
+    <ClCompile Include="RecastAlloc.cpp" />
+    <ClCompile Include="RecastArea.cpp" />
+    <ClCompile Include="RecastContour.cpp" />
+    <ClCompile Include="RecastConvexHull.cpp" />
+    <ClCompile Include="RecastFilter.cpp" />
+    <ClCompile Include="RecastInputGeom.cpp" />
+    <ClCompile Include="RecastLayers.cpp" />
+    <ClCompile Include="RecastMesh.cpp" />
+    <ClCompile Include="RecastMeshDetail.cpp" />
+    <ClCompile Include="RecastRasterization.cpp" />
+    <ClCompile Include="RecastRegion.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\NavMesh\ConvexShapeObstacle.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\CylinderObstacle.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourAlloc.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourAssert.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourCommon.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourCrowd.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourLocalBoundary.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourNavMesh.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourNavMeshBuilder.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourNavMeshQuery.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourNode.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourObstacleAvoidance.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourPathCorridor.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourPathQueue.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourProximityGrid.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourStatus.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourTileCache.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\DetourTileCacheBuilder.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\fastlz.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\Obstacle.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\OgreDetourCrowd.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\OgreDetourTileCache.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\OgreRecast.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\OgreRecastDefinitions.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\OgreRecastNavmeshPruner.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\Recast.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\RecastAlloc.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\RecastAssert.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\RecastConvexHull.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\NavMesh\RecastInputGeom.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

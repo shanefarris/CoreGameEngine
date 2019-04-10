@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Includes">
+      <UniqueIdentifier>{00f15a32-7f72-4bfa-8068-7e4aaf2acd93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Includes\AStar">
+      <UniqueIdentifier>{97687f9f-d510-475b-8fc6-20738e6f4960}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AStar">
+      <UniqueIdentifier>{61d531a3-6ce6-4b2d-acff-8e99b7df02f2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\AI\CFpsVehicle.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\Obstacle.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\SegmentedPathway.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\SteerLibrary.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\Utilities.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\Vec3Utilities.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\Wall.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="PolylineSegmentedPath.h" />
+    <ClInclude Include="PolylineSegmentedPathwaySegmentRadii.h" />
+    <ClInclude Include="QueryPathAlike.h" />
+    <ClInclude Include="QueryPathAlikeMappings.h" />
+    <ClInclude Include="QueryPathAlikeUtilities.h" />
+    <ClInclude Include="..\..\Include\AI\PolylineSegmentedPathwaySingleRadius.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="Proximity.h" />
+    <ClInclude Include="..\..\Include\AI\CAStarGrid.h">
+      <Filter>Includes\AStar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\CAStarNode.h">
+      <Filter>Includes\AStar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\QueryPathAlikeBaseDataExtractionPolicies.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="CAiController.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\AbstractVehicle.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\LocalSpace.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\AI\Pathway.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="SegmentedPathAlikeUtilities.h" />
+    <ClInclude Include="SegmentedPath.h" />
+    <ClInclude Include="Path.h" />
+    <ClInclude Include="LocalityQuery.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CFpsVehicle.cpp" />
+    <ClCompile Include="LocalityQuery.cpp" />
+    <ClCompile Include="LocalSpace.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="PolylineSegmentedPath.cpp" />
+    <ClCompile Include="PolylineSegmentedPathwaySegmentRadii.cpp" />
+    <ClCompile Include="PolylineSegmentedPathwaySingleRadius.cpp" />
+    <ClCompile Include="Wall.cpp" />
+    <ClCompile Include="CAStarNode.cpp">
+      <Filter>AStar</Filter>
+    </ClCompile>
+    <ClCompile Include="CAStarGrid.cpp">
+      <Filter>AStar</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Includes">
+      <UniqueIdentifier>{c1fd5ab7-dbae-4d2a-899d-9dff0190118c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DAL">
+      <UniqueIdentifier>{79dea61c-5a9e-439c-8b8f-740d8feb9964}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\FileDatabase\Database.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\FileDatabase\IError.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\FileDatabase\Query.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\FileDatabase\sqlite3.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\FileDatabase\sqlite3ext.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\FileDatabase\StderrLog.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="CDatabaseHelper.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="..\..\Include\FileDatabase\CoreDAL.h">
+      <Filter>DAL</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CoreDal.cpp">
+      <Filter>DAL</Filter>
+    </ClCompile>
+    <ClCompile Include="CDatabaseHelper.cpp" />
+    <ClCompile Include="Database.cpp" />
+    <ClCompile Include="Query.cpp" />
+    <ClCompile Include="sqlite3.c" />
+    <ClCompile Include="StderrLog.cpp" />
+  </ItemGroup>
+</Project>

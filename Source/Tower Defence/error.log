@@ -1,0 +1,28 @@
+Session started 2013-1-9 - 16:23 31:510
+Session started 2013-1-9 - 16:23 33:473
+16:23 33:474 - Unknown xml tag: 
+<PagedTerrain name="Terrain" colormaptexturesize="128" detaildistance="240" iscolormap="false" lightmaptexturesize="1024" 
+	mapsize="129" maxbatchsize="65" maxpixelerror="3" minbatchsize="33" pagedesitymapsize="1024" pagesize="40" pagex="2" 
+	pagey="2" terrainfile="Page" worldsize="4000" resourcegroup="General" minx="-2" miny="-2" maxx="2" maxy="2" />
+
+16:23 33:474 - Unknown xml tag: 
+
+
+16:23 33:486 - Unknown xml tag: 
+<Hydrax name="HydraxWater" causticsend="10" causticspower="9" causticsscale="16" configfile="Hydrax.hdx" 
+depthlimit="0" foammaxdistance="7.5e+007" foamscale="0.0075" foamstart="-0.1" foamtransparency="1" 
+fullreflectiondistance="1e+011" globaltransparency="0" godraysexposure="0.76 0.76 0.76" godraysintensity="0.015" 
+godraysintersections="false" godraysnumrays="100" godrayssize="0.03" godraysspeed="5" iscaelumitegrated="false" 
+iscomponentscaustics="true" iscomponentsdepth="true" iscomponentsfoam="true" iscomponentsgodrays="true" 
+iscomponentsreflections="true" iscomponentssmooth="true" iscomponentssun="true" iscomponentsunderwater="true" 
+ispgmodulechoppywaves="true" ispgmoduleforcerecalculategeometry="false" ispgmodulesmooth="false" layers="0" 
+modulename="ProjectedGridVertex" noisemodulename="Perlin" normaldistortion="0.075" perlinanimspeed="1.2" 
+perlinfalloff="0.49" perlingpulod="0.5 50 150000" perlingpustrength="2" perlinoctaves="8" perlinscale="0.185" 
+perlintimemulti="1.27" pgmodulechoppystrength="1" pgmodulecomplexity="100" pgmoduleelevation="5" 
+pgmodulestrength="3" planeserror="9.5" position="-500 10 -500" rttqualitydepth="0" rttqualitydepthaip="0" 
+rttqualitydepthreflection="0" rttqualitygpunormalmap="0" rttqualityreflection="0" rttqualityrefraction="0" 
+shadermode="3452816845" smoothpower="9.98" sunarea="746.089" suncolour="0 0 0" 
+sunposition="2997.92 7460.89 -16863.8" sunstrength="1.75" techniqueadd="" techniqueremove="" updatescript="" 
+watercolour="0 0 0"></Hydrax>
+16:23 34:528 - Invalid billboard set.
+16:23 34:535 - Invalid billboard set.

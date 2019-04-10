@@ -1,0 +1,415 @@
+10:23:24: Creating resource group General
+10:23:24: Creating resource group Internal
+10:23:24: Creating resource group Autodetect
+10:23:24: SceneManagerFactory for type 'DefaultSceneManager' registered.
+10:23:24: Registering ResourceManager for type Material
+10:23:24: Registering ResourceManager for type Mesh
+10:23:24: Registering ResourceManager for type Skeleton
+10:23:24: MovableObjectFactory for type 'ParticleSystem' registered.
+10:23:24: OverlayElementFactory for type Panel registered.
+10:23:24: OverlayElementFactory for type BorderPanel registered.
+10:23:24: OverlayElementFactory for type TextArea registered.
+10:23:24: Registering ResourceManager for type Font
+10:23:24: ArchiveFactory for archive type FileSystem registered.
+10:23:24: ArchiveFactory for archive type Zip registered.
+10:23:24: DDS codec registering
+10:23:24: FreeImage version: 3.13.1
+10:23:24: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+10:23:24: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,bay,bmq,cr2,crw,cs1,dc2,dcr,dng,erf,fff,hdr,k25,kdc,mdc,mos,mrw,nef,orf,pef,pxn,raf,raw,rdc,sr2,srf,arw,3fr,cine,ia,kc2,mef,nrw,qtk,rw2,sti,drf,dsc,ptx,cap,iiq,rwz
+10:23:24: Registering ResourceManager for type HighLevelGpuProgram
+10:23:24: Registering ResourceManager for type Compositor
+10:23:24: MovableObjectFactory for type 'Entity' registered.
+10:23:24: MovableObjectFactory for type 'Light' registered.
+10:23:24: MovableObjectFactory for type 'BillboardSet' registered.
+10:23:24: MovableObjectFactory for type 'ManualObject' registered.
+10:23:24: MovableObjectFactory for type 'BillboardChain' registered.
+10:23:24: MovableObjectFactory for type 'RibbonTrail' registered.
+10:23:24: *-*-* OGRE Initialising
+10:23:24: *-*-* Version 1.7.3 (Cthugha)
+10:23:24: Added resource location '../../Media' of type 'FileSystem' to resource group 'General'
+10:23:24: Added resource location '../../Media/Island' of type 'FileSystem' to resource group 'General'
+10:23:24: Creating resource group Sound
+10:23:24: Added resource location '../../media/Sound.zip' of type 'Zip' to resource group 'Sound' with recursive option
+10:23:24: Added resource location '../../media/Common.zip' of type 'Zip' to resource group 'General' with recursive option
+10:23:25: Added resource location '../../media/Media.zip' of type 'Zip' to resource group 'General' with recursive option
+10:23:25: Creating resource group Sky
+10:23:25: Added resource location '../../media/Sky.zip' of type 'Zip' to resource group 'Sky' with recursive option
+10:23:25: Creating resource group Hydrax
+10:23:25: Added resource location '../../media/hydrax.zip' of type 'Zip' to resource group 'Hydrax' with recursive option
+10:23:25: Creating resource group TerrainTextures
+10:23:25: Added resource location '../../media/TerrainTextures.zip' of type 'Zip' to resource group 'TerrainTextures' with recursive option
+10:23:25: Loading library RenderSystem_Direct3D9_d
+10:23:25: Installing plugin: D3D9 RenderSystem
+10:23:25: D3D9 : Direct3D9 Rendering Subsystem created.
+10:23:25: D3D9: Driver Detection Starts
+10:23:25: D3D9: Driver Detection Ends
+10:23:25: Plugin successfully installed
+10:23:25: Loading library Plugin_ParticleFX_d
+10:23:25: Installing plugin: ParticleFX
+10:23:25: Particle Emitter Type 'Point' registered
+10:23:25: Particle Emitter Type 'Box' registered
+10:23:25: Particle Emitter Type 'Ellipsoid' registered
+10:23:25: Particle Emitter Type 'Cylinder' registered
+10:23:25: Particle Emitter Type 'Ring' registered
+10:23:25: Particle Emitter Type 'HollowEllipsoid' registered
+10:23:25: Particle Affector Type 'LinearForce' registered
+10:23:25: Particle Affector Type 'ColourFader' registered
+10:23:25: Particle Affector Type 'ColourFader2' registered
+10:23:25: Particle Affector Type 'ColourImage' registered
+10:23:25: Particle Affector Type 'ColourInterpolator' registered
+10:23:25: Particle Affector Type 'Scaler' registered
+10:23:25: Particle Affector Type 'Rotator' registered
+10:23:25: Particle Affector Type 'DirectionRandomiser' registered
+10:23:25: Particle Affector Type 'DeflectorPlane' registered
+10:23:25: Plugin successfully installed
+10:23:25: Loading library Plugin_CgProgramManager_d
+10:23:25: Installing plugin: Cg Program Manager
+10:23:25: Plugin successfully installed
+10:23:25: Loading library Plugin_OctreeSceneManager_d
+10:23:25: Installing plugin: Octree & Terrain Scene Manager
+10:23:25: Plugin successfully installed
+10:23:25: D3D9 : RenderSystem Option: Full Screen = No
+10:23:25: D3D9 : RenderSystem Option: Video Mode = 1280 x 800 @ 32-bit colour
+10:23:25: CPU Identifier & Features
+10:23:25: -------------------------
+10:23:25:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i7-2675QM CPU @ 2.20GHz
+10:23:25:  *      SSE: yes
+10:23:25:  *     SSE2: yes
+10:23:25:  *     SSE3: yes
+10:23:25:  *      MMX: yes
+10:23:25:  *   MMXEXT: yes
+10:23:25:  *    3DNOW: no
+10:23:25:  * 3DNOWEXT: no
+10:23:25:  *     CMOV: yes
+10:23:25:  *      TSC: yes
+10:23:25:  *      FPU: yes
+10:23:25:  *      PRO: yes
+10:23:25:  *       HT: no
+10:23:25: -------------------------
+10:23:25: D3D9 : Subsystem Initialising
+10:23:25: Registering ResourceManager for type Texture
+10:23:25: Registering ResourceManager for type GpuProgram
+10:23:25: D3D9RenderSystem::_createRenderWindow "Core", 1280x800 windowed  miscParams: FSAA=0 FSAAHint= colourDepth=32 gamma=false monitorIndex=0 useNVPerfHUD=false vsync=true vsyncInterval=1 
+10:23:25: D3D9 : Created D3D9 Rendering Window 'Core' : 1280x800, 32bpp
+10:23:25: D3D9: Vertex texture format supported - PF_L8
+10:23:25: D3D9: Vertex texture format supported - PF_L16
+10:23:25: D3D9: Vertex texture format supported - PF_A8
+10:23:25: D3D9: Vertex texture format supported - PF_A4L4
+10:23:25: D3D9: Vertex texture format supported - PF_BYTE_LA
+10:23:25: D3D9: Vertex texture format supported - PF_R5G6B5
+10:23:25: D3D9: Vertex texture format supported - PF_B5G6R5
+10:23:25: D3D9: Vertex texture format supported - PF_A4R4G4B4
+10:23:25: D3D9: Vertex texture format supported - PF_A1R5G5B5
+10:23:25: D3D9: Vertex texture format supported - PF_A8R8G8B8
+10:23:25: D3D9: Vertex texture format supported - PF_B8G8R8A8
+10:23:25: D3D9: Vertex texture format supported - PF_A2R10G10B10
+10:23:25: D3D9: Vertex texture format supported - PF_A2B10G10R10
+10:23:25: D3D9: Vertex texture format supported - PF_DXT1
+10:23:25: D3D9: Vertex texture format supported - PF_DXT2
+10:23:25: D3D9: Vertex texture format supported - PF_DXT3
+10:23:25: D3D9: Vertex texture format supported - PF_DXT4
+10:23:25: D3D9: Vertex texture format supported - PF_DXT5
+10:23:25: D3D9: Vertex texture format supported - PF_FLOAT16_RGB
+10:23:25: D3D9: Vertex texture format supported - PF_FLOAT16_RGBA
+10:23:26: D3D9: Vertex texture format supported - PF_FLOAT32_RGB
+10:23:26: D3D9: Vertex texture format supported - PF_FLOAT32_RGBA
+10:23:26: D3D9: Vertex texture format supported - PF_X8R8G8B8
+10:23:26: D3D9: Vertex texture format supported - PF_X8B8G8R8
+10:23:26: D3D9: Vertex texture format supported - PF_R8G8B8A8
+10:23:26: D3D9: Vertex texture format supported - PF_DEPTH
+10:23:26: D3D9: Vertex texture format supported - PF_SHORT_RGBA
+10:23:26: D3D9: Vertex texture format supported - PF_FLOAT16_R
+10:23:26: D3D9: Vertex texture format supported - PF_FLOAT32_R
+10:23:26: D3D9: Vertex texture format supported - PF_SHORT_GR
+10:23:26: D3D9: Vertex texture format supported - PF_FLOAT16_GR
+10:23:26: D3D9: Vertex texture format supported - PF_FLOAT32_GR
+10:23:26: D3D9: Vertex texture format supported - PF_SHORT_RGB
+10:23:26: D3D9: Vertex texture format supported - PF_PVRTC_RGB2
+10:23:26: D3D9: Vertex texture format supported - PF_PVRTC_RGBA2
+10:23:26: D3D9: Vertex texture format supported - PF_PVRTC_RGB4
+10:23:26: D3D9: Vertex texture format supported - PF_PVRTC_RGBA4
+10:23:26: RenderSystem capabilities
+10:23:26: -------------------------
+10:23:26: RenderSystem Name: Direct3D9 Rendering Subsystem
+10:23:26: GPU Vendor: intel
+10:23:26: Device Name: Monitor-1-Mobile Intel(R) HD Graphics
+10:23:26: Driver Version: 8.17.10.1083
+10:23:26:  * Fixed function pipeline: yes
+10:23:26:  * Hardware generation of mipmaps: yes
+10:23:26:  * Texture blending: yes
+10:23:26:  * Anisotropic texture filtering: yes
+10:23:26:  * Dot product texture operation: yes
+10:23:26:  * Cube mapping: yes
+10:23:26:  * Hardware stencil buffer: yes
+10:23:26:    - Stencil depth: 8
+10:23:26:    - Two sided stencil support: yes
+10:23:26:    - Wrap stencil values: yes
+10:23:26:  * Hardware vertex / index buffers: yes
+10:23:26:  * Vertex programs: yes
+10:23:26:  * Number of floating-point constants for vertex programs: 256
+10:23:26:  * Number of integer constants for vertex programs: 16
+10:23:26:  * Number of boolean constants for vertex programs: 16
+10:23:26:  * Fragment programs: yes
+10:23:26:  * Number of floating-point constants for fragment programs: 224
+10:23:26:  * Number of integer constants for fragment programs: 16
+10:23:26:  * Number of boolean constants for fragment programs: 16
+10:23:26:  * Geometry programs: no
+10:23:26:  * Number of floating-point constants for geometry programs: 0
+10:23:26:  * Number of integer constants for geometry programs: 0
+10:23:26:  * Number of boolean constants for geometry programs: 0
+10:23:26:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 ps_2_a ps_2_b ps_2_x ps_3_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
+10:23:26:  * Texture Compression: yes
+10:23:26:    - DXT: yes
+10:23:26:    - VTC: no
+10:23:26:    - PVRTC: no
+10:23:26:  * Scissor Rectangle: yes
+10:23:26:  * Hardware Occlusion Query: yes
+10:23:26:  * User clip planes: yes
+10:23:26:  * VET_UBYTE4 vertex element type: yes
+10:23:26:  * Infinite far plane projection: yes
+10:23:26:  * Hardware render-to-texture: yes
+10:23:26:  * Floating point textures: yes
+10:23:26:  * Non-power-of-two textures: yes
+10:23:26:  * Volume textures: yes
+10:23:26:  * Multiple Render Targets: 4
+10:23:26:    - With different bit depths: yes
+10:23:26:  * Point Sprites: yes
+10:23:26:  * Extended point parameters: yes
+10:23:26:  * Max Point Size: 10
+10:23:26:  * Vertex texture fetch: yes
+10:23:26:  * Number of world matrices: 0
+10:23:26:  * Number of texture units: 8
+10:23:26:  * Stencil buffer depth: 8
+10:23:26:  * Number of vertex blend matrices: 0
+10:23:26:    - Max vertex textures: 4
+10:23:26:    - Vertex textures shared: no
+10:23:26:  * Render to Vertex Buffer : no
+10:23:26:  * DirectX per stage constants: yes
+10:23:26: ***************************************
+10:23:26: *** D3D9 : Subsystem Initialised OK ***
+10:23:26: ***************************************
+10:23:26: DefaultWorkQueue('Root') initialising on thread 0073BF08.
+10:23:26: DefaultWorkQueue('Root')::WorkerFunc - thread 00765F18 starting.
+10:23:26: DefaultWorkQueue('Root')::WorkerFunc - thread 00768590 starting.
+10:23:26: DefaultWorkQueue('Root')::WorkerFunc - thread 007672A8 starting.
+10:23:26: DefaultWorkQueue('Root')::WorkerFunc - thread 0076CE30 starting.
+10:23:26: DefaultWorkQueue('Root')::WorkerFunc - thread 0076BB48 starting.
+10:23:26: DefaultWorkQueue('Root')::WorkerFunc - thread 00767238 starting.
+10:23:26: DefaultWorkQueue('Root')::WorkerFunc - thread 0076AC38 starting.
+10:23:26: DefaultWorkQueue('Root')::WorkerFunc - thread 00766FA8 starting.
+10:23:26: Particle Renderer Type 'billboard' registered
+10:23:26: SceneManagerFactory for type 'OctreeSceneManager' registered.
+10:23:26: SceneManagerFactory for type 'TerrainSceneManager' registered.
+10:23:26: Parsing scripts for resource group Autodetect
+10:23:26: Finished parsing scripts for resource group Autodetect
+10:23:26: Parsing scripts for resource group General
+10:23:26: Parsing script SelectionIndicator.material
+10:23:26: Parsing script Common.material
+10:23:26: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource ps_glow.cg in resource group General or any other group. in ResourceGroupManager::openResource at src\OgreResourceGroupManager.cpp (line 753)
+10:23:26: High-level program glow_ps_cg encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource ps_glow.cg in resource group General or any other group. in ResourceGroupManager::openResource at src\OgreResourceGroupManager.cpp (line 753)
+10:23:26: Parsing script crate.material
+10:23:26: Parsing script spawn_point.material
+10:23:26: Parsing script zzzMaterial1.material
+10:23:28: Compiler error: number expected in zzzMaterial1.material(25): specular expects at least 4 arguments
+10:23:28: Compiler error: reference to a non existing object in zzzMaterial1.material(1485)
+10:23:28: Compiler error: reference to a non existing object in zzzMaterial1.material(1496)
+10:23:28: Compiler error: reference to a non existing object in zzzMaterial1.material(1591)
+10:23:28: Compiler error: reference to a non existing object in zzzMaterial1.material(1602)
+10:23:28: Parsing script zzzMaterial2.material
+10:23:29: Parsing script common.fontdef
+10:23:29: Parsing script Common.overlay
+10:23:29: Texture: Transparent.tga: Loading 1 faces(PF_A8R8G8B8,64x64x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,64x64x1.
+10:23:29: Texture: StatsBorder.png: Loading 1 faces(PF_A8R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+10:23:29: Texture: Compass2.jpg: Loading 1 faces(PF_R8G8B8,512x32x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,512x32x1.
+10:23:29: Texture: StatsBorderCenter.png: Loading 1 faces(PF_A8R8G8B8,256x128x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x128x1.
+10:23:29: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource minimap.png in resource group General or any other group. in ResourceGroupManager::openResource at src\OgreResourceGroupManager.cpp (line 753)
+10:23:29: Error loading texture minimap.png. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource minimap.png in resource group General or any other group. in ResourceGroupManager::openResource at src\OgreResourceGroupManager.cpp (line 753)
+10:23:29: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource minimapborder.png in resource group General or any other group. in ResourceGroupManager::openResource at src\OgreResourceGroupManager.cpp (line 753)
+10:23:29: Error loading texture minimapborder.png. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource minimapborder.png in resource group General or any other group. in ResourceGroupManager::openResource at src\OgreResourceGroupManager.cpp (line 753)
+10:23:29: Texture: target.png: Loading 1 faces(PF_A8R8G8B8,45x45x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,45x45x1.
+10:23:29: Finished parsing scripts for resource group General
+10:23:29: Parsing scripts for resource group Hydrax
+10:23:29: Finished parsing scripts for resource group Hydrax
+10:23:29: Parsing scripts for resource group Internal
+10:23:29: Finished parsing scripts for resource group Internal
+10:23:29: Parsing scripts for resource group Sky
+10:23:29: Parsing script GroundFog.program
+10:23:29: Parsing script Haze.program
+10:23:30: Parsing script MinimalCompositorVP.program
+10:23:30: Parsing script zzzSky.material
+10:23:31: Parsing script zzzSky.compositor
+10:23:31: Finished parsing scripts for resource group Sky
+10:23:31: Parsing scripts for resource group Sound
+10:23:31: Finished parsing scripts for resource group Sound
+10:23:31: Parsing scripts for resource group TerrainTextures
+10:23:31: Finished parsing scripts for resource group TerrainTextures
+10:23:31: TerrainSceneManager: Registered a new PageSource for type Heightmap
+10:23:31: *** Initializing OIS ***
+10:23:31: *** Loading core plugin ../../Bin/Debug/Plugins\PluginAiState_Misc1.dll ***
+10:23:31: *** Loading core plugin ../../Bin/Debug/Plugins\PluginBuildings_Core1.dll ***
+10:23:31: *** Loading core plugin ../../Bin/Debug/Plugins\PluginCamera_Core1.dll ***
+10:23:31: *** Loading core plugin ../../Bin/Debug/Plugins\PluginConsole.dll ***
+10:23:32: *** Loading core plugin ../../Bin/Debug/Plugins\PluginConsoleCheat.dll ***
+10:23:32: *** Loading core plugin ../../Bin/Debug/Plugins\PluginGameObject_All.dll ***
+10:23:32: *** Loading core plugin ../../Bin/Debug/Plugins\PluginGameObject_Misc1.dll ***
+10:23:32: *** Loading core plugin ../../Bin/Debug/Plugins\PluginMission_Core1Pack1.dll ***
+10:23:32: *** Loading core plugin ../../Bin/Debug/Plugins\PluginParticleEffect_Core1.dll ***
+10:23:33: *** Loading core plugin ../../Bin/Debug/Plugins\PluginPhysics_Ode.dll ***
+10:23:33: *** Loading core plugin ../../Bin/Debug/Plugins\PluginPlayers_Core1.dll ***
+10:23:33: *** Loading core plugin ../../Bin/Debug/Plugins\PluginPostEffects_Core1.dll ***
+10:23:33: MovableObjectFactory for type 'ODERagdoll' registered.
+10:23:33: *-*-* OgreAL Initialization
+10:23:33: MovableObjectFactory for type 'OgreAL_Sound' registered.
+10:23:33: MovableObjectFactory for type 'OgreAL_Listener' registered.
+10:23:33: *-*-* Creating OpenAL
+10:23:33: OpenAL Version: 1.1
+10:23:33: Available Devices
+10:23:33: -----------------
+10:23:33: Failed to open Device: OpenAL Error: The specified source name is not valid
+10:23:33: OGRE EXCEPTION(13:): Failed to open audio device in Sound::CSoundManager::InitializeDevice
+10:23:33: Choosing: 
+10:23:33: Supported Formats
+10:23:33: -----------------
+10:23:33: *** Registering particles ***
+10:23:33: *** Registering post effects ***
+10:23:33: CompositorChain: Compositor BLOOM has no supported techniques.
+10:23:33: CompositorChain: Compositor MOTION_BLUR has no supported techniques.
+10:23:33: CompositorChain: Compositor SSAO has no supported techniques.
+10:23:33: OGRE EXCEPTION(5:ItemIdentityException): SceneNode '' not found. in SceneManager::getSceneNode at src\OgreSceneManager.cpp (line 895)
+10:23:33: *** Initialising world ***
+10:23:33: *** Initialising sky ***
+10:23:33: Caelum: Initialising Caelum system...
+10:23:33: Caelum: Plugin not installed; installing now.
+10:23:33: Caelum plugin version 0.5.0 installed
+10:23:33: Registering ResourceManager for type PropertyScript
+10:23:33: Caelum: Creating required internal resource group 'Caelum'
+10:23:33: Creating resource group Caelum
+10:23:33: Caelum: Creating caelum sub-components.
+10:23:33: Texture: EarthClearSky2.png: Loading 1 faces(PF_A8R8G8B8,64x64x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,64x64x1.
+10:23:33: Texture: AtmosphereDepth.png: Loading 1 faces(PF_R8G8B8,32x1x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,32x1x1.
+10:23:33: Caelum: Creating CaelumSphericDome sphere mesh resource...
+10:23:33: Caelum: generateSphericDome DONE
+10:23:33: Texture: sun_disc.png: Loading 1 faces(PF_A8R8G8B8,128x128x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,128x128x1.
+10:23:33: D3D9 : Loading 2D Texture, image name : 'moon_disc.dds' with 2147483647 mip map levels
+10:23:33: D3D9 : Loading 2D Texture, image name : 'noise1.dds' with 2147483647 mip map levels
+10:23:33: D3D9 : Loading 2D Texture, image name : 'noise2.dds' with 2147483647 mip map levels
+10:23:33: D3D9 : Loading 2D Texture, image name : 'noise4.dds' with 2147483647 mip map levels
+10:23:33: Caelum: DONE initializing
+10:23:33: CaelumSystem: Attached to viewport 45694248 render target Core
+10:23:34: Texture: grass.jpg: Loading 1 faces(PF_R8G8B8,512x512x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,512x512x1.
+10:23:34: *** Initialising vegetation ***
+10:23:34: OGRE EXCEPTION(5:ItemIdentityException): Could not find material bullet_streak in BillboardSet::setMaterialName at src\OgreBillboardSet.cpp (line 312)
+10:23:34: OGRE EXCEPTION(5:ItemIdentityException): Could not find material blue_bullet in BillboardSet::setMaterialName at src\OgreBillboardSet.cpp (line 312)
+10:23:34: Mesh: Loading zombie_small.mesh.
+10:23:34: Skeleton: Loading zombie_small.skeleton
+10:23:34: Texture: zombie.jpg: Loading 1 faces(PF_R8G8B8,512x512x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,512x512x1.
+10:23:35: Mesh: Loading Soldier.mesh.
+10:23:35: Skeleton: Loading Soldier.skeleton
+10:23:35: WARNING: Soldier.mesh is an older format ([MeshSerializer_v1.40]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+10:23:35: Texture: USMC_lowPoly.jpg: Loading 1 faces(PF_R8G8B8,1024x1024x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x1024x1.
+10:23:35: Texture: m4a1.jpg: Loading 1 faces(PF_R8G8B8,533x267x1) with 9 generated mipmaps from Image. Internal format is PF_X8R8G8B8,533x267x1.
+10:23:35: Mesh: Loading m4a1_1.mesh.
+10:23:35: WARNING: m4a1_1.mesh is an older format ([MeshSerializer_v1.40]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+10:23:35: console line count: 19
+10:23:35: console line lenght: 100
+10:23:35: Texture: console_blue.png: Loading 1 faces(PF_R8G8B8,100x19x1) with 6 generated mipmaps from Image. Internal format is PF_X8R8G8B8,100x19x1.
+10:23:35: Font VeraMonousing texture size 512x256
+10:23:35: Info: Freetype returned null for character 160 in font VeraMono
+10:23:35: Texture: VeraMonoTexture: Loading 1 faces(PF_BYTE_LA,512x256x1) with 0 generated mipmaps from Image. Internal format is PF_BYTE_LA,512x256x1.
+10:23:36: Font BlueHighusing texture size 1024x512
+10:23:36: Info: Freetype returned null for character 127 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 128 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 129 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 130 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 131 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 132 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 133 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 134 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 135 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 136 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 137 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 138 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 139 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 140 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 141 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 142 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 143 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 144 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 145 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 146 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 147 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 148 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 149 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 150 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 151 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 152 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 153 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 154 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 155 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 156 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 157 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 158 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 159 in font BlueHigh
+10:23:36: Info: Freetype returned null for character 160 in font BlueHigh
+10:23:36: Texture: BlueHighTexture: Loading 1 faces(PF_BYTE_LA,1024x512x1) with 0 generated mipmaps from Image. Internal format is PF_BYTE_LA,1024x512x1.
+10:23:37: CharacterState_FindEnemy success for player: player_0_0
+10:23:37: CharacterState_FindEnemy success for player: player_1_1
+10:23:37: CharacterState_FindEnemy success for player: player_2_2
+10:23:37: CharacterState_FindEnemy success for player: player_3_3
+10:23:37: CharacterState_FindEnemy success for player: player_4_4
+10:23:37: CharacterState_FindEnemy success for player: player_5_5
+10:23:37: CharacterState_FindEnemy success for player: player_6_6
+10:23:37: CharacterState_FindEnemy success for player: player_7_7
+10:23:37: CharacterState_FindEnemy success for player: player_8_8
+10:23:37: CharacterState_FindEnemy success for player: player_9_9
+10:23:37: CharacterState_FindEnemy success for player: player_10_10
+10:23:37: CharacterState_FindEnemy success for player: player_11_11
+10:23:37: CharacterState_FindEnemy success for player: player_12_12
+10:23:37: CharacterState_FindEnemy success for player: player_13_13
+10:23:37: CharacterState_FindEnemy success for player: player_14_14
+10:23:37: CharacterState_FindEnemy success for player: player_15_15
+10:23:37: CharacterState_FindEnemy success for player: player_16_16
+10:23:37: CharacterState_FindEnemy success for player: player_17_17
+10:23:37: CharacterState_FindEnemy success for player: player_18_18
+10:23:37: CharacterState_FindEnemy success for player: player_19_19
+10:23:37: CharacterState_FindEnemy success for player: player_20_20
+10:23:37: CharacterState_FindEnemy success for player: player_21_21
+10:23:37: CharacterState_FindEnemy success for player: player_22_22
+10:23:37: CharacterState_FindEnemy success for player: player_23_23
+10:23:37: CharacterState_FindEnemy success for player: player_24_24
+10:23:37: CharacterState_FindEnemy success for player: player_25_25
+10:23:37: CharacterState_FindEnemy success for player: player_26_26
+10:23:37: CharacterState_FindEnemy success for player: player_27_27
+10:23:37: CharacterState_FindEnemy success for player: player_28_28
+10:23:37: CharacterState_FindEnemy success for player: player_29_29
+10:23:37: CharacterState_FindEnemy success for player: player_30_30
+10:23:37: CharacterState_FindEnemy success for player: player_31_31
+10:23:37: CharacterState_FindEnemy success for player: player_32_32
+10:23:37: CharacterState_FindEnemy success for player: player_33_33
+10:23:37: CharacterState_FindEnemy success for player: player_34_34
+10:23:37: CharacterState_FindEnemy success for player: player_35_35
+10:23:37: CharacterState_FindEnemy success for player: player_36_36
+10:23:37: CharacterState_FindEnemy success for player: player_37_37
+10:23:37: CharacterState_FindEnemy success for player: player_38_38
+10:24:09: *** Shutting down world ***
+10:24:09: *** Shutting down sky ***
+10:24:09: Caelum: Shutting down Caelum system...
+10:24:09: Caelum: Delete UniversalClock
+10:24:09: Caelum: Delete UniversalClock
+10:24:09: Caelum: CaelumSystem destroyed.
+10:24:09: *** Shutting down sky ***
+10:24:09: *** Shutting down vegetation ***
+10:24:09: *** Shutting down vegetation ***
+10:24:09: *** Shutting down terrain ***
+10:24:09: *** Shutting down terrain ***
+10:24:09: DefaultWorkQueue('Root') shutting down on thread 0073BF08.
+10:24:09: DefaultWorkQueue('Root')::WorkerFunc - thread 00767238 stopped.
+10:24:09: DefaultWorkQueue('Root')::WorkerFunc - thread 00766FA8 stopped.
+10:24:09: DefaultWorkQueue('Root')::WorkerFunc - thread 0076AC38 stopped.
+10:24:09: DefaultWorkQueue('Root')::WorkerFunc - thread 007672A8 stopped.
+10:24:09: DefaultWorkQueue('Root')::WorkerFunc - thread 0076BB48 stopped.
+10:24:09: DefaultWorkQueue('Root')::WorkerFunc - thread 00765F18 stopped.
+10:24:09: DefaultWorkQueue('Root')::WorkerFunc - thread 0076CE30 stopped.
+10:24:09: DefaultWorkQueue('Root')::WorkerFunc - thread 00768590 stopped.
+10:24:09: *-*-* OGRE Shutdown

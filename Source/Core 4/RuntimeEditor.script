@@ -1,0 +1,8 @@
+function OnPlayerCreate(PlayerName)
+	print("OnPlayerCreate")
+	print("Test 1")
+	print(PlayerName)
+	
+	gameObjManager = Core.CGameObjectManager:Instance()
+	print(gameObjManager)
+end

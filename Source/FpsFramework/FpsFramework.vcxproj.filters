@@ -1,0 +1,587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CGameObject.cpp" />
+    <ClCompile Include="CUtility.cpp" />
+    <ClCompile Include="CConfiguration.cpp" />
+    <ClCompile Include="CFpsFrameListener.cpp" />
+    <ClCompile Include="CFrameListenerFramework.cpp" />
+    <ClCompile Include="CGame.cpp" />
+    <ClCompile Include="CGameState.cpp" />
+    <ClCompile Include="CDbParserStrategy.cpp">
+      <Filter>Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="CSceneImporter.cpp">
+      <Filter>Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="CXmlParserStrategy.cpp">
+      <Filter>Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraChase.cpp">
+      <Filter>Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraFps.cpp">
+      <Filter>Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraGod.cpp">
+      <Filter>Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraSpring.cpp">
+      <Filter>Cameras</Filter>
+    </ClCompile>
+    <ClCompile Include="CBillboardManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CCameraManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CCharacterStateManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CEffectsManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameObjectManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CGuiManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CInputManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CItemsManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CMissionManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhysicsManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CPluginManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CScriptManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CTrainingManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CAiReactionComponent_Default.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CEnvironmentObserver.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CDeferredShading.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="CBulletHole.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CLightMaterialGenerator.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="CLineOfSightStrategy_Defaults.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CLuaConsole.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="CLoadingScreen.cpp">
+      <Filter>OgreSpecific</Filter>
+    </ClCompile>
+    <ClCompile Include="CMagazine.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="CMaterialGenerator.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\Core_lua.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="CParticleEffect.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhysicsProfile.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayer.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerAttributesComponent.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerSoundComponent.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CPostEffect.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="CRayLight.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="CProjectile.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="CSerializer.cpp">
+      <Filter>Serialization</Filter>
+    </ClCompile>
+    <ClCompile Include="CScrollingMessage.cpp">
+      <Filter>OgreSpecific</Filter>
+    </ClCompile>
+    <ClCompile Include="CSpawnManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CWeapon.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="CTextOutput.cpp">
+      <Filter>OgreSpecific</Filter>
+    </ClCompile>
+    <ClCompile Include="MovableTextOverlay.cpp">
+      <Filter>OgreSpecific</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects\Fire\OgreAreaEmitter.cpp">
+      <Filter>OgreSpecific</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects\Fire\OgreBoxEmitter.cpp">
+      <Filter>OgreSpecific</Filter>
+    </ClCompile>
+    <ClCompile Include="Effects\Fire\OgreShaderParticleRenderer.cpp">
+      <Filter>Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\Overlays_lua.cpp">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="CInventoryItem.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="CMelee.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuilding.cpp">
+      <Filter>Building</Filter>
+    </ClCompile>
+    <ClCompile Include="CSkySystem.cpp">
+      <Filter>Nature</Filter>
+    </ClCompile>
+    <ClCompile Include="CTerrainSystem.cpp">
+      <Filter>Nature</Filter>
+    </ClCompile>
+    <ClCompile Include="CVegetationSystem.cpp">
+      <Filter>Nature</Filter>
+    </ClCompile>
+    <ClCompile Include="CWaterSystem.cpp">
+      <Filter>Nature</Filter>
+    </ClCompile>
+    <ClCompile Include="CWorld.cpp">
+      <Filter>Nature</Filter>
+    </ClCompile>
+    <ClCompile Include="CNatureManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CWeaponProfile.cpp">
+      <Filter>Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerPimpl.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Scripting\Swig_CS_CompiledHeaders_wrap.cxx">
+      <Filter>Scripting</Filter>
+    </ClCompile>
+    <ClCompile Include="NetworkData.cpp">
+      <Filter>Networking</Filter>
+    </ClCompile>
+    <ClCompile Include="CNetworkManager.cpp">
+      <Filter>Managers</Filter>
+    </ClCompile>
+    <ClCompile Include="CGameObjectHierarchy.cpp" />
+    <ClCompile Include="OgreConsole.cpp">
+      <Filter>Console</Filter>
+    </ClCompile>
+    <ClCompile Include="CInputManagerPimpl.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="CNavMeshVehicle.cpp">
+      <Filter>Player</Filter>
+    </ClCompile>
+    <ClCompile Include="CGuiStrategy_Default.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CConfiguration.h" />
+    <ClInclude Include="CompilerConfig.h" />
+    <ClInclude Include="CParserStrategies.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraBindedPlane.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraChase.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraFps.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraGod.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="CCameraSpring.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CBillboardManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CCameraManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CCharacterStateManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CEffectsManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CGameObjectManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CGuiManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CInputManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CItemsManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CMissionManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPhysicsManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPluginManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CScriptManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CTrainingManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="CAiReactionComponent_Default.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CCharacterState.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CEnvironmentObserver.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="CDeferredShading.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="CBulletHole.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CEntityEffect.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CGameManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="CLightMaterialGenerator.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="CLineOfSightStrategy_Defaults.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CLuaConsole.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CGameState.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CLoadingScreen.h">
+      <Filter>OgreSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CMagazine.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CProjectile.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="CMaterialGenerator.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\Core_lua.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CMenuState.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CGameObject.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CGame.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CFrameListenerFramework.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CFpsFrameListener.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CoreEngine.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CoreStructures.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CParticleEffect.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPhysicsProfile.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPlayer.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPlayerAttributesComponent.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPlayerSoundComponent.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPostEffect.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CRagdollBoneInformation.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="CRayLight.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="CSerializer.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CScrollingMessage.h">
+      <Filter>OgreSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CSpawnManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CWeapon.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CWeaponProfile.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CTextOutput.h">
+      <Filter>OgreSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CUtility.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CVolumeObject.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\GeneralFunctions.hpp">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\IAiReactionComponent.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\ICamera.h">
+      <Filter>Cameras</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\IPhysicsRagdoll.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\IPhysicsStrategy.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\Defines.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CWorldProfile.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\MovableTextOverlay.h">
+      <Filter>OgreSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\IMission.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\Fire\OgreAreaEmitter.h">
+      <Filter>OgreSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\Fire\OgreBoxEmitter.h">
+      <Filter>OgreSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\MissionEvents.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\Fire\OgreParticleCustomParam.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Effects\Fire\OgreShaderParticleRenderer.h">
+      <Filter>Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="RectLayoutManager.h">
+      <Filter>OgreSpecific</Filter>
+    </ClInclude>
+    <ClInclude Include="Scripting\Overlays_lua.h">
+      <Filter>Scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\PlayerEnums.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\PhysicsStructures.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\SceneImporterPackage.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="CSceneImporter.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="QueryStrings.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\Structures.h">
+      <Filter>Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPrecisionTimer.h" />
+    <ClInclude Include="..\..\Include\Core\ICharacterController.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CInventoryItem.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="CMelee.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\AnimationMapping.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CItemProfile.h">
+      <Filter>Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CBuilding.h">
+      <Filter>Building</Filter>
+    </ClInclude>
+    <ClInclude Include="CSkySystem.h">
+      <Filter>Nature</Filter>
+    </ClInclude>
+    <ClInclude Include="CTerrainSystem.h">
+      <Filter>Nature</Filter>
+    </ClInclude>
+    <ClInclude Include="CVegetationSystem.h">
+      <Filter>Nature</Filter>
+    </ClInclude>
+    <ClInclude Include="CWaterSystem.h">
+      <Filter>Nature</Filter>
+    </ClInclude>
+    <ClInclude Include="CWorld.h">
+      <Filter>Nature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CNatureManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="IEnvironment.h">
+      <Filter>Nature</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CPlayerPimpl.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="NetworkData.h">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CNetworkManager.h">
+      <Filter>Managers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\INetworkStrategy.h">
+      <Filter>Networking</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CGameObjectHierarchy.h">
+      <Filter>%40Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\OgreConsole.h">
+      <Filter>Console</Filter>
+    </ClInclude>
+    <ClInclude Include="CInputManagerPimpl.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CInputEvent.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CInputListener.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CNavMeshVehicle.h">
+      <Filter>Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\IGuiStrategy.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Core\CGuiStrategy_Default.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Serialization">
+      <UniqueIdentifier>{eaf9e2aa-0beb-4e5a-ab12-6f424d88d2e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Managers">
+      <UniqueIdentifier>{9310fee3-15c9-4797-a606-b4e56816dcd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Cameras">
+      <UniqueIdentifier>{cc5baf71-824c-451b-9e27-d23fa307e61a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scripting">
+      <UniqueIdentifier>{5de0b0f1-6fc0-4f4b-ac69-76436dbd28d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="OgreSpecific">
+      <UniqueIdentifier>{a5720044-8180-4199-b698-db666e4a6922}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Player">
+      <UniqueIdentifier>{ede484d7-d949-441b-b9fc-ec0212e88a5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Console">
+      <UniqueIdentifier>{e289b21c-23ba-4f92-a56f-96f3a9fff01c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effects">
+      <UniqueIdentifier>{84e878af-0379-486e-a83d-607537657406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="%40Includes">
+      <UniqueIdentifier>{e2fd74ec-6e91-4cfa-aa68-22da6ffee0e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Inventory">
+      <UniqueIdentifier>{029f1dfb-68aa-4986-beeb-7187d44e0af1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{2abc07e0-a2be-4622-be2e-b7def70e9528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Networking">
+      <UniqueIdentifier>{f123b162-5d1e-40bb-9607-daf4d8bff3ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Building">
+      <UniqueIdentifier>{9aa0493f-d547-4b7e-8298-7455d0d37328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Nature">
+      <UniqueIdentifier>{0df6d16f-64cf-4e80-b8e5-d3244b7ed634}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{026c15a5-4ee3-4253-9ae4-d3f2ce63a8e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{9123bcb3-dcd5-4105-b3c1-53eaf4c080a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

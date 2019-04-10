@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Includes">
+      <UniqueIdentifier>{418a8360-488d-46f3-bcc6-b369c04110d4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\VisualDebugger\Procedural.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralBoxGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralCapsuleGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralConeGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralCylinderGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralIcoSphereGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralMeshGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralPlaneGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralPlatform.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralRoot.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralRoundedBoxGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralSphereGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralTorusGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralTorusKnotGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralTubeGenerator.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\VisualDebugger\ProceduralUtils.h">
+      <Filter>Includes</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ProceduralBoxGenerator.cpp" />
+    <ClCompile Include="ProceduralCapsuleGenerator.cpp" />
+    <ClCompile Include="ProceduralConeGenerator.cpp" />
+    <ClCompile Include="ProceduralCylinderGenerator.cpp" />
+    <ClCompile Include="ProceduralIcoSphereGenerator.cpp" />
+    <ClCompile Include="ProceduralMeshGenerator.cpp" />
+    <ClCompile Include="ProceduralPlaneGenerator.cpp" />
+    <ClCompile Include="ProceduralRoot.cpp" />
+    <ClCompile Include="ProceduralRoundedBoxGenerator.cpp" />
+    <ClCompile Include="ProceduralSphereGenerator.cpp" />
+    <ClCompile Include="ProceduralTorusGenerator.cpp" />
+    <ClCompile Include="ProceduralTorusKnotGenerator.cpp" />
+    <ClCompile Include="ProceduralTubeGenerator.cpp" />
+  </ItemGroup>
+</Project>

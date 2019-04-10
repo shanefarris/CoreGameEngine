@@ -1,0 +1,397 @@
+17:28:44: Creating resource group General
+17:28:44: Creating resource group Internal
+17:28:44: Creating resource group Autodetect
+17:28:44: SceneManagerFactory for type 'DefaultSceneManager' registered.
+17:28:44: Registering ResourceManager for type Material
+17:28:44: Registering ResourceManager for type Mesh
+17:28:44: Registering ResourceManager for type Skeleton
+17:28:44: MovableObjectFactory for type 'ParticleSystem' registered.
+17:28:44: ArchiveFactory for archive type FileSystem registered.
+17:28:44: ArchiveFactory for archive type Zip registered.
+17:28:44: ArchiveFactory for archive type EmbeddedZip registered.
+17:28:44: DDS codec registering
+17:28:44: FreeImage version: 3.15.4
+17:28:44: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+17:28:44: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,3fr,arw,bay,bmq,cap,cine,cr2,crw,cs1,dc2,dcr,drf,dsc,dng,erf,fff,ia,iiq,k25,kc2,kdc,mdc,mef,mos,mrw,nef,nrw,orf,pef,ptx,pxn,qtk,raf,raw,rdc,rw2,rwl,rwz,sr2,srf,srw,sti
+17:28:44: Registering ResourceManager for type HighLevelGpuProgram
+17:28:44: Registering ResourceManager for type Compositor
+17:28:44: MovableObjectFactory for type 'Entity' registered.
+17:28:44: MovableObjectFactory for type 'Light' registered.
+17:28:44: MovableObjectFactory for type 'BillboardSet' registered.
+17:28:44: MovableObjectFactory for type 'ManualObject' registered.
+17:28:44: MovableObjectFactory for type 'BillboardChain' registered.
+17:28:44: MovableObjectFactory for type 'RibbonTrail' registered.
+17:28:44: *-*-* OGRE Initialising
+17:28:44: *-*-* Version 2.0.0unstable (Tindalos)
+17:28:44: Added resource location '../../Media' of type 'FileSystem' to resource group 'General'
+17:28:44: Added resource location '../../Media/Island' of type 'FileSystem' to resource group 'General'
+17:28:44: Creating resource group Sound
+17:28:44: Added resource location '../../media/Sound.zip' of type 'Zip' to resource group 'Sound' with recursive option
+17:28:44: Added resource location '../../media/Common.zip' of type 'Zip' to resource group 'General' with recursive option
+17:28:44: Added resource location '../../media/Media.zip' of type 'Zip' to resource group 'General' with recursive option
+17:28:44: Creating resource group Sky
+17:28:44: Added resource location '../../media/Sky.zip' of type 'Zip' to resource group 'Sky' with recursive option
+17:28:44: Creating resource group Hydrax
+17:28:44: Added resource location '../../media/hydrax.zip' of type 'Zip' to resource group 'Hydrax' with recursive option
+17:28:44: Creating resource group TerrainTextures
+17:28:44: Added resource location '../../media/TerrainTextures.zip' of type 'Zip' to resource group 'TerrainTextures' with recursive option
+17:28:44: Loading library RenderSystem_Direct3D9_d
+17:28:45: Installing plugin: D3D9 RenderSystem
+17:28:45: D3D9 : Direct3D9 Rendering Subsystem created.
+17:28:45: D3D9: Driver Detection Starts
+17:28:45: D3D9: Driver Detection Ends
+17:28:45: Plugin successfully installed
+17:28:45: Loading library Plugin_ParticleFX_d
+17:28:45: Installing plugin: ParticleFX
+17:28:45: Particle Emitter Type 'Point' registered
+17:28:45: Particle Emitter Type 'Box' registered
+17:28:45: Particle Emitter Type 'Ellipsoid' registered
+17:28:45: Particle Emitter Type 'Cylinder' registered
+17:28:45: Particle Emitter Type 'Ring' registered
+17:28:45: Particle Emitter Type 'HollowEllipsoid' registered
+17:28:45: Particle Affector Type 'LinearForce' registered
+17:28:45: Particle Affector Type 'ColourFader' registered
+17:28:45: Particle Affector Type 'ColourFader2' registered
+17:28:45: Particle Affector Type 'ColourImage' registered
+17:28:45: Particle Affector Type 'ColourInterpolator' registered
+17:28:45: Particle Affector Type 'Scaler' registered
+17:28:45: Particle Affector Type 'Rotator' registered
+17:28:45: Particle Affector Type 'DirectionRandomiser' registered
+17:28:45: Particle Affector Type 'DeflectorPlane' registered
+17:28:45: Plugin successfully installed
+17:28:45: Loading library Plugin_CgProgramManager_d
+17:28:46: Installing plugin: Cg Program Manager
+17:28:46: Plugin successfully installed
+17:28:46: Loading library Plugin_OctreeSceneManager_d
+17:28:46: Installing plugin: Octree Scene Manager
+17:28:46: Plugin successfully installed
+17:28:46: D3D9 : RenderSystem Option: Full Screen = No
+17:28:46: D3D9 : RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
+17:28:46: CPU Identifier & Features
+17:28:46: -------------------------
+17:28:46:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i7-2675QM CPU @ 2.20GHz
+17:28:46:  *      SSE: yes
+17:28:46:  *     SSE2: yes
+17:28:46:  *     SSE3: yes
+17:28:46:  *      MMX: yes
+17:28:46:  *   MMXEXT: yes
+17:28:46:  *    3DNOW: no
+17:28:46:  * 3DNOWEXT: no
+17:28:46:  *     CMOV: yes
+17:28:46:  *      TSC: yes
+17:28:46:  *      FPU: yes
+17:28:46:  *      PRO: yes
+17:28:46:  *       HT: no
+17:28:46: -------------------------
+17:28:46: D3D9 : Subsystem Initialising
+17:28:46: Registering ResourceManager for type Texture
+17:28:46: Registering ResourceManager for type GpuProgram
+17:28:46: D3D9RenderSystem::_createRenderWindow "Core", 800x600 windowed  miscParams: FSAA=0 FSAAHint= colourDepth=32 gamma=false monitorIndex=0 useNVPerfHUD=false vsync=true vsyncInterval=1 
+17:28:46: D3D9 : Created D3D9 Rendering Window 'Core' : 800x600, 32bpp
+17:28:47: D3D9: Vertex texture format supported - PF_L8
+17:28:47: D3D9: Vertex texture format supported - PF_L16
+17:28:47: D3D9: Vertex texture format supported - PF_A8
+17:28:47: D3D9: Vertex texture format supported - PF_A4L4
+17:28:47: D3D9: Vertex texture format supported - PF_BYTE_LA
+17:28:47: D3D9: Vertex texture format supported - PF_R5G6B5
+17:28:47: D3D9: Vertex texture format supported - PF_B5G6R5
+17:28:47: D3D9: Vertex texture format supported - PF_A4R4G4B4
+17:28:47: D3D9: Vertex texture format supported - PF_A1R5G5B5
+17:28:47: D3D9: Vertex texture format supported - PF_A8R8G8B8
+17:28:47: D3D9: Vertex texture format supported - PF_B8G8R8A8
+17:28:47: D3D9: Vertex texture format supported - PF_A2R10G10B10
+17:28:47: D3D9: Vertex texture format supported - PF_A2B10G10R10
+17:28:47: D3D9: Vertex texture format supported - PF_DXT1
+17:28:47: D3D9: Vertex texture format supported - PF_DXT2
+17:28:47: D3D9: Vertex texture format supported - PF_DXT3
+17:28:47: D3D9: Vertex texture format supported - PF_DXT4
+17:28:47: D3D9: Vertex texture format supported - PF_DXT5
+17:28:47: D3D9: Vertex texture format supported - PF_FLOAT16_RGB
+17:28:47: D3D9: Vertex texture format supported - PF_FLOAT16_RGBA
+17:28:47: D3D9: Vertex texture format supported - PF_FLOAT32_RGB
+17:28:47: D3D9: Vertex texture format supported - PF_FLOAT32_RGBA
+17:28:47: D3D9: Vertex texture format supported - PF_X8R8G8B8
+17:28:47: D3D9: Vertex texture format supported - PF_X8B8G8R8
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8B8A8
+17:28:47: D3D9: Vertex texture format supported - PF_DEPTH
+17:28:47: D3D9: Vertex texture format supported - PF_SHORT_RGBA
+17:28:47: D3D9: Vertex texture format supported - PF_FLOAT16_R
+17:28:47: D3D9: Vertex texture format supported - PF_FLOAT32_R
+17:28:47: D3D9: Vertex texture format supported - PF_SHORT_GR
+17:28:47: D3D9: Vertex texture format supported - PF_FLOAT16_GR
+17:28:47: D3D9: Vertex texture format supported - PF_FLOAT32_GR
+17:28:47: D3D9: Vertex texture format supported - PF_SHORT_RGB
+17:28:47: D3D9: Vertex texture format supported - PF_PVRTC_RGB2
+17:28:47: D3D9: Vertex texture format supported - PF_PVRTC_RGBA2
+17:28:47: D3D9: Vertex texture format supported - PF_PVRTC_RGB4
+17:28:47: D3D9: Vertex texture format supported - PF_PVRTC_RGBA4
+17:28:47: D3D9: Vertex texture format supported - PF_PVRTC2_2BPP
+17:28:47: D3D9: Vertex texture format supported - PF_PVRTC2_4BPP
+17:28:47: D3D9: Vertex texture format supported - PF_R11G11B10_FLOAT
+17:28:47: D3D9: Vertex texture format supported - PF_R8_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8B8_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8B8A8_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R16_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16B16_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16B16A16_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R32_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R32G32_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R32G32B32_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R32G32B32A32_UINT
+17:28:47: D3D9: Vertex texture format supported - PF_R8_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8B8_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8B8A8_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R16_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16B16_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16B16A16_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R32_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R32G32_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R32G32B32_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R32G32B32A32_SINT
+17:28:47: D3D9: Vertex texture format supported - PF_R9G9B9E5_SHAREDEXP
+17:28:47: D3D9: Vertex texture format supported - PF_BC4_UNORM
+17:28:47: D3D9: Vertex texture format supported - PF_BC4_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_BC5_UNORM
+17:28:47: D3D9: Vertex texture format supported - PF_BC5_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_BC6H_UF16
+17:28:47: D3D9: Vertex texture format supported - PF_BC6H_SF16
+17:28:47: D3D9: Vertex texture format supported - PF_BC7_UNORM
+17:28:47: D3D9: Vertex texture format supported - PF_BC7_UNORM_SRGB
+17:28:47: D3D9: Vertex texture format supported - PF_R8
+17:28:47: D3D9: Vertex texture format supported - PF_RG8
+17:28:47: D3D9: Vertex texture format supported - PF_R8_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8B8_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_R8G8B8A8_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_R16_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16B16_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_R16G16B16A16_SNORM
+17:28:47: D3D9: Vertex texture format supported - PF_ETC1_RGB8
+17:28:47: RenderSystem capabilities
+17:28:47: -------------------------
+17:28:47: RenderSystem Name: Direct3D9 Rendering Subsystem
+17:28:47: GPU Vendor: intel
+17:28:47: Device Name: Monitor-1-Mobile Intel(R) HD Graphics
+17:28:47: Driver Version: 8.17.10.1083
+17:28:47:  * Fixed function pipeline: yes
+17:28:47:  * Hardware generation of mipmaps: yes
+17:28:47:  * Texture blending: yes
+17:28:47:  * Anisotropic texture filtering: yes
+17:28:47:  * Dot product texture operation: yes
+17:28:47:  * Cube mapping: yes
+17:28:47:  * Hardware stencil buffer: yes
+17:28:47:    - Stencil depth: 8
+17:28:47:    - Two sided stencil support: yes
+17:28:47:    - Wrap stencil values: yes
+17:28:47:  * Hardware vertex / index buffers: yes
+17:28:47:  * Vertex programs: yes
+17:28:47:  * Number of floating-point constants for vertex programs: 256
+17:28:47:  * Number of integer constants for vertex programs: 16
+17:28:47:  * Number of boolean constants for vertex programs: 16
+17:28:47:  * Fragment programs: yes
+17:28:47:  * Number of floating-point constants for fragment programs: 224
+17:28:47:  * Number of integer constants for fragment programs: 16
+17:28:47:  * Number of boolean constants for fragment programs: 16
+17:28:47:  * Geometry programs: no
+17:28:47:  * Number of floating-point constants for geometry programs: 11
+17:28:47:  * Number of integer constants for geometry programs: 52910
+17:28:47:  * Number of boolean constants for geometry programs: 17
+17:28:47:  * Tesselation Hull programs: no
+17:28:47:  * Number of floating-point constants for tesselation hull programs: 0
+17:28:47:  * Number of integer constants for tesselation hull programs: 0
+17:28:47:  * Number of boolean constants for tesselation hull programs: 0
+17:28:47:  * Tesselation Domain programs: no
+17:28:47:  * Number of floating-point constants for tesselation domain programs: 0
+17:28:47:  * Number of integer constants for tesselation domain programs: 0
+17:28:47:  * Number of boolean constants for tesselation domain programs: 0
+17:28:47:  * Compute programs: no
+17:28:47:  * Number of floating-point constants for compute programs: 15
+17:28:47:  * Number of integer constants for compute programs: 0
+17:28:47:  * Number of boolean constants for compute programs: 0
+17:28:47:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 ps_2_a ps_2_b ps_2_x ps_3_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
+17:28:47:  * Texture Compression: yes
+17:28:47:    - DXT: yes
+17:28:47:    - VTC: no
+17:28:47:    - PVRTC: no
+17:28:47:    - BC4/BC5: no
+17:28:47:    - BC6H/BC7: no
+17:28:47:  * Scissor Rectangle: yes
+17:28:47:  * Hardware Occlusion Query: yes
+17:28:47:  * User clip planes: yes
+17:28:47:  * VET_UBYTE4 vertex element type: yes
+17:28:47:  * Infinite far plane projection: yes
+17:28:47:  * Hardware render-to-texture: yes
+17:28:47:  * Floating point textures: yes
+17:28:47:  * Non-power-of-two textures: yes
+17:28:47:  * 1d textures: yes
+17:28:47:  * Volume textures: yes
+17:28:47:  * Multiple Render Targets: 4
+17:28:47:    - With different bit depths: yes
+17:28:47:  * Point Sprites: yes
+17:28:47:  * Extended point parameters: yes
+17:28:47:  * Max Point Size: 256
+17:28:47:  * Vertex texture fetch: yes
+17:28:47:  * Number of world matrices: 0
+17:28:47:  * Number of texture units: 8
+17:28:47:  * Stencil buffer depth: 8
+17:28:47:  * Number of vertex blend matrices: 0
+17:28:47:    - Max vertex textures: 4
+17:28:47:    - Vertex textures shared: no
+17:28:47:  * Render to Vertex Buffer : no
+17:28:47:  * Hardware Atomic Counters: no
+17:28:47:  * DirectX per stage constants: yes
+17:28:47: ***************************************
+17:28:47: *** D3D9 : Subsystem Initialised OK ***
+17:28:47: ***************************************
+17:28:47: DefaultWorkQueue('Root') initialising on thread 1cd4.
+17:28:47: DefaultWorkQueue('Root')::WorkerFunc - thread c44 starting.
+17:28:47: DefaultWorkQueue('Root')::WorkerFunc - thread 1ba8 starting.
+17:28:47: DefaultWorkQueue('Root')::WorkerFunc - thread b2c starting.
+17:28:47: DefaultWorkQueue('Root')::WorkerFunc - thread 898 starting.
+17:28:47: DefaultWorkQueue('Root')::WorkerFunc - thread 1268 starting.
+17:28:47: DefaultWorkQueue('Root')::WorkerFunc - thread 1700 starting.
+17:28:47: DefaultWorkQueue('Root')::WorkerFunc - thread dc starting.
+17:28:47: DefaultWorkQueue('Root')::WorkerFunc - thread 74c starting.
+17:28:47: Particle Renderer Type 'billboard' registered
+17:28:47: SceneManagerFactory for type 'OctreeSceneManager' registered.
+17:28:47: Parsing scripts for resource group Autodetect
+17:28:47: Finished parsing scripts for resource group Autodetect
+17:28:47: Creating resources for group Autodetect
+17:28:47: All done
+17:28:47: Parsing scripts for resource group General
+17:28:47: Parsing script Common.material
+17:28:48: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource ps_glow.cg in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+17:28:51: High-level program glow_ps_cg encountered an error during loading and is thus not supported.
+OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource ps_glow.cg in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+17:28:51: Parsing script Materials.material
+17:28:51: Parsing script crate.material
+17:28:51: Parsing script spawn_point.material
+17:28:51: Parsing script Box.material
+17:28:51: Parsing script crosshair.material
+17:28:51: Parsing script Demarkation.material
+17:28:51: Parsing script dungeon.material
+17:28:51: Parsing script GameChar_Male.material
+17:28:51: Parsing script Gate.material
+17:28:51: Parsing script highlander.house.01.material
+17:28:51: Parsing script Pot.material
+17:28:51: Parsing script recastdebug.material
+17:28:51: Parsing script tudorhouse.material
+17:28:51: Parsing script WoodPallet.material
+17:28:51: Finished parsing scripts for resource group General
+17:28:51: Creating resources for group General
+17:28:51: All done
+17:28:51: Parsing scripts for resource group Hydrax
+17:28:51: Finished parsing scripts for resource group Hydrax
+17:28:51: Creating resources for group Hydrax
+17:28:51: All done
+17:28:51: Parsing scripts for resource group Internal
+17:28:51: Finished parsing scripts for resource group Internal
+17:28:51: Creating resources for group Internal
+17:28:51: All done
+17:28:51: Parsing scripts for resource group Sky
+17:28:51: Parsing script GroundFog.program
+17:28:52: Parsing script Haze.program
+17:28:52: Parsing script MinimalCompositorVP.program
+17:28:52: Parsing script zzzSky.material
+17:28:52: Parsing script zzzSky.compositor
+17:28:53: Finished parsing scripts for resource group Sky
+17:28:53: Creating resources for group Sky
+17:28:53: All done
+17:28:53: Parsing scripts for resource group Sound
+17:28:53: Finished parsing scripts for resource group Sound
+17:28:53: Creating resources for group Sound
+17:28:53: All done
+17:28:53: Parsing scripts for resource group TerrainTextures
+17:28:53: Finished parsing scripts for resource group TerrainTextures
+17:28:53: Creating resources for group TerrainTextures
+17:28:53: All done
+17:28:54: OverlayElementFactory for type Panel registered.
+17:28:54: OverlayElementFactory for type BorderPanel registered.
+17:28:54: OverlayElementFactory for type TextArea registered.
+17:28:54: Registering ResourceManager for type Font
+17:28:54: *** Initializing OIS ***
+17:28:54: *** Loading core plugin ../../Bin/Debug/Plugins\PluginAiState_Misc1.dll ***
+17:28:54: *** Loading core plugin ../../Bin/Debug/Plugins\PluginBuildings_Core1.dll ***
+17:28:55: *** Loading core plugin ../../Bin/Debug/Plugins\PluginCamera_Core1.dll ***
+17:28:55: *** Loading core plugin ../../Bin/Debug/Plugins\PluginConsole.dll ***
+17:28:55: *** Loading core plugin ../../Bin/Debug/Plugins\PluginConsoleCheat.dll ***
+17:28:55: *** Loading core plugin ../../Bin/Debug/Plugins\PluginGameObject_All.dll ***
+17:28:55: *** Loading core plugin ../../Bin/Debug/Plugins\PluginGui3D.dll ***
+17:28:56: *** Loading core plugin ../../Bin/Debug/Plugins\PluginMission_Core1Pack1.dll ***
+17:28:56: *** Loading core plugin ../../Bin/Debug/Plugins\PluginMyGui.dll ***
+17:28:56: *** Loading core plugin ../../Bin/Debug/Plugins\PluginParticleEffect_Core1.dll ***
+17:28:56: *** Loading core plugin ../../Bin/Debug/Plugins\PluginPhysics_Ode.dll ***
+17:28:57: *** Loading core plugin ../../Bin/Debug/Plugins\PluginPlayers_Core1.dll ***
+17:28:57: *** Loading core plugin ../../Bin/Debug/Plugins\PluginPostEffects_Core1.dll ***
+17:28:57: *-*-* OgreAL Initialization
+17:28:57: MovableObjectFactory for type 'OgreAL_Sound' registered.
+17:28:57: MovableObjectFactory for type 'OgreAL_Listener' registered.
+17:28:57: *-*-* Creating OpenAL
+17:28:57: OpenAL Version: 1.1
+17:28:57: Available Devices
+17:28:57: -----------------
+17:28:58:  * Generic Software
+17:28:58: Choosing: Generic Software
+17:28:58: Supported Formats
+17:28:58: -----------------
+17:28:58:  * AL_FORMAT_MONO16, Monophonic CSound
+17:28:58:  * AL_FORMAT_STEREO16, Stereo CSound
+17:28:58:  * AL_FORMAT_QUAD16, 4 Channel CSound
+17:28:58:  * AL_FORMAT_51CHN16, 5.1 Surround CSound
+17:28:58:  * AL_FORMAT_61CHN16, 6.1 Surround CSound
+17:28:58:  * AL_FORMAT_71CHN16, 7.1 Surround CSound
+17:28:58: EAX 2.0 Detected
+17:28:58: EFX Extension Found
+17:28:59: *** Registering particles ***
+17:28:59: *** Registering post effects ***
+17:28:59: CompositorChain: Compositor BLOOM has no supported techniques.
+17:28:59: CompositorChain: Compositor MOTION_BLUR has no supported techniques.
+17:28:59: CompositorChain: Compositor SSAO has no supported techniques.
+17:28:59: MovableObjectFactory for type 'ODERagdoll' registered.
+17:29:00: Texture: dejavu.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) Internal format is PF_A8R8G8B8,512x512x1.
+17:29:00: loading GUI...
+17:29:00: Texture: MyGUI_BlackOrangeSkins.png: Loading 1 faces(PF_A8R8G8B8,512x256x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x256x1.
+17:29:01: Texture: MyGUI_Pointers.png: Loading 1 faces(PF_A8R8G8B8,256x128x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x128x1.
+17:29:01: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource MessageBoxResources.xml in resource group General or any other group. in ResourceGroupManager::openResource at ..\..\OgreMain\src\OgreResourceGroupManager.cpp (line 756)
+17:29:01: GUI loaded!
+17:29:03: Texture: btnPlay.png: Loading 1 faces(PF_A8R8G8B8,31x31x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,31x31x1.
+17:29:03: Texture: btnPause.png: Loading 1 faces(PF_A8R8G8B8,31x31x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,31x31x1.
+17:29:03: OGRE EXCEPTION(5:ItemIdentityException): Could not find material blue_bullet in BillboardSet::setMaterialName at ..\..\OgreMain\src\OgreBillboardSet.cpp (line 312)
+17:29:04: *** Initialising world ***
+17:29:04: Texture: grass.jpg: Loading 1 faces(PF_R8G8B8,512x512x1) Internal format is PF_X8R8G8B8,512x512x1.
+17:29:04: *** Initialising vegetation ***
+17:30:04: Mesh: Loading Soldier.mesh.
+17:30:04: Skeleton: Loading Soldier.skeleton
+17:30:04: WARNING: Soldier.mesh is an older format ([MeshSerializer_v1.40]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+17:30:04: Can't assign material Soldier01-Default_OgreMax to SubEntity of player_0_0 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:04: Can't assign material Soldierm4a1_OgreMax to SubEntity of player_0_0 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:05: Can't assign material Soldier01-Default_OgreMax to SubEntity of player_1_1 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:05: Can't assign material Soldierm4a1_OgreMax to SubEntity of player_1_1 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:05: Can't assign material Soldier01-Default_OgreMax to SubEntity of player_2_2 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:05: Can't assign material Soldierm4a1_OgreMax to SubEntity of player_2_2 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:05: Can't assign material Soldier01-Default_OgreMax to SubEntity of player_3_3 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:05: Can't assign material Soldierm4a1_OgreMax to SubEntity of player_3_3 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:36: Mesh: Loading m4a1_1.mesh.
+17:30:36: WARNING: m4a1_1.mesh is an older format ([MeshSerializer_v1.41]); you should upgrade it as soon as possible using the OgreMeshUpgrade tool.
+17:30:36: Can't assign material 03-Default to SubEntity of 0 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:36: Can't assign material 04-Default to SubEntity of 0 because this Material does not exist. Have you forgotten to define it in a .material script?
+17:30:42: *** Shutting down world ***
+17:30:42: *** Shutting down vegetation ***
+17:30:42: *** Shutting down vegetation ***
+17:30:42: *** Shutting down terrain ***
+17:30:42: *** Shutting down terrain ***
+17:30:50: DefaultWorkQueue('Root') shutting down on thread 1cd4.
+17:30:50: DefaultWorkQueue('Root')::WorkerFunc - thread 74c stopped.
+17:30:50: DefaultWorkQueue('Root')::WorkerFunc - thread b2c stopped.
+17:30:50: DefaultWorkQueue('Root')::WorkerFunc - thread 1700 stopped.
+17:30:50: DefaultWorkQueue('Root')::WorkerFunc - thread dc stopped.
+17:30:50: DefaultWorkQueue('Root')::WorkerFunc - thread 1268 stopped.
+17:30:50: DefaultWorkQueue('Root')::WorkerFunc - thread c44 stopped.
+17:30:50: DefaultWorkQueue('Root')::WorkerFunc - thread 898 stopped.
+17:30:50: DefaultWorkQueue('Root')::WorkerFunc - thread 1ba8 stopped.
+17:30:50: *-*-* OGRE Shutdown

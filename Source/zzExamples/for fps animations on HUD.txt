@@ -1,0 +1,23 @@
+		camRoll = mSmgr->createSceneNode();
+		camYaw = mSmgr->createSceneNode();
+		camPitch = mSmgr->createSceneNode();
+		camPos = mSmgr->createSceneNode();
+
+		mSmgr->getRootSceneNode()->addChild(camPos);
+		camPos->addChild(camYaw);
+		camYaw->addChild(camPitch);
+		camPitch->addChild(camRoll);
+		camRoll->attachObject(mCamera);
+		
+		.
+		.
+		.
+		
+		Ogre::SceneNode* nd = mSmgr->createSceneNode();
+		nd->attachObject(mSmgr->createEntity("Arms.mesh"));
+		nd->setPosition(0,0,-1.5);
+		//nd->pitch(Ogre::Degree(90));
+		//nd->yaw(Ogre::Degree(180));
+		camRoll->addChild(nd);
+		
+		

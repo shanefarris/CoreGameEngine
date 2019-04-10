@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{22A97F31-88E7-4B11-B6C1-2481BF659D52}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ConsoleApplication2</RootNamespace>
+    <AssemblyName>ConsoleApplication2</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Wrapper\AI_PATH.cs" />
+    <Compile Include="Wrapper\ANIMATION_MAPPING.cs" />
+    <Compile Include="Wrapper\ARCHIVE.cs" />
+    <Compile Include="Wrapper\ASTAR_GRID.cs" />
+    <Compile Include="Wrapper\ASTAR_NODE.cs" />
+    <Compile Include="Wrapper\BGSOUND.cs" />
+    <Compile Include="Wrapper\BILLBOARD.cs" />
+    <Compile Include="Wrapper\BUILDING.cs" />
+    <Compile Include="Wrapper\CAELUM.cs" />
+    <Compile Include="Wrapper\CAMERA.cs" />
+    <Compile Include="Wrapper\CBuilding.cs" />
+    <Compile Include="Wrapper\CCameraManager.cs" />
+    <Compile Include="Wrapper\CCharacterState.cs" />
+    <Compile Include="Wrapper\CCharacterStateManager.cs" />
+    <Compile Include="Wrapper\CDummyGameObject.cs" />
+    <Compile Include="Wrapper\CEffectsManager.cs" />
+    <Compile Include="Wrapper\CEntityEffect.cs" />
+    <Compile Include="Wrapper\CGame.cs" />
+    <Compile Include="Wrapper\CGameManager.cs" />
+    <Compile Include="Wrapper\CGameObject.cs" />
+    <Compile Include="Wrapper\CGameObjectManager.cs" />
+    <Compile Include="Wrapper\CGameState.cs" />
+    <Compile Include="Wrapper\CGuiManager.cs" />
+    <Compile Include="Wrapper\CInputManager.cs" />
+    <Compile Include="Wrapper\CInventoryItem.cs" />
+    <Compile Include="Wrapper\CItemProfile.cs" />
+    <Compile Include="Wrapper\CItemsManager.cs" />
+    <Compile Include="Wrapper\CLuaConsole.cs" />
+    <Compile Include="Wrapper\CMagazine.cs" />
+    <Compile Include="Wrapper\CMagazineProfile.cs" />
+    <Compile Include="Wrapper\CMenuState.cs" />
+    <Compile Include="Wrapper\CMissionEvent.cs" />
+    <Compile Include="Wrapper\CMissionManager.cs" />
+    <Compile Include="Wrapper\CNatureManager.cs" />
+    <Compile Include="Wrapper\CoreEntityObject.cs" />
+    <Compile Include="Wrapper\CParticleEffect.cs" />
+    <Compile Include="Wrapper\CPhysicsManager.cs" />
+    <Compile Include="Wrapper\CPhysicsProfile.cs" />
+    <Compile Include="Wrapper\CPlayer.cs" />
+    <Compile Include="Wrapper\CPlayerPimpl.cs" />
+    <Compile Include="Wrapper\CPlayerSoundComponent.cs" />
+    <Compile Include="Wrapper\CPluginManager.cs" />
+    <Compile Include="Wrapper\CPostEffect.cs" />
+    <Compile Include="Wrapper\CPrecisionTimer.cs" />
+    <Compile Include="Wrapper\CProjectile.cs" />
+    <Compile Include="Wrapper\CProjectileProfile.cs" />
+    <Compile Include="Wrapper\CScrollingMessage.cs" />
+    <Compile Include="Wrapper\CSpawnManager.cs" />
+    <Compile Include="Wrapper\CTrainingManager.cs" />
+    <Compile Include="Wrapper\CVolumeObject.cs" />
+    <Compile Include="Wrapper\CWeapon.cs" />
+    <Compile Include="Wrapper\CWeaponProfile.cs" />
+    <Compile Include="Wrapper\CWorldProfile.cs" />
+    <Compile Include="Wrapper\DATA_CONTAINER.cs" />
+    <Compile Include="Wrapper\ENVIRONMENT_ATTRIBUTE_TYPE.cs" />
+    <Compile Include="Wrapper\ET_CAPABILITIES.cs" />
+    <Compile Include="Wrapper\E_ANIM_STATE.cs" />
+    <Compile Include="Wrapper\E_BODY_TYPE.cs" />
+    <Compile Include="Wrapper\E_BUILDING_CATEGORY.cs" />
+    <Compile Include="Wrapper\E_BUILDING_STATE.cs" />
+    <Compile Include="Wrapper\E_CAMERA_MODE.cs" />
+    <Compile Include="Wrapper\E_CHARACTER_STATE_OUTCOME.cs" />
+    <Compile Include="Wrapper\E_DRIVER_TYPE.cs" />
+    <Compile Include="Wrapper\E_GUI_STRATEGY.cs" />
+    <Compile Include="Wrapper\E_ITEM_USE_RESULT.cs" />
+    <Compile Include="Wrapper\E_LOS_TYPE.cs" />
+    <Compile Include="Wrapper\E_PHYSICS_SHAPE.cs" />
+    <Compile Include="Wrapper\E_PLAYER_STATE.cs" />
+    <Compile Include="Wrapper\E_PLAYER_TEAM.cs" />
+    <Compile Include="Wrapper\E_VOLUME_TYPE.cs" />
+    <Compile Include="Wrapper\GAMEOBJECT.cs" />
+    <Compile Include="Wrapper\GEO_SET.cs" />
+    <Compile Include="Wrapper\GEO_SET_SUBSET.cs" />
+    <Compile Include="Wrapper\HEIGHT_TERRAIN.cs" />
+    <Compile Include="Wrapper\HYDRAX.cs" />
+    <Compile Include="Wrapper\IAgentSteer.cs" />
+    <Compile Include="Wrapper\INVENTORY_TYPE.cs" />
+    <Compile Include="Wrapper\LIGHT.cs" />
+    <Compile Include="Wrapper\LIGHT_TYPE.cs" />
+    <Compile Include="Wrapper\MAGAZINE.cs" />
+    <Compile Include="Wrapper\MELEE.cs" />
+    <Compile Include="Wrapper\MISSION_TYPE.cs" />
+    <Compile Include="Wrapper\MovableTextOverlay.cs" />
+    <Compile Include="Wrapper\MovableTextOverlayAttributes.cs" />
+    <Compile Include="Wrapper\PAGED_TERRAIN.cs" />
+    <Compile Include="Wrapper\PHYSICS_PROFILE.cs" />
+    <Compile Include="Wrapper\PLACED_ITEM.cs" />
+    <Compile Include="Wrapper\PLANE_TERRAIN.cs" />
+    <Compile Include="Wrapper\PLAYER.cs" />
+    <Compile Include="Wrapper\PLAYER_INVENTORY.cs" />
+    <Compile Include="Wrapper\PROJECTILES.cs" />
+    <Compile Include="Wrapper\PROJECTILE_TYPE.cs" />
+    <Compile Include="Wrapper\SceneImporterPackage.cs" />
+    <Compile Include="Wrapper\SCENEMANAGER.cs" />
+    <Compile Include="Wrapper\SCENE_QUERY_FLAGS.cs" />
+    <Compile Include="Wrapper\SOUND.cs" />
+    <Compile Include="Wrapper\SoundToAnimation.cs" />
+    <Compile Include="Wrapper\SPAWN_POINT.cs" />
+    <Compile Include="Wrapper\SPhysicsRayCastReport.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_AnimationState.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_AxisAlignedBox.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Camera.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_ColourValue.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__AI__CFpsVehicle.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__AI__IAiReactionComponent.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__CEnvironmentObserver.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__CPlayerAttributesComponent.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__GUI__IGuiStrategy.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__ILineOfSightStrategy.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__Nature__CWaterSystem.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__Nature__CWorld.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__Physics__ICharacterController.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__Physics__IPhysicsRagdoll.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Core__Physics__IPhysicsStrategy.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_EngineDevice.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Entity.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_f32.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Font.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_FrameEvent.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_ManualObject.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_MapT_Core__E_ANIM_STATE_Core__SoundToAnimation_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_MapT_String_Core__Physics__CPhysicsProfile_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_MapT_String_VectorT_Vector3_t_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_MapT_u32_Core__SPAWN_POINT_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_MovableObject.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_MovablePlane.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Ogre__Entity.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Ogre__FogMode.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Ogre__FrameEvent.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__JoyStick.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__JoyStickListener.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__Keyboard.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__KeyEvent.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__KeyListener.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__Mouse.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__MouseButtonID.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__MouseEvent.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_OIS__MouseListener.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_p_char.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_p_f_p_q_const__Core__Physics__CPhysicsProfile__void.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Quaternion.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Radian.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Ray.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_RaySceneQuery.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_RenderWindow.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_s32.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_SceneManager.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_SceneNode.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Sound__CSoundManager.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_std__vectorT_Core__CPlayer_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_String.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_TerrainGroup.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Timer.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_u16.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_u32.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Vector2.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Vector3.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Vector4.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_char_const_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__AI_PATH_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__AI__Obstacle_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__AI__Wall_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__ANIMATION_MAPPING_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__ANIMATION_MAPPING__SOUND_ANIMATION_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__ARCHIVE_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__ASTAR_NODE_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__BGSOUND_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__BILLBOARD_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__BUILDING_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__CAMERA_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__CBuilding_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__CGameObject_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__CInventoryItem_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__CItemProfile_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__CPlayer_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__CProjectile_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__GAMEOBJECT_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__GEO_SET_SUBSET_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__GEO_SET_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__ICamera_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__LIGHT_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__MAGAZINE_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__MELEE_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Mission__IMission_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__PHYSICS_PROFILE_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__PLACED_ITEM_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__PLAYER_INVENTORY_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__PLAYER_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IAiStateFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IBuildingFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__ICameraFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IConsoleParser_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IGameObjectFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IMissionFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IParticleFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IPhysicsStrategyFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IPlayerFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__Plugin__IPostEffectFactory_p_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__PROJECTILES_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__SOUND_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__SPAWN_POINT_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__TERRAIN_LAYER_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__WATER_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Core__WEAPON_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_s32_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_String_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_u32_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_VectorT_Vector3_t.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_Viewport.cs" />
+    <Compile Include="Wrapper\SWIGTYPE_p_void.cs" />
+    <Compile Include="Wrapper\TERRAIN_LAYER.cs" />
+    <Compile Include="Wrapper\TERRAIN_TYPE.cs" />
+    <Compile Include="Wrapper\test.cs" />
+    <Compile Include="Wrapper\testPINVOKE.cs" />
+    <Compile Include="Wrapper\VIEWPORT.cs" />
+    <Compile Include="Wrapper\VolumePackage.cs" />
+    <Compile Include="Wrapper\WATER.cs" />
+    <Compile Include="Wrapper\WEAPON.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

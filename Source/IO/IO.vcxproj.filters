@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{20ba54be-4829-4eb3-a5e7-2c8bc7adec9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Ogre">
+      <UniqueIdentifier>{e36bd13e-7f10-4611-b08a-8ec82af87a5e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\IO\CAsynReadFile.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CConfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CFileList.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CFileSystem.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CLimitReadFile.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CMemoryReadFile.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CPakReader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CReadFile.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CWriteFile.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CXMLReader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CXMLReaderImpl.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CXMLWriter.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CZipReader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\IFileList.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\ILogger.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\IWriteFile.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\IXMLReader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\IXMLWriter.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CDebugManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\IFileSystem.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\IReadFile.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="fast_atof.h" />
+    <ClInclude Include="COgreTextResource.h">
+      <Filter>Ogre</Filter>
+    </ClInclude>
+    <ClInclude Include="COgreTextManager.h">
+      <Filter>Ogre</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\IO\CoreLogging.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CAsynReadFile.cpp" />
+    <ClCompile Include="CConfig.cpp" />
+    <ClCompile Include="CDebugManager.cpp" />
+    <ClCompile Include="CFileList.cpp" />
+    <ClCompile Include="CFileSystem.cpp" />
+    <ClCompile Include="CLimitReadFile.cpp" />
+    <ClCompile Include="CMemoryReadFile.cpp" />
+    <ClCompile Include="CPakReader.cpp" />
+    <ClCompile Include="CReadFile.cpp" />
+    <ClCompile Include="CWriteFile.cpp" />
+    <ClCompile Include="CXMLReader.cpp" />
+    <ClCompile Include="CXMLWriter.cpp" />
+    <ClCompile Include="CZipReader.cpp" />
+    <ClCompile Include="EngineXML.cpp" />
+    <ClCompile Include="COgreTextResource.cpp">
+      <Filter>Ogre</Filter>
+    </ClCompile>
+    <ClCompile Include="COgreTextManager.cpp">
+      <Filter>Ogre</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,49 @@
+<SceneManager ambient="0.361333 0.361333 0.361333 3" fogcolor="0.5 0.5 0.5 1" fogdensity="0" fogend="1000" fogstart="0" 
+name="MySceneManager" skyboxactive="false" skyboxdistance="5000" skyboxmaterial="" scenemanagertype="OctreeSceneManager" 
+fogmode="None"></SceneManager>
+<Viewport color="0 0 0 1" compositor0enabled="true" compositor0name="" name="Viewport1" parent=""></Viewport>
+<Camera name="Camera1" clipdistance="0.1 59994" default="true" fov="0.785398" lookat="0 0 -1" orientation="0 0 1 0" parent="" position="0 200 0"></Camera>
+<Archive name="Island" filename="..\..\Media\Island.zip" />
+<Archive name="General" filename="..\..\Media\Sandbox.zip" />
+
+<PagedTerrain name="Terrain" colormaptexturesize="128" detaildistance="240" iscolormap="false" lightmaptexturesize="1024" 
+mapsize="129" maxbatchsize="65" maxpixelerror="3" minbatchsize="33" pagedesitymapsize="1024" pagesize="40" 
+maxx="0" minx="-1" maxy="0" miny="-1" terrainfile="Page" worldsize="4000"></PagedTerrain>
+
+<!--<PlaneTerrain></PlaneTerrain>-->
+
+<Caelum name="CaelumSky" timeday="1" timehour="12" timeminute="0" timemonth="1" timesec="0" timespeed="0" 
+timeyear="2000" isclouds="true" layerofclouds="3452816845" fogdenmultiplier="0" ismanagefog="false" layer="0" 
+issinglelightsource="false" issingleshadowsource="false" ismanageambientlight="true" 
+minambientlight="0.1 0.1 0.3 1" moonambientmultipler="0.2 0.2 0.2 1" moonattmultipler="1" moonattdistance="100000" 
+moonattlinearmultipler="0" moonquadmultipler="0" ismoonautodisable="true" ismooncastshadow="true" 
+moondiffusemultipler="1 1 0.9 1" ismoonenabled="true" moonspecularmultipler="1 1 1 1" observerlatitude="45" 
+observerlongitude="0" isstarsenabled="true" starsmag0pixelsize="16" starsmagscale="2.51189" starsmaxpixelsize="6" 
+starsminpixelsize="4" sunambientmultipler="0.5 0.5 0.5 1" sunattmultipler="1" sundistance="100000" 
+sunattlinearmultipler="0" sunquadmultipler="0" issunautodisable="true" issuncastshadow="true" suncolor="0 0 0" 
+sundiffusemultipler="0 0 0 1" issunenabled="true" sunlightcolor="0 0 0" sunposition="-61.985 1746.96 -4331.57" 
+sunspecularmultipler="0 0 0 1"></Caelum>
+
+<Hydrax name="HydraxWater" causticsend="0.95" causticspower="9" causticsscale="16" configfile="Hydrax.hdx" 
+depthlimit="0" foammaxdistance="7.5e+007" foamscale="0.0075" foamstart="0" foamtransparency="1" 
+fullreflectiondistance="1e+011" globaltransparency="0" godraysexposure="0.76 2.46 2.29" godraysintensity="0.015" 
+godraysintersections="false" godraysnumrays="100" godrayssize="0.03" godraysspeed="5" iscaelumitegrated="false" 
+iscomponentscaustics="true" iscomponentsdepth="true" iscomponentsfoam="true" iscomponentsgodrays="true" 
+iscomponentsreflections="true" iscomponentssmooth="true" iscomponentssun="true" iscomponentsunderwater="true" 
+ispgmodulechoppywaves="true" ispgmoduleforcerecalculategeometry="false" ispgmodulesmooth="false" layers="0" 
+modulename="ProjectedGridVertex" noisemodulename="Perlin" normaldistortion="0.075" perlinanimspeed="1.2" 
+perlinfalloff="0.49" perlingpulod="0.5 50 150000" perlingpustrength="2" perlinoctaves="8" perlinscale="0.185" 
+perlintimemulti="1.27" pgmodulechoppystrength="1" pgmodulecomplexity="100" pgmoduleelevation="5" 
+pgmodulestrength="3" planeserror="0" position="-500 5 -500" rttqualitydepth="0" rttqualitydepthaip="0" 
+rttqualitydepthreflection="0" rttqualitygpunormalmap="0" rttqualityreflection="0" rttqualityrefraction="0" 
+shadermode="3452816845" smoothpower="9.98" sunarea="746.089" suncolour="0 0 0" sunposition="2997.92 7460.89 -16863.8" 
+sunstrength="1.75" techniqueadd="" techniqueremove="" updatescript="" watercolour="0 0 0"></Hydrax>
+
+<Weapon name="weapon2" disp_name="M4 Test2" semi="true" burst="false" auto="true" mag="9x19mm_15" rof="80" mesh="m4a1_1.mesh" overlay="Soldier/Target" accuracy="80" power="25" scale="1.0 1.0 1.0" range="100" />
+<Magazine name="9x19mm_15" disp_name="9x19mm 15 round magazine" projectiles="9x19mm_JHP" capacity="15" mesh=""></Magazine>
+<Projectile name="9x19mm_JHP" disp_name="9x19mm Jacketed Hollow Point" damage="100" penetrating="false" muzzle_velocity="350" mesh="" pitch="90" roll="0" bbbullet="Bullet" bbflash="BulletSource"></Projectile>
+
+
+<GameObject name="crate1" physicsprofilename="crate1" meshfile="crate.mesh" parent="" orientation="1 0 0 0" position="100 500 0" scale="1 1 1" shadows="false"></GameObject>
+
+<PhysicsProfile name="crate1" shape="cube" restitution="0" friction="0" mass="1" density="0.1"></PhysicsProfile>

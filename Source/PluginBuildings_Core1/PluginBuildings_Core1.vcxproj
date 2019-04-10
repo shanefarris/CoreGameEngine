@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8BA2D20-ED5B-4CAC-9C69-222A0C70B256}</ProjectGuid>
+    <RootNamespace>PluginBuildings_Core1</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\Bin\$(Configuration)\Plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\Bin\$(Configuration)\Plugins\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\Bin\$(Configuration)\Plugins\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\Bin\$(Configuration)\Plugins\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\Include\;..\..\Include\Core;$(CORE_INCLUDE);$(OGRE_INCLUDE);$(CORE_INCLUDE)\PhysX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;CORE_DLL;COMPILE_PHYSX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <BrowseInformation>true</BrowseInformation>
+      <DisableSpecificWarnings>4503</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain_d.lib;FPSFramework.lib;AiEngine.lib;OIS_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)..;$(CORE_32_DEB);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSBR>true</PreserveSBR>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\Include\;..\..\Include\Core;$(CORE_INCLUDE);$(OGRE_INCLUDE);$(CORE_INCLUDE)\PhysX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;CORE_DLL;COMPILE_PHYSX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain_d.lib;FPSFramework.lib;AiEngine.lib;OIS_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)..;$(CORE_64_DEB);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\Include\;..\..\Include\Core;$(CORE_INCLUDE);$(OGRE_INCLUDE);$(CORE_INCLUDE)\PhysX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;CORE_DLL;COMPILE_PHYSX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4503</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain.lib;FPSFramework.lib;AiEngine.lib;OIS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)..;$(CORE_32_REL);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\Include\;..\..\Include\Core;$(CORE_INCLUDE);$(OGRE_INCLUDE);$(CORE_INCLUDE)\PhysX;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;CORE_DLL;COMPILE_PHYSX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain.lib;FPSFramework.lib;AiEngine.lib;OIS.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir)..;$(CORE_64_REL);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FpsFramework\FpsFramework.vcxproj">
+      <Project>{d3009a7d-caac-418a-a8c7-751596be1beb}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CBuildingBigOilTanker.cpp" />
+    <ClCompile Include="CBuildingBigOilTanker_lod3.cpp" />
+    <ClCompile Include="CBuildingBrokenHouse.cpp" />
+    <ClCompile Include="CBuildingBrokenHouse_lod3.cpp" />
+    <ClCompile Include="CBuildingElectricTower.cpp" />
+    <ClCompile Include="CBuildingElectricTower_lod2.cpp" />
+    <ClCompile Include="CBuildingHall1.cpp" />
+    <ClCompile Include="CBuildingHall1_lod2.cpp" />
+    <ClCompile Include="CBuildingHall3.cpp" />
+    <ClCompile Include="CBuildingHall3_lod2.cpp" />
+    <ClCompile Include="CBuildingHall4.cpp" />
+    <ClCompile Include="CBuildingHall4_lod2.cpp" />
+    <ClCompile Include="CBuildingHallWithInterior.cpp" />
+    <ClCompile Include="CBuildingHallWithInterior_lod2.cpp" />
+    <ClCompile Include="CBuildingHQMilitiaTentShape.cpp" />
+    <ClCompile Include="CBuildingOilPump.cpp" />
+    <ClCompile Include="CBuildingOilTank.cpp" />
+    <ClCompile Include="CBuildingOilTank2.cpp" />
+    <ClCompile Include="CBuildingOilTank2_lod2.cpp" />
+    <ClCompile Include="CBuildingOilTank6.cpp" />
+    <ClCompile Include="CBuildingOilTank6_lod2.cpp" />
+    <ClCompile Include="CBuildingOldHouse1.cpp" />
+    <ClCompile Include="CBuildingOldHouse10.cpp" />
+    <ClCompile Include="CBuildingOldHouse10_lod.cpp" />
+    <ClCompile Include="CBuildingOldHouse11.cpp" />
+    <ClCompile Include="CBuildingOldHouse11_lod2.cpp" />
+    <ClCompile Include="CBuildingOldHouse1_lod2.cpp" />
+    <ClCompile Include="CBuildingOldHouse2.cpp" />
+    <ClCompile Include="CBuildingOldHouse2_lod2.cpp" />
+    <ClCompile Include="CBuildingOldHouse3.cpp" />
+    <ClCompile Include="CBuildingOldHouse4.cpp" />
+    <ClCompile Include="CBuildingOldHouse4Socket.cpp" />
+    <ClCompile Include="CBuildingOldHouse4_lod2.cpp" />
+    <ClCompile Include="CBuildingOldHouse5.cpp" />
+    <ClCompile Include="CBuildingOldHouse5_lod2.cpp" />
+    <ClCompile Include="CBuildingOldHouse6.cpp" />
+    <ClCompile Include="CBuildingOldHouse6_lod2.cpp" />
+    <ClCompile Include="CBuildingOldHouse7.cpp" />
+    <ClCompile Include="CBuildingOldHouse7_lod2.cpp" />
+    <ClCompile Include="CBuildingOldHouse8.cpp" />
+    <ClCompile Include="CBuildingOldHouse8_lod.cpp" />
+    <ClCompile Include="CBuildingOldHouse9.cpp" />
+    <ClCompile Include="CBuildingOldHouse9_lod2.cpp" />
+    <ClCompile Include="CBuildingOldShed.cpp" />
+    <ClCompile Include="CBuildingOpenedHall.cpp" />
+    <ClCompile Include="CBuildingOpenedHall_lod1.cpp" />
+    <ClCompile Include="CBuildingRuinedHall.cpp" />
+    <ClCompile Include="CBuildingSilo1.cpp" />
+    <ClCompile Include="CBuildingSilo1_lod2.cpp" />
+    <ClCompile Include="CBuildingTank1.cpp" />
+    <ClCompile Include="CBuildingTank1_lod2.cpp" />
+    <ClCompile Include="CBuildingTower.cpp" />
+    <ClCompile Include="CBuildingTowerRedWhite.cpp" />
+    <ClCompile Include="CBuildingTowerRedWhite_lod1.cpp" />
+    <ClCompile Include="CBuildingTower_lod.cpp" />
+    <ClCompile Include="CBuildingVillageRoadTCross.cpp" />
+    <ClCompile Include="CBuildingVillage_church.cpp" />
+    <ClCompile Include="CBuildingVillage_house1.cpp" />
+    <ClCompile Include="CBuildingVillage_house2.cpp" />
+    <ClCompile Include="CBuildingVillage_house3.cpp" />
+    <ClCompile Include="CBuildingVillage_house4.cpp" />
+    <ClCompile Include="CBuildingVillage_house5.cpp" />
+    <ClCompile Include="CBuildingVillage_house6.cpp" />
+    <ClCompile Include="CBuildingVillage_house7.cpp" />
+    <ClCompile Include="Exports.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CBuildingBigOilTanker.h" />
+    <ClInclude Include="CBuildingBigOilTanker_lod3.h" />
+    <ClInclude Include="CBuildingBrokenHouse.h" />
+    <ClInclude Include="CBuildingBrokenHouse_lod3.h" />
+    <ClInclude Include="CBuildingElectricTower.h" />
+    <ClInclude Include="CBuildingElectricTower_lod2.h" />
+    <ClInclude Include="CBuildingHall1.h" />
+    <ClInclude Include="CBuildingHall1_lod2.h" />
+    <ClInclude Include="CBuildingHall3.h" />
+    <ClInclude Include="CBuildingHall3_lod2.h" />
+    <ClInclude Include="CBuildingHall4.h" />
+    <ClInclude Include="CBuildingHall4_lod2.h" />
+    <ClInclude Include="CBuildingHallWithInterior.h" />
+    <ClInclude Include="CBuildingHallWithInterior_lod2.h" />
+    <ClInclude Include="CBuildingHQMilitiaTentShape.h" />
+    <ClInclude Include="CBuildingOilPump.h" />
+    <ClInclude Include="CBuildingOilTank.h" />
+    <ClInclude Include="CBuildingOilTank2.h" />
+    <ClInclude Include="CBuildingOilTank2_lod2.h" />
+    <ClInclude Include="CBuildingOilTank6.h" />
+    <ClInclude Include="CBuildingOilTank6_lod2.h" />
+    <ClInclude Include="CBuildingOldHouse1.h" />
+    <ClInclude Include="CBuildingOldHouse10.h" />
+    <ClInclude Include="CBuildingOldHouse10_lod.h" />
+    <ClInclude Include="CBuildingOldHouse11.h" />
+    <ClInclude Include="CBuildingOldHouse11_lod2.h" />
+    <ClInclude Include="CBuildingOldHouse1_lod2.h" />
+    <ClInclude Include="CBuildingOldHouse2.h" />
+    <ClInclude Include="CBuildingOldHouse2_lod2.h" />
+    <ClInclude Include="CBuildingOldHouse3.h" />
+    <ClInclude Include="CBuildingOldHouse4.h" />
+    <ClInclude Include="CBuildingOldHouse4Socket.h" />
+    <ClInclude Include="CBuildingOldHouse4_lod2.h" />
+    <ClInclude Include="CBuildingOldHouse5.h" />
+    <ClInclude Include="CBuildingOldHouse5_lod2.h" />
+    <ClInclude Include="CBuildingOldHouse6.h" />
+    <ClInclude Include="CBuildingOldHouse6_lod2.h" />
+    <ClInclude Include="CBuildingOldHouse7.h" />
+    <ClInclude Include="CBuildingOldHouse7_lod2.h" />
+    <ClInclude Include="CBuildingOldHouse8.h" />
+    <ClInclude Include="CBuildingOldHouse8_lod.h" />
+    <ClInclude Include="CBuildingOldHouse9.h" />
+    <ClInclude Include="CBuildingOldHouse9_lod2.h" />
+    <ClInclude Include="CBuildingOldShed.h" />
+    <ClInclude Include="CBuildingOpenedHall.h" />
+    <ClInclude Include="CBuildingOpenedHall_lod1.h" />
+    <ClInclude Include="CBuildingRuinedHall.h" />
+    <ClInclude Include="CBuildingSilo1.h" />
+    <ClInclude Include="CBuildingSilo1_lod2.h" />
+    <ClInclude Include="CBuildingTank1.h" />
+    <ClInclude Include="CBuildingTank1_lod2.h" />
+    <ClInclude Include="CBuildingTower.h" />
+    <ClInclude Include="CBuildingTowerRedWhite.h" />
+    <ClInclude Include="CBuildingTowerRedWhite_lod1.h" />
+    <ClInclude Include="CBuildingTower_lod.h" />
+    <ClInclude Include="CBuildingVillageRoadTCross.h" />
+    <ClInclude Include="CBuildingVillage_church.h" />
+    <ClInclude Include="CBuildingVillage_house1.h" />
+    <ClInclude Include="CBuildingVillage_house2.h" />
+    <ClInclude Include="CBuildingVillage_house3.h" />
+    <ClInclude Include="CBuildingVillage_house4.h" />
+    <ClInclude Include="CBuildingVillage_house5.h" />
+    <ClInclude Include="CBuildingVillage_house6.h" />
+    <ClInclude Include="CBuildingVillage_house7.h" />
+    <ClInclude Include="Exports.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

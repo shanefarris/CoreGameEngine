@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MyGUI type="Layout">
+    <Widget type="Widget" skin="Panel" position="160 544 472 200" layer="Overlapped" name="_Main">
+        <Widget type="Tab" skin="Tab" position="0 0 472 200">
+            <Widget type="Sheet" skin="Default" position="8 29 456 164">
+                <Property key="Widget_Caption" value="Player"/>
+                <Widget type="ComboBox" skin="ComboBox" position="8 27 144 24" name="cmbPlayers">
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="8 56 104 27" name="btnAddPlayer">
+                    <Property key="Widget_Caption" value="Load"/>
+                    <Property key="Widget_Show" value="true"/>
+                    <Property key="Widget_Enabled" value="true"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 8 168 32">
+                    <Property key="Widget_Caption" value="Render Players"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="160 59 96 24" name="btnAddPathPoint">
+                    <Property key="Widget_Caption" value="Add Path"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="160 27 112 24" name="cmbPaths">
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="160 3 64 16">
+                    <Property key="Widget_Caption" value="Paths"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="280 27 96 24" name="btnAddVolume">
+                    <Property key="Widget_Caption" value="Add Volume"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="160 91 96 24" name="btnAddAStarNodes">
+                    <Property key="Widget_Caption" value="Add A *"/>
+                </Widget>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 456 164">
+                <Property key="Widget_Caption" value="Objects"/>
+                <Widget type="Button" skin="ButtonSmall" position="8 75 88 24" name="btnPlaceObsBox">
+                    <Property key="Widget_Caption" value="Box Obs."/>
+                    <Property key="Widget_Enabled" value="true"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="104 11 88 24" name="btnAddWall">
+                    <Property key="Widget_Caption" value="Add Wall"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="8 107 88 24" name="btnPlaceObsSphere">
+                    <Property key="Widget_Caption" value="Sphere Obs."/>
+                    <Property key="Widget_FontHeight" value="16"/>
+                    <Property key="Widget_Enabled" value="true"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="200 3 128 24">
+                    <Property key="Widget_Caption" value="Items Inventory"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="200 27 152 24" name="cmbItemsInventory">
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="360 27 88 24" name="btnPlaceItem">
+                    <Property key="Widget_Caption" value="Place Item"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="104 43 88 24" name="btnAddMesh">
+                    <Property key="Widget_Caption" value="Add Mesh"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="8 11 88 24" name="btnPhysicsProfile">
+                    <Property key="Widget_Caption" value="Physics"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="8 43 88 24" name="btnSpawnPoints">
+                    <Property key="Widget_Caption" value="Spawn Points"/>
+                    <Property key="Widget_FontHeight" value="16"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="104 75 88 24" name="btnAddBuilding">
+                    <Property key="Widget_Caption" value="Add Building"/>
+                    <Property key="Widget_FontHeight" value="17"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="104 107 88 24" name="btnHierarchy">
+                    <Property key="Widget_Caption" value="Hierarchy"/>
+                </Widget>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 456 164">
+                <Property key="Widget_Caption" value="Editor"/>
+                <Widget type="Button" skin="ButtonSmall" position="168 35 72 24" name="btnSave">
+                    <Property key="Widget_Caption" value="Save"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 59 80 24">
+                    <Property key="Widget_Caption" value="File Type"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="88 67 152 24" name="cmbFileType">
+                    <Property key="ComboBox_AddItem" value="XML"/>
+                    <Property key="ComboBox_AddItem" value="DB"/>
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                    <Property key="Widget_Enabled" value="false"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 3 128 16">
+                    <Property key="Widget_Caption" value="Scene File"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="88 35 72 24" name="btnLoadSceneFile">
+                    <Property key="Widget_Caption" value="Load"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="88 3 152 24" name="txtSceneFile"/>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 456 164">
+                <Property key="Widget_Caption" value="Debug"/>
+                <Widget type="Button" skin="ButtonSmall" position="8 35 96 24" name="btnPlacePlane">
+                    <Property key="Widget_Caption" value="Add Plane"/>
+                </Widget>
+                <Widget type="Button" skin="CheckBox" position="8 3 152 24" name="chkShowPhyDebug">
+                    <Property key="Widget_Caption" value="Show Phy Debug"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="160 3 144 24">
+                    <Property key="Widget_Caption" value="F8 for Ray Test"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="160 27 144 24">
+                    <Property key="Widget_Caption" value="First Object Hit"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="288 27 152 24" name="txtFirstRayTest"/>
+                <Widget type="List" skin="List" position="288 59 152 104" name="lstRayTestAll"/>
+                <Widget type="StaticText" skin="StaticText" position="160 59 96 24">
+                    <Property key="Widget_Caption" value="All Objects"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="8 67 96 24" name="btnPhysSandbox">
+                    <Property key="Widget_Caption" value="Phys Sandbox"/>
+                </Widget>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 456 164">
+                <Property key="Widget_Caption" value="Sound"/>
+                <Widget type="StaticText" skin="StaticText" position="8 3 80 16">
+                    <Property key="Widget_Caption" value="Sound File"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="8 19 264 24" name="cmbSoundFiles">
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="8 51 72 24" name="btnAddSound">
+                    <Property key="Widget_Caption" value="Add"/>
+                </Widget>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 456 164">
+                <Property key="Widget_Caption" value="Light"/>
+                <Property key="Sheet_Select" value="true"/>
+                <Widget type="StaticText" skin="StaticText" position="8 3 128 24">
+                    <Property key="Widget_Caption" value="ShadowTechnique"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="128 67 88 24" name="btnAddLight">
+                    <Property key="Widget_Caption" value="Add Light"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="128 3 320 24" name="cmbShadowTechnique">
+                    <Property key="ComboBox_AddItem" value="SHADOWTYPE_NONE"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWDETAILTYPE_ADDITIVE"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWDETAILTYPE_MODULATIVE"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWDETAILTYPE_INTEGRATED"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWDETAILTYPE_STENCIL"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWDETAILTYPE_TEXTURE"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWTYPE_STENCIL_MODULATIVE"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWTYPE_STENCIL_ADDITIVE"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWTYPE_TEXTURE_MODULATIVE"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWTYPE_TEXTURE_ADDITIVE"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWTYPE_TEXTURE_ADDITIVE_INTEGRATED"/>
+                    <Property key="ComboBox_AddItem" value="SHADOWTYPE_TEXTURE_MODULATIVE_INTEGRATED"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="24 35 104 24">
+                    <Property key="Widget_Caption" value="Ambient Color"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="128 35 56 24" name="txtAmbientX"/>
+                <Widget type="Edit" skin="Edit" position="192 35 56 24" name="txtAmbientY"/>
+                <Widget type="Edit" skin="Edit" position="256 35 56 24" name="txtAmbientZ"/>
+                <Widget type="Button" skin="ButtonSmall" position="360 131 88 24" name="cmdSaveLight">
+                    <Property key="Widget_Caption" value="Save"/>
+                </Widget>
+            </Widget>
+        </Widget>
+    </Widget>
+    <Widget type="StaticImage" skin="StaticImage" position="328 0 56 32" layer="Overlapped" name="btnPlay"/>
+    <Widget type="StaticImage" skin="StaticImage" position="328 0 56 40" layer="Overlapped" name="btnPause"/>
+    <Widget type="Window" skin="WindowCS" position="-24 72 304 456" layer="Overlapped" name="frmSoundProp">
+        <Property key="Widget_Caption" value="Sound"/>
+        <Widget type="HScroll" skin="HSlider" position="141 34 152 16" name="sldGain">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="101 34 48 24">
+            <Property key="Widget_Caption" value="Gain"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="93 50 40 16">
+            <Property key="Widget_Caption" value="Pitch"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="37 66 104 16">
+            <Property key="Widget_Caption" value="Max Distance"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="69 234 64 16">
+            <Property key="Widget_Caption" value="Position"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="13 82 120 16">
+            <Property key="Widget_Caption" value="Outer Cone Gain"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="13 98 136 16">
+            <Property key="Widget_Caption" value="Inner Cone Angle"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="5 114 136 24">
+            <Property key="Widget_Caption" value="Outer Cone Angle"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 50 152 16" name="sldPitch">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 66 152 16" name="sldMaxDistance">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 82 152 16" name="sldOuterConeGain">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 98 152 16" name="sldInnerConeAngle">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 114 152 16" name="sldOuterConeAngle">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="141 234 40 24" name="txtSoundPositionX"/>
+        <Widget type="Edit" skin="Edit" position="181 234 40 24" name="txtSoundPositionY"/>
+        <Widget type="Edit" skin="Edit" position="221 234 40 24" name="txtSoundPositionZ"/>
+        <Widget type="StaticText" skin="StaticText" position="61 10 72 16">
+            <Property key="Widget_Caption" value="File Name"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="69 130 64 16">
+            <Property key="Widget_Caption" value="Max Gain"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 130 152 16" name="sldMaxGain">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 146 152 16" name="sldMinGain">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="69 146 64 16">
+            <Property key="Widget_Caption" value="Min Gain"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="29 162 120 16">
+            <Property key="Widget_Caption" value="Roll off Factor"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="45 178 104 16">
+            <Property key="Widget_Caption" value="Ref Distance"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="69 266 64 16">
+            <Property key="Widget_Caption" value="Velocity"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="69 298 64 16">
+            <Property key="Widget_Caption" value="Direction"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="141 10 152 16" name="txtSoundFileName">
+            <Property key="Widget_Enabled" value="false"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 162 152 16" name="sldRollOff">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="HScroll" skin="HSlider" position="141 178 152 16" name="sldRefDistance">
+            <Property key="Scroll_Range" value="100"/>
+            <Property key="Scroll_Position" value="50"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="141 266 40 24" name="txtSoundVelocityX"/>
+        <Widget type="Edit" skin="Edit" position="181 266 40 24" name="txtSoundVelocityY"/>
+        <Widget type="Edit" skin="Edit" position="221 266 40 24" name="txtSoundVelocityZ"/>
+        <Widget type="Edit" skin="Edit" position="141 298 40 24" name="txtSoundDirectionX"/>
+        <Widget type="Edit" skin="Edit" position="181 298 40 24" name="txtSoundDirectionY"/>
+        <Widget type="Edit" skin="Edit" position="221 298 40 24" name="txtSoundDirectionZ"/>
+        <Widget type="Button" skin="ButtonSmall" position="5 378 72 32" name="btnSoundCancel">
+            <Property key="Widget_Caption" value="Cancel"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="85 378 72 32" name="btnSoundSave">
+            <Property key="Widget_Caption" value="Save"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="61 338 48 24" name="btnSoundPlay">
+            <Property key="Widget_Caption" value="Play"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="125 338 48 24" name="btnSoundPause">
+            <Property key="Widget_Caption" value="Pause"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="181 338 48 24" name="btnSoundStop">
+            <Property key="Widget_Caption" value="Stop"/>
+        </Widget>
+        <Widget type="Button" skin="CheckBox" position="45 202 208 24" name="chkSoundRelative">
+            <Property key="Widget_Caption" value="Relative to the listener"/>
+        </Widget>
+    </Widget>
+    <Widget type="Window" skin="WindowCS" position="0 64 312 408" layer="Overlapped" name="frmMesh">
+        <Property key="Widget_Caption" value="Game Object"/>
+        <Widget type="Tab" skin="Tab" position="-3 2 304 368">
+            <Widget type="Sheet" skin="Default" position="8 29 288 332">
+                <Property key="Widget_Caption" value="Placement"/>
+                <Widget type="ComboBox" skin="ComboBox" position="77 10 208 24" name="cmbMeshList">
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="5 10 88 16">
+                    <Property key="Widget_Caption" value="Mesh List"/>
+                </Widget>
+                <Widget type="Button" skin="RadioBox" position="77 106 152 24" name="rdoMeshSphereObstacle">
+                    <Property key="Widget_Caption" value="Sphere Obstacle"/>
+                </Widget>
+                <Widget type="Button" skin="RadioBox" position="77 130 144 24" name="rdoMeshBoxObstacle">
+                    <Property key="Widget_Caption" value="Box Obstacle"/>
+                    <Property key="Widget_Enabled" value="false"/>
+                </Widget>
+                <Widget type="Button" skin="CheckBox" position="93 154 152 24" name="chkMeshRandom">
+                    <Property key="Widget_Caption" value="Ramdonly Place"/>
+                    <Property key="Widget_AlignText" value="ALIGN_LEFT ALIGN_VCENTER"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="37 178 48 16">
+                    <Property key="Widget_Caption" value="Count"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="93 178 56 24" name="txtMeshCount">
+                    <Property key="Widget_Enabled" value="false"/>
+                    <Property key="Widget_Caption" value="1000"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="173 290 88 32" name="btnMeshPlace">
+                    <Property key="Widget_Caption" value="Place"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="61 290 88 32" name="btnMeshClose">
+                    <Property key="Widget_Caption" value="Close"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="37 210 56 16">
+                    <Property key="Widget_Caption" value="Min X"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="37 234 56 16">
+                    <Property key="Widget_Caption" value="Min Z"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="157 210 56 16">
+                    <Property key="Widget_Caption" value="Max X"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="157 234 56 16">
+                    <Property key="Widget_Caption" value="Max Z"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="93 210 56 24" name="txtMeshMinX">
+                    <Property key="Widget_Enabled" value="false"/>
+                    <Property key="Widget_Caption" value="-1500"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="93 234 56 24" name="txtMeshMinZ">
+                    <Property key="Widget_Enabled" value="false"/>
+                    <Property key="Widget_Caption" value="-1500"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="205 210 48 24" name="txtMeshMaxX">
+                    <Property key="Widget_Enabled" value="false"/>
+                    <Property key="Widget_Caption" value="1500"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="205 234 48 24" name="txtMeshMaxZ">
+                    <Property key="Widget_Enabled" value="false"/>
+                    <Property key="Widget_Caption" value="1500"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="5 74 80 16">
+                    <Property key="Widget_Caption" value="Envir. Att."/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="77 74 208 24" name="cmbMeshEnvAtt">
+                    <Property key="ComboBox_AddItem" value="None"/>
+                    <Property key="ComboBox_AddItem" value="Pickup"/>
+                    <Property key="ComboBox_AddItem" value="Dangerous"/>
+                    <Property key="ComboBox_AddItem" value="Neutral"/>
+                    <Property key="ComboBox_AddItem" value="Mission"/>
+                    <Property key="ComboBox_AddItem" value="Unknown"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="37 42 40 16">
+                    <Property key="Widget_Caption" value="Name"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="77 43 208 24" name="txtGameObjectName"/>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 288 332">
+                <Property key="Widget_Caption" value="Properties"/>
+                <Widget type="Button" skin="ButtonSmall" position="117 290 83 33" name="btnPropertiesCancel">
+                    <Property key="Widget_Caption" value="Cancel"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="213 290 83 33" name="btnPropertiesSave">
+                    <Property key="Widget_Caption" value="Save"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="5 10 56 16">
+                    <Property key="Widget_Caption" value="Position"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="5 26 83 24" name="txtGenPropPosX"/>
+                <Widget type="Edit" skin="Edit" position="93 27 83 23" name="txtGenPropPosY"/>
+                <Widget type="Edit" skin="Edit" position="181 26 83 24" name="txtGenPropPosZ"/>
+                <Widget type="StaticText" skin="StaticText" position="5 74 56 16">
+                    <Property key="Widget_Caption" value="Scale"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="5 90 51 24" name="txtGenPropScaleX"/>
+                <Widget type="Edit" skin="Edit" position="61 90 51 24" name="txtGenPropScaleY"/>
+                <Widget type="Edit" skin="Edit" position="117 90 51 24" name="txtGenPropScaleZ"/>
+                <Widget type="StaticText" skin="StaticText" position="8 139 112 16">
+                    <Property key="Widget_Caption" value="Physics Profile"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="5 163 192 32" name="cmbGOPhysicsProfile"/>
+            </Widget>
+        </Widget>
+    </Widget>
+    <Widget type="HScroll" skin="HSlider" position="376 16 120 16" layer="Overlapped" name="sldMasterSpeed">
+        <Property key="Scroll_Range" value="200"/>
+        <Property key="Scroll_Position" value="100"/>
+    </Widget>
+    <Widget type="Window" skin="WindowC" position="8 120 296 432" layer="Overlapped" name="frmPlayerProperties">
+        <Property key="Widget_Caption" value="Player Properties"/>
+        <Widget type="Tab" skin="Tab" position="-3 2 288 352">
+            <Widget type="Sheet" skin="Default" position="8 29 272 316">
+                <Property key="Widget_Caption" value="General"/>
+                <Property key="Sheet_Select" value="true"/>
+                <Widget type="StaticText" skin="StaticText" position="29 2 56 16">
+                    <Property key="Widget_Caption" value="Name"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="77 2 184 24" name="txtPlayerName"/>
+                <Widget type="Button" skin="CheckBox" position="77 34 112 24" name="chkPlayerShowLoS">
+                    <Property key="Widget_Caption" value="Show LoS"/>
+                </Widget>
+                <Widget type="Button" skin="CheckBox" position="77 58 168 24" name="chkPlayerShowBB">
+                    <Property key="Widget_Caption" value="Show Bounding Box"/>
+                    <Property key="Widget_Enabled" value="true"/>
+                </Widget>
+                <Widget type="Button" skin="CheckBox" position="77 82 184 24" name="chkPlayerShowCC">
+                    <Property key="Widget_Caption" value="Show Char Controller"/>
+                    <Property key="Widget_Enabled" value="false"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="5 122 72 16">
+                    <Property key="Widget_Caption" value="Inventory"/>
+                </Widget>
+                <Widget type="List" skin="List" position="77 146 184 65" name="lstPlayerItems"/>
+                <Widget type="ComboBox" skin="ComboBox" position="77 122 184 24" name="cmbPlayerAllItems">
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="189 218 72 24" name="btnPlayerAddItem">
+                    <Property key="Widget_Caption" value="Add"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="109 218 72 24" name="btnPlayerRemoveItem">
+                    <Property key="Widget_Caption" value="Remove"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 251 64 16">
+                    <Property key="Widget_Caption" value="Position"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="8 275 80 24" name="txtPlayerPosX"/>
+                <Widget type="Edit" skin="Edit" position="96 275 80 24" name="txtPlayerPosY"/>
+                <Widget type="Edit" skin="Edit" position="184 275 80 24" name="txtPlayerPosZ"/>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 272 316">
+                <Property key="Widget_Caption" value="AI"/>
+                <Widget type="StaticText" skin="StaticText" position="8 43 128 16">
+                    <Property key="Widget_Caption" value="Character State"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="8 67 192 24" name="cmbPlayerState">
+                    <Property key="ComboBox_AddItem" value="Wander"/>
+                    <Property key="ComboBox_AddItem" value="Seek Enemy"/>
+                    <Property key="ComboBox_AddItem" value="Seek Obs"/>
+                    <Property key="ComboBox_AddItem" value="Evade"/>
+                    <Property key="ComboBox_AddItem" value="Follow Path"/>
+                    <Property key="ComboBox_AddItem" value="Find Weapon"/>
+                    <Property key="ComboBox_AddItem" value="Find Enemy"/>
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 99 112 24">
+                    <Property key="Widget_Caption" value="Vehicle Target"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="8 123 192 24" name="cmbPlayerTarget">
+                    <Property key="Widget_Enabled" value="true"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 155 56 24">
+                    <Property key="Widget_Caption" value="Team"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="8 179 192 24" name="cmbPlayerTeam">
+                    <Property key="Widget_Enabled" value="true"/>
+                </Widget>
+                <Widget type="Button" skin="CheckBox" position="8 11 176 24" name="chkPlayerIsHuman">
+                    <Property key="Widget_Caption" value="Is Human Player"/>
+                </Widget>
+            </Widget>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="101 362 80 32" name="btnPlayerCancel">
+            <Property key="Widget_Caption" value="Close"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="197 362 80 32" name="btnPlayerSave">
+            <Property key="Widget_Caption" value="Save"/>
+        </Widget>
+    </Widget>
+    <Widget type="Window" skin="WindowCS" position="-24 120 296 368" layer="Overlapped" name="frmVolume">
+        <Property key="Widget_Caption" value="Volumes"/>
+        <Widget type="StaticText" skin="StaticText" position="21 10 64 24">
+            <Property key="Widget_Caption" value="Shape"/>
+        </Widget>
+        <Widget type="ComboBox" skin="ComboBox" position="77 10 168 24" name="cmbVolShape">
+            <Property key="ComboBox_AddItem" value="Cube"/>
+            <Property key="ComboBox_AddItem" value="Sphere"/>
+            <Property key="ComboBox_AddItem" value="Capsule"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="40 123 88 16">
+            <Property key="Widget_Caption" value="Radius"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="56 91 48 24">
+            <Property key="Widget_Caption" value="Size"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="96 67 120 16">
+            <Property key="Widget_Caption" value="Physics Profile"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="96 123 72 24" name="txtVolPhyRadius"/>
+        <Widget type="Edit" skin="Edit" position="96 91 32 24" name="txtVolPhySizeX"/>
+        <Widget type="Button" skin="ButtonSmall" position="200 291 80 32" name="btnVolPhySave">
+            <Property key="Widget_Caption" value="Save"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="16 291 80 32" name="btnVolPhyClose">
+            <Property key="Widget_Caption" value="Close"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="136 90 32 25" name="txtVolPhySizeY"/>
+        <Widget type="Edit" skin="Edit" position="176 91 32 24" name="txtVolPhySizeZ"/>
+        <Widget type="StaticText" skin="StaticText" position="21 42 48 16">
+            <Property key="Widget_Caption" value="Name"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="77 42 168 24" name="txtVolName"/>
+        <Widget type="StaticText" skin="StaticText" position="29 154 64 16">
+            <Property key="Widget_Caption" value="Position"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="96 154 32 24" name="txtVolPosX"/>
+        <Widget type="Edit" skin="Edit" position="137 154 32 24" name="txtVolPosY"/>
+        <Widget type="Edit" skin="Edit" position="176 154 32 24" name="txtVolPosZ"/>
+        <Widget type="Button" skin="ButtonSmall" position="125 291 72 32" name="btnVolPhyPlace">
+            <Property key="Widget_Caption" value="Place"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="69 210 168 24">
+            <Property key="Widget_Caption" value="Lua Events Needed"/>
+        </Widget>
+    </Widget>
+    <Widget type="Window" skin="WindowC" position="0 80 344 440" layer="Overlapped" name="frmPhysicsProfiles">
+        <Property key="Widget_Caption" value="Physics Profiles"/>
+        <Widget type="StaticText" skin="StaticText" position="40 267 64 16">
+            <Property key="Widget_Caption" value="Shape"/>
+        </Widget>
+        <Widget type="ComboBox" skin="ComboBox" position="96 267 184 24" name="cmbGOPhyShape">
+            <Property key="ComboBox_AddItem" value="Cube"/>
+            <Property key="ComboBox_AddItem" value="Sphere"/>
+            <Property key="ComboBox_AddItem" value="Custom"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="48 75 64 16">
+            <Property key="Widget_Caption" value="Mass"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="16 139 80 24">
+            <Property key="Widget_Caption" value="Body Type"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="8 107 80 24">
+            <Property key="Widget_Caption" value="Restitution"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="160 107 80 24">
+            <Property key="Widget_Caption" value="Friction"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="160 75 88 16">
+            <Property key="Widget_Caption" value="Density"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="40 235 88 16">
+            <Property key="Widget_Caption" value="Radius"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="56 203 48 24">
+            <Property key="Widget_Caption" value="Size"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="96 75 56 24" name="txtGOPhyMass"/>
+        <Widget type="Edit" skin="Edit" position="224 75 56 24" name="txtGOPhyDensity"/>
+        <Widget type="Edit" skin="Edit" position="96 107 56 24" name="txtGOPhyRes"/>
+        <Widget type="Edit" skin="Edit" position="224 107 56 24" name="txtGOPhyFriction"/>
+        <Widget type="Edit" skin="Edit" position="96 235 72 24" name="txtGOPhyRadius"/>
+        <Widget type="Edit" skin="Edit" position="96 203 32 24" name="txtGOPhySizeX"/>
+        <Widget type="ComboBox" skin="ComboBox" position="96 139 184 24" name="cmbGOPhyBodyType">
+            <Property key="ComboBox_AddItem" value="None"/>
+            <Property key="ComboBox_AddItem" value="All"/>
+            <Property key="ComboBox_AddItem" value="Ragdoll"/>
+            <Property key="ComboBox_AddItem" value="Geometry"/>
+            <Property key="ComboBox_AddItem" value="Vehicle"/>
+            <Property key="ComboBox_AddItem" value="Static Geometry"/>
+            <Property key="ComboBox_AddItem" value="Character Controller"/>
+            <Property key="ComboBox_AddItem" value="Volume"/>
+            <Property key="ComboBox_AddItem" value="Terrain"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="192 347 80 32" name="btnGOPhySave">
+            <Property key="Widget_Caption" value="Save"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="96 347 80 32" name="btnGOPhyClose">
+            <Property key="Widget_Caption" value="Close"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="136 203 32 24" name="txtGOPhySizeY"/>
+        <Widget type="Edit" skin="Edit" position="176 203 32 24" name="txtGOPhySizeZ"/>
+        <Widget type="StaticText" skin="StaticText" position="53 18 48 16">
+            <Property key="Widget_Caption" value="Name"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="96 18 184 24" name="txtGOPhysProfileName"/>
+    </Widget>
+    <Widget type="Window" skin="WindowC" position="32 56 472 528" layer="Overlapped" name="frmOdeTest">
+        <Property key="Widget_Caption" value="Ode Test"/>
+        <Property key="Widget_Show" value="false"/>
+        <Widget type="Tab" skin="Tab" position="-3 2 464 448">
+            <Widget type="Sheet" skin="Default" position="8 29 448 412">
+                <Property key="Widget_Caption" value="World Damp/Contact"/>
+                <Property key="Sheet_Select" value="true"/>
+                <Widget type="StaticText" skin="StaticText" position="128 35 120 24">
+                    <Property key="Widget_Caption" value="Linear Damping:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="120 67 128 24">
+                    <Property key="Widget_Caption" value="Angular Damping:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="48 131 200 24">
+                    <Property key="Widget_Caption" value="Linear Damping Threshold:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="40 163 208 24">
+                    <Property key="Widget_Caption" value="Angular Damping Threshold:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="96 195 160 24">
+                    <Property key="Widget_Caption" value="Max Angular Speed:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="8 11 64 24">
+                    <Property key="Widget_Caption" value="Damping"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="40 259 208 24">
+                    <Property key="Widget_Caption" value="Contact Max Correcting Vel:"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="0 227 152 24">
+                    <Property key="Widget_Caption" value="Contact Parameters"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="80 291 168 24">
+                    <Property key="Widget_Caption" value="Contact Surface Layer:"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="256 35 104 24" name="txtOdeWLinearDamping"/>
+                <Widget type="Edit" skin="Edit" position="256 67 104 24" name="txtOdeWAngularDamping"/>
+                <Widget type="Edit" skin="Edit" position="256 131 104 24" name="txtOdeWLinearDampingThreshold"/>
+                <Widget type="Edit" skin="Edit" position="256 163 104 24" name="txtOdeWAngularDampingThreshold"/>
+                <Widget type="Edit" skin="Edit" position="256 195 104 24" name="txtOdeWMaxAngularSpeed"/>
+                <Widget type="Edit" skin="Edit" position="256 259 104 24" name="txtOdeWContactMaxCorrectingVel"/>
+                <Widget type="Edit" skin="Edit" position="256 291 104 24" name="txtOdeWContactSurfaceLayer"/>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 448 412">
+                <Property key="Widget_Caption" value="Rigid Body"/>
+                <Widget type="Tab" skin="Tab" position="0 3 448 408">
+                    <Widget type="Sheet" skin="Default" position="8 29 432 372">
+                        <Property key="Widget_Caption" value="Kinematic State"/>
+                        <Property key="Sheet_Select" value="true"/>
+                        <Widget type="StaticText" skin="StaticText" position="8 3 176 24">
+                            <Property key="Widget_Caption" value="Enabling and Disabling"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="48 155 232 24">
+                            <Property key="Widget_Caption" value="Auto Disable Linear Threshold:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="40 187 240 24">
+                            <Property key="Widget_Caption" value="Auto Disable Angular Threshold:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="128 219 152 24">
+                            <Property key="Widget_Caption" value="Auto Disable Steps:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="136 251 144 24">
+                            <Property key="Widget_Caption" value="Auto Disable Time:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="8 283 272 24">
+                            <Property key="Widget_Caption" value="Auto Disable Average Samples Count:"/>
+                        </Widget>
+                        <Widget type="Button" skin="CheckBox" position="8 27 112 24" name="chkOdeRDynamic">
+                            <Property key="Widget_Caption" value="Dynamic"/>
+                        </Widget>
+                        <Widget type="Button" skin="CheckBox" position="8 51 88 24" name="chkOdeRKinematic">
+                            <Property key="Widget_Caption" value="Kinematic"/>
+                        </Widget>
+                        <Widget type="Button" skin="CheckBox" position="8 75 112 24" name="chkOdeREnabled">
+                            <Property key="Widget_Caption" value="Enabled"/>
+                        </Widget>
+                        <Widget type="Button" skin="CheckBox" position="8 99 168 24" name="chkOdeRAutoDisableFlag">
+                            <Property key="Widget_Caption" value="Auto Disable Flag"/>
+                        </Widget>
+                        <Widget type="Edit" skin="Edit" position="280 155 88 24" name="txtOdeRAutoDisableLinearThreshold"/>
+                        <Widget type="Edit" skin="Edit" position="280 187 88 24" name="txtOdeRAutoDisableAngularThreshold"/>
+                        <Widget type="Edit" skin="Edit" position="280 219 88 24" name="txtOdeRAutoDisableSteps"/>
+                        <Widget type="Edit" skin="Edit" position="280 251 88 24" name="txtOdeRAutoDisableTime"/>
+                        <Widget type="Edit" skin="Edit" position="280 283 88 24" name="txtOdeRAutoDisableAvgSampleCnt"/>
+                    </Widget>
+                    <Widget type="Sheet" skin="Default" position="8 29 432 372">
+                        <Property key="Widget_Caption" value="Pos/Mass and force"/>
+                        <Widget type="StaticText" skin="StaticText" position="144 11 80 24">
+                            <Property key="Widget_Caption" value="Position:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="128 35 80 24">
+                            <Property key="Widget_Caption" value="Linear Vel:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="120 59 96 24">
+                            <Property key="Widget_Caption" value="Angular Vel:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="128 83 88 24">
+                            <Property key="Widget_Caption" value="Add Force:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="120 107 88 24">
+                            <Property key="Widget_Caption" value="Add Torque:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="96 131 120 24">
+                            <Property key="Widget_Caption" value="Add Rel Force:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="88 211 128 24">
+                            <Property key="Widget_Caption" value="Add Rel Torque:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="72 235 144 24">
+                            <Property key="Widget_Caption" value="Add Force At Pos:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="40 259 176 24">
+                            <Property key="Widget_Caption" value="Add Force At Rel Pos:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="40 283 184 24">
+                            <Property key="Widget_Caption" value="Add Rel Force At Pos:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="8 307 200 24">
+                            <Property key="Widget_Caption" value="Add Rel Force At Rel Pos:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="160 155 56 24">
+                            <Property key="Widget_Caption" value="Force:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="152 179 72 24">
+                            <Property key="Widget_Caption" value="Torque:"/>
+                        </Widget>
+                        <Widget type="Edit" skin="Edit" position="208 11 56 24" name="txtOdeRPosX"/>
+                        <Widget type="Edit" skin="Edit" position="264 11 56 24" name="txtOdeRPosY"/>
+                        <Widget type="Edit" skin="Edit" position="320 11 56 24" name="txtOdeRPosZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 35 56 24" name="txtOdeRLinearVelX"/>
+                        <Widget type="Edit" skin="Edit" position="264 35 56 24" name="txtOdeRLinearVelY"/>
+                        <Widget type="Edit" skin="Edit" position="320 35 56 24" name="txtOdeRLinearVelZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 59 56 24" name="txtOdeRAngularVelX"/>
+                        <Widget type="Edit" skin="Edit" position="264 59 56 24" name="txtOdeRAngularVelY"/>
+                        <Widget type="Edit" skin="Edit" position="320 59 56 24" name="txtOdeRAngularVelZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 83 56 24" name="txtOdeRAddForceX"/>
+                        <Widget type="Edit" skin="Edit" position="264 83 56 24" name="txtOdeRAddForceY"/>
+                        <Widget type="Edit" skin="Edit" position="320 83 56 24" name="txtOdeRAddForceZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 107 56 24" name="txtOdeRAddTorqueX"/>
+                        <Widget type="Edit" skin="Edit" position="264 107 56 24" name="txtOdeRAddTorqueY"/>
+                        <Widget type="Edit" skin="Edit" position="320 107 56 24" name="txtOdeRAddTorqueZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 131 56 24" name="txtOdeRRelForceX"/>
+                        <Widget type="Edit" skin="Edit" position="264 131 56 24" name="txtOdeRRelForceY"/>
+                        <Widget type="Edit" skin="Edit" position="320 131 56 24" name="txtOdeRRelForceZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 155 56 24" name="txtOdeRForceX"/>
+                        <Widget type="Edit" skin="Edit" position="264 155 56 24" name="txtOdeRForceY"/>
+                        <Widget type="Edit" skin="Edit" position="320 155 56 24" name="txtOdeRForceZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 179 56 24" name="txtOdeRTorqueX"/>
+                        <Widget type="Edit" skin="Edit" position="264 179 56 24" name="txtOdeRTorqueY"/>
+                        <Widget type="Edit" skin="Edit" position="320 179 56 24" name="txtOdeRTorqueZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 211 56 24" name="txtOdeRAddRelTorqueX"/>
+                        <Widget type="Edit" skin="Edit" position="264 211 56 24" name="txtOdeRAddRelTorqueY"/>
+                        <Widget type="Edit" skin="Edit" position="320 211 56 24" name="txtOdeRAddRelTorqueZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 235 56 24" name="txtOdeRAddForcePosX"/>
+                        <Widget type="Edit" skin="Edit" position="264 235 56 24" name="txtOdeRAddForcePosY"/>
+                        <Widget type="Edit" skin="Edit" position="320 235 56 24" name="txtOdeRAddForcePosZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 259 56 24" name="txtOdeRAddForceRelPosX"/>
+                        <Widget type="Edit" skin="Edit" position="264 259 56 24" name="txtOdeRAddForceRelPosY"/>
+                        <Widget type="Edit" skin="Edit" position="320 259 56 24" name="txtOdeRAddForceRelPosZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 283 56 24" name="txtOdeRAddRelForcePosX"/>
+                        <Widget type="Edit" skin="Edit" position="264 283 56 24" name="txtOdeRAddRelForcePosY"/>
+                        <Widget type="Edit" skin="Edit" position="320 283 56 24" name="txtOdeRAddRelForcePosZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 307 56 24" name="txtOdeRAddRelForceRelX"/>
+                        <Widget type="Edit" skin="Edit" position="264 307 56 24" name="txtOdeRAddRelForceRelY"/>
+                        <Widget type="Edit" skin="Edit" position="320 307 56 24" name="txtOdeRAddRelForceRelZ"/>
+                        <Widget type="Edit" skin="Edit" position="208 339 56 24" name="txtOdeRUtilityPosX"/>
+                        <Widget type="Edit" skin="Edit" position="264 339 56 24" name="txtOdeRUtilityPosY"/>
+                        <Widget type="Edit" skin="Edit" position="320 339 56 24" name="txtOdeRUtilityPosZ"/>
+                        <Widget type="StaticText" skin="StaticText" position="96 339 112 24">
+                            <Property key="Widget_Caption" value="Position fields:"/>
+                        </Widget>
+                    </Widget>
+                    <Widget type="Sheet" skin="Default" position="8 29 432 372">
+                        <Property key="Widget_Caption" value="Damping"/>
+                        <Widget type="StaticText" skin="StaticText" position="112 11 128 24">
+                            <Property key="Widget_Caption" value="Linear Damping:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="104 43 128 24">
+                            <Property key="Widget_Caption" value="Angular Damping:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="32 75 200 24">
+                            <Property key="Widget_Caption" value="Linear Damping Threshold:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="24 107 208 24">
+                            <Property key="Widget_Caption" value="Angular Damping Threshold:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="80 139 152 24">
+                            <Property key="Widget_Caption" value="Max Angular Speed:"/>
+                        </Widget>
+                        <Widget type="Edit" skin="Edit" position="240 11 88 24" name="txtOdeRLinearDamping"/>
+                        <Widget type="Edit" skin="Edit" position="240 43 88 24" name="txtOdeRAngularDamping"/>
+                        <Widget type="Edit" skin="Edit" position="240 75 88 24" name="txtOdeRLinearDampingThreshold"/>
+                        <Widget type="Edit" skin="Edit" position="240 107 88 24" name="txtOdeRAngularDampingThreshold"/>
+                        <Widget type="Edit" skin="Edit" position="240 139 88 24" name="txtOdeRMaxAngularSpeed"/>
+                    </Widget>
+                </Widget>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 448 412">
+                <Property key="Widget_Caption" value="Geom"/>
+                <Widget type="Tab" skin="Tab" position="0 3 448 456">
+                    <Widget type="Sheet" skin="Default" position="8 29 432 420">
+                        <Property key="Widget_Caption" value="General"/>
+                        <Widget type="StaticText" skin="StaticText" position="8 19 128 24">
+                            <Property key="Widget_Caption" value="Offset Position:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="8 35 128 24">
+                            <Property key="Widget_Caption" value="Offset Rotation:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="8 51 152 24">
+                            <Property key="Widget_Caption" value="Offset Quaternion:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="8 107 176 24">
+                            <Property key="Widget_Caption" value="Offset World Position:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="8 123 176 24">
+                            <Property key="Widget_Caption" value="Offset World Rotation:"/>
+                        </Widget>
+                        <Widget type="StaticText" skin="StaticText" position="8 139 192 24">
+                            <Property key="Widget_Caption" value="Offset World Quaternion:"/>
+                        </Widget>
+                        <Widget type="Button" skin="ButtonSmall" position="0 179 112 24" name="btnOdeGClearOffset">
+                            <Property key="Widget_Caption" value="Clear Offset"/>
+                        </Widget>
+                        <Widget type="Button" skin="CheckBox" position="8 227 112 24" name="chkOdeGEnabled">
+                            <Property key="Widget_Caption" value="Enabled"/>
+                        </Widget>
+                    </Widget>
+                </Widget>
+            </Widget>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="381 458 80 32" name="btnOdeSave">
+            <Property key="Widget_Caption" value="Apply"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="293 458 72 32" name="btnOdeClose">
+            <Property key="Widget_Caption" value="Close"/>
+        </Widget>
+    </Widget>
+    <Widget type="Window" skin="WindowC" position="0 136 344 336" layer="Overlapped" name="frmAStar">
+        <Property key="Widget_Caption" value="A* Grid Creator"/>
+        <Widget type="StaticText" skin="StaticText" position="85 26 88 24">
+            <Property key="Widget_Caption" value="Start Point"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="21 50 152 24">
+            <Property key="Widget_Caption" value="Size (Num of Nodes)"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="173 18 48 24" name="txtASPStartX"/>
+        <Widget type="Edit" skin="Edit" position="269 18 48 24" name="txtASPStartZ"/>
+        <Widget type="ComboBox" skin="ComboBox" position="173 50 144 24" name="cmbASPSize"/>
+        <Widget type="Button" skin="ButtonSmall" position="253 258 64 24" name="btnASPSave">
+            <Property key="Widget_Caption" value="Save"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="29 258 64 24" name="btnASPDelete">
+            <Property key="Widget_Caption" value="Delete"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="181 258 64 24" name="btnASPClose">
+            <Property key="Widget_Caption" value="Close"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="253 226 64 24" name="btnASPTest">
+            <Property key="Widget_Caption" value="Test"/>
+        </Widget>
+        <Widget type="List" skin="List" position="101 106 216 112" name="lstASPNodes"/>
+        <Widget type="StaticText" skin="StaticText" position="101 82 80 24">
+            <Property key="Widget_Caption" value="Node List"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="29 106 64 24" name="btnASPRemove">
+            <Property key="Widget_Caption" value="Remove"/>
+        </Widget>
+        <Widget type="Button" skin="CheckBox" position="117 226 104 24" name="chkASPShowGrid">
+            <Property key="Widget_Caption" value="Show Grid"/>
+        </Widget>
+    </Widget>
+    <Widget type="Window" skin="WindowCS" position="0 104 368 288" layer="Overlapped" name="frmSpawnPoint">
+        <Property key="Widget_Caption" value="Spawn Points"/>
+        <Widget type="ComboBox" skin="ComboBox" position="93 18 256 24" name="cmbSpawnPoints"/>
+        <Widget type="StaticText" skin="StaticText" position="53 58 32 24">
+            <Property key="Widget_Caption" value="Id"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="21 90 72 24">
+            <Property key="Widget_Caption" value="Position"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="37 122 48 24">
+            <Property key="Widget_Caption" value="Team"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="13 154 80 24">
+            <Property key="Widget_Caption" value="Cool Down"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="93 50 80 24" name="txtSpawnPointId"/>
+        <Widget type="Edit" skin="Edit" position="93 82 80 24" name="txtSpawnPointX"/>
+        <Widget type="Edit" skin="Edit" position="181 82 80 24" name="txtSpawnPointY"/>
+        <Widget type="Edit" skin="Edit" position="269 82 80 24" name="txtSpawnPointZ"/>
+        <Widget type="Edit" skin="Edit" position="93 146 80 24" name="txtSpawnPointCoolDown"/>
+        <Widget type="Button" skin="ButtonSmall" position="269 202 80 32" name="btnSpawnPointPlace">
+            <Property key="Widget_Caption" value="Place"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="173 202 80 32" name="btnSpawnPointClose">
+            <Property key="Widget_Caption" value="Close"/>
+        </Widget>
+        <Widget type="ComboBox" skin="ComboBox" position="93 114 144 24" name="cmbSpawnPointTeam"/>
+        <Widget type="Button" skin="ButtonSmall" position="269 114 48 24" name="btnSpawnPointUpdate">
+            <Property key="Widget_Caption" value="Update"/>
+            <Property key="Widget_FontHeight" value="12"/>
+        </Widget>
+    </Widget>
+    <Widget type="Window" skin="WindowCS" position="0 136 312 400" layer="Overlapped" name="frmBuilding">
+        <Property key="Widget_Caption" value="Buildings"/>
+        <Widget type="Tab" skin="Tab" position="-3 2 304 360">
+            <Widget type="Sheet" skin="Default" position="8 29 288 324">
+                <Property key="Widget_Caption" value="Placement"/>
+                <Property key="Sheet_Select" value="true"/>
+                <Widget type="ComboBox" skin="ComboBox" position="77 10 208 24" name="cmbBuildingList">
+                    <Property key="ComboBox_ModeDrop" value="true"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="5 10 88 16">
+                    <Property key="Widget_Caption" value="Mesh List"/>
+                </Widget>
+                <Widget type="Button" skin="RadioBox" position="77 138 152 24" name="rdoBuildingSphereObstacle">
+                    <Property key="Widget_Caption" value="Sphere Obstacle"/>
+                </Widget>
+                <Widget type="Button" skin="RadioBox" position="77 162 144 24" name="rdoBuildingBoxObstacle">
+                    <Property key="Widget_Caption" value="Box Obstacle"/>
+                    <Property key="Widget_Enabled" value="false"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="173 290 88 32" name="btnBuildingPlace">
+                    <Property key="Widget_Caption" value="Place"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="61 290 88 32" name="btnBuildingClose">
+                    <Property key="Widget_Caption" value="Close"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="37 42 40 16">
+                    <Property key="Widget_Caption" value="Name"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="77 43 208 24" name="txtBuildingName"/>
+                <Widget type="Edit" skin="Edit" position="5 98 83 24" name="txtBuildingPosX"/>
+                <Widget type="Edit" skin="Edit" position="93 99 83 23" name="txtBuildingPosY"/>
+                <Widget type="Edit" skin="Edit" position="181 98 83 24" name="txtBuildingPosZ"/>
+                <Widget type="StaticText" skin="StaticText" position="5 74 75 25">
+                    <Property key="Widget_Caption" value="Position"/>
+                </Widget>
+            </Widget>
+            <Widget type="Sheet" skin="Default" position="8 29 288 324">
+                <Property key="Widget_Caption" value="Properties"/>
+                <Widget type="Button" skin="ButtonSmall" position="117 290 83 33" name="btnBuildingCancel">
+                    <Property key="Widget_Caption" value="Cancel"/>
+                </Widget>
+                <Widget type="Button" skin="ButtonSmall" position="213 290 83 33" name="btnBuildingSave">
+                    <Property key="Widget_Caption" value="Save"/>
+                </Widget>
+                <Widget type="StaticText" skin="StaticText" position="5 10 56 16">
+                    <Property key="Widget_Caption" value="Scale"/>
+                </Widget>
+                <Widget type="Edit" skin="Edit" position="53 10 51 24" name="txtBuildingScaleX"/>
+                <Widget type="Edit" skin="Edit" position="109 10 51 24" name="txtBuildingScaleY"/>
+                <Widget type="Edit" skin="Edit" position="165 10 51 24" name="txtBuildingScaleZ"/>
+                <Widget type="StaticText" skin="StaticText" position="8 43 56 24">
+                    <Property key="Widget_Caption" value="Team"/>
+                </Widget>
+                <Widget type="ComboBox" skin="ComboBox" position="5 106 208 24" name="cmbBuildingType"/>
+                <Widget type="ComboBox" skin="ComboBox" position="56 43 168 24" name="cmbBuildingTeam"/>
+                <Widget type="StaticText" skin="StaticText" position="8 83 112 24">
+                    <Property key="Widget_Caption" value="Building Type"/>
+                </Widget>
+            </Widget>
+        </Widget>
+    </Widget>
+    <Widget type="Window" skin="WindowCS" position="0 88 304 384" layer="Overlapped" name="MeshHierarchy">
+        <Property key="Widget_Caption" value="Mesh Hierarchy"/>
+        <Widget type="ItemBox" skin="ItemBox" position="0 211 200 80" name="lstHierarchy"/>
+        <Widget type="StaticText" skin="StaticText" position="8 187 112 24">
+            <Property key="Widget_Caption" value="Hierarchy List"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="208 211 72 24" name="cmdHierarchyRemove">
+            <Property key="Widget_Caption" value="Remove"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="8 11 80 24">
+            <Property key="Widget_Caption" value="Mesh List"/>
+        </Widget>
+        <Widget type="ComboBox" skin="ComboBox" position="88 11 192 24" name="cmdHierarchyMeshList"/>
+        <Widget type="StaticText" skin="StaticText" position="40 43 48 24">
+            <Property key="Widget_Caption" value="Name"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="88 43 192 24" name="txtHierarchyChildName"/>
+        <Widget type="StaticText" skin="StaticText" position="8 75 120 24">
+            <Property key="Widget_Caption" value="Offset Position"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="8 99 80 24" name="txtHierarchyChildPosX"/>
+        <Widget type="Edit" skin="Edit" position="96 99 80 24" name="txtHierarchyChildPosY"/>
+        <Widget type="Edit" skin="Edit" position="184 99 80 24" name="txtHierarchyChildPosZ"/>
+        <Widget type="Button" skin="ButtonSmall" position="184 139 80 24" name="btnHierarchyChildAdd">
+            <Property key="Widget_Caption" value="Add"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="197 306 88 32" name="btnHierarchySave">
+            <Property key="Widget_Caption" value="Save"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="101 306 88 32" name="btnHierarchyClose">
+            <Property key="Widget_Caption" value="Close"/>
+        </Widget>
+    </Widget>
+    <Widget type="Window" skin="WindowCS" position="200 40 528 504" layer="Overlapped" name="frmLight">
+        <Property key="Widget_Caption" value="Light"/>
+        <Widget type="StaticText" skin="StaticText" position="205 10 56 24">
+            <Property key="Widget_Caption" value="Type"/>
+        </Widget>
+        <Widget type="ComboBox" skin="ComboBox" position="245 10 184 24" name="cmbLightType">
+            <Property key="ComboBox_AddItem" value="Point"/>
+            <Property key="ComboBox_AddItem" value="Directional"/>
+            <Property key="ComboBox_AddItem" value="Spot Light"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="5 50 112 16">
+            <Property key="Widget_Caption" value="Diffuse Color"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="5 82 112 24">
+            <Property key="Widget_Caption" value="Specular Color"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="13 114 120 24">
+            <Property key="Widget_Caption" value="Attenuation:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="61 170 64 24">
+            <Property key="Widget_Caption" value="Position"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="53 202 72 24">
+            <Property key="Widget_Caption" value="Direction"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="21 346 88 24">
+            <Property key="Widget_Caption" value="Spot Light:"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="61 434 56 24">
+            <Property key="Widget_Caption" value="Falloff"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="29 234 88 24">
+            <Property key="Widget_Caption" value="Power Scale"/>
+        </Widget>
+        <Widget type="Button" skin="CheckBox" position="261 306 88 24" name="chkLightVisible">
+            <Property key="Widget_Caption" value="Visible"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="5 10 72 16">
+            <Property key="Widget_Caption" value="Name"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="45 10 160 24" name="txtLightName"/>
+        <Widget type="StaticText" skin="StaticText" position="261 274 160 24">
+            <Property key="Widget_Caption" value="Shadow Far Distance"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="5 274 200 24">
+            <Property key="Widget_Caption" value="Shadow Near Clip Distance"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="13 306 192 24">
+            <Property key="Widget_Caption" value="Shadow Far Clip Distance"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="117 50 56 24" name="txtLightDiffuseX"/>
+        <Widget type="Edit" skin="Edit" position="181 50 56 24" name="txtLightDiffuseY"/>
+        <Widget type="Edit" skin="Edit" position="245 50 56 24" name="txtLightDiffuseZ"/>
+        <Widget type="Edit" skin="Edit" position="117 82 56 24" name="txtLightSpecularX"/>
+        <Widget type="Edit" skin="Edit" position="181 82 56 24" name="txtLightSpecularY"/>
+        <Widget type="Edit" skin="Edit" position="245 82 56 24" name="txtLightSpecularZ"/>
+        <Widget type="StaticText" skin="StaticText" position="29 138 56 24">
+            <Property key="Widget_Caption" value="Range"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="77 138 56 24" name="txtLightAttRange"/>
+        <Widget type="StaticText" skin="StaticText" position="141 138 72 24">
+            <Property key="Widget_Caption" value="Constant"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="205 138 56 24" name="txtLightAttConstant"/>
+        <Widget type="StaticText" skin="StaticText" position="269 138 64 24">
+            <Property key="Widget_Caption" value="Linear"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="317 138 56 24" name="txtLightAttLinear"/>
+        <Widget type="StaticText" skin="StaticText" position="381 138 80 24">
+            <Property key="Widget_Caption" value="Quadratic"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="453 138 56 24" name="txtLightAttQuadratic"/>
+        <Widget type="Edit" skin="Edit" position="117 170 56 24" name="txtLightPosX"/>
+        <Widget type="Edit" skin="Edit" position="181 170 56 24" name="txtLightPosY"/>
+        <Widget type="Edit" skin="Edit" position="245 170 56 24" name="txtLightPosZ"/>
+        <Widget type="Edit" skin="Edit" position="117 202 56 24" name="txtLightDirX"/>
+        <Widget type="Edit" skin="Edit" position="181 202 56 24" name="txtLightDirY"/>
+        <Widget type="Edit" skin="Edit" position="245 202 56 24" name="txtLightDirZ"/>
+        <Widget type="Edit" skin="Edit" position="117 234 56 24" name="txtLightPower"/>
+        <Widget type="Edit" skin="Edit" position="197 274 56 24" name="txtLightShadNearClipDis"/>
+        <Widget type="Edit" skin="Edit" position="197 306 56 24" name="txtShadFarClipDis"/>
+        <Widget type="Edit" skin="Edit" position="413 274 56 24" name="txtLightShadFarDis"/>
+        <Widget type="Edit" skin="Edit" position="117 370 56 24" name="txtLightInner"/>
+        <Widget type="StaticText" skin="StaticText" position="29 370 96 24">
+            <Property key="Widget_Caption" value="Inner Angle"/>
+        </Widget>
+        <Widget type="StaticText" skin="StaticText" position="21 402 96 24">
+            <Property key="Widget_Caption" value="Outter Angle"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="117 402 56 24" name="txtLightOutter"/>
+        <Widget type="Edit" skin="Edit" position="117 434 56 24" name="txtLightFalloff"/>
+        <Widget type="Button" skin="ButtonSmall" position="317 418 88 32" name="btnLightCancel">
+            <Property key="Widget_Caption" value="Cancel"/>
+        </Widget>
+        <Widget type="Button" skin="ButtonSmall" position="421 418 88 32" name="btnLightSave">
+            <Property key="Widget_Caption" value="Save"/>
+        </Widget>
+        <Widget type="Edit" skin="Edit" position="309 50 56 24" name="txtLightDiffuseA"/>
+        <Widget type="Edit" skin="Edit" position="309 82 56 24" name="txtLightSpecularA"/>
+    </Widget>
+</MyGUI>

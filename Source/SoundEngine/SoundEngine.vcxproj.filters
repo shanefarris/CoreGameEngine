@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{82ac3f0d-6c63-48f9-9804-839aa09ef949}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source">
+      <UniqueIdentifier>{d46839f8-e675-4d3e-9ec0-dbe07949c9f5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\Audio\CSound.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Audio\CSoundManager.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Audio\SoundEnginePrereqs.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="COggSound.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundFactory.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="CWavSound.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEngineException.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundEngineMemberFunctionPointer.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Audio\CListener.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CListener.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="COggSound.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CSound.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundFactory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundManager.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CWavSound.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundEngineException.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

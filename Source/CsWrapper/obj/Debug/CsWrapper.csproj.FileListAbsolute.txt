@@ -1,0 +1,5 @@
+D:\Code\Core-Engine\Trunk\Source\CsWrapper\obj\Debug\CsWrapper.pdb
+D:\Code\Core-Engine\Trunk\Bin\Debug\CsWrapper.dll
+D:\Code\Core-Engine\Trunk\Bin\Debug\CsWrapper.pdb
+D:\Code\Core-Engine\Trunk\Source\CsWrapper\obj\Debug\CsWrapper.dll
+D:\Code\Core-Engine\Trunk\Source\CsWrapper\obj\Debug\CsWrapper.csprojResolveAssemblyReference.cache

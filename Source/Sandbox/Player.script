@@ -1,0 +1,11 @@
+function OnCreate ( f1 )
+	print("OnCreate")
+end
+
+function OnPreUpdatePlayer ( f1 )
+	print("OnPreUpdatePlayer")
+end
+
+function OnPostUpdatePlayer ( f1 )
+	print("OnPostUpdatePlayer")
+end

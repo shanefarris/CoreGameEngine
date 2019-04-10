@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CCustomFrameListener.cpp" />
+    <ClCompile Include="CMenuDirector.cpp" />
+    <ClCompile Include="CRuntimeEditorManager.cpp" />
+    <ClCompile Include="CMeshMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CObjectsMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhysicsProfileMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CPhysicsSandboxOde.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CPlayerProperties.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CSoundProperties.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CVolumeMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CEditorHelper.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="CSpawnPoints.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CBuildingMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CMeshHierarchy.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="CMaterialHelper.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="CLightMap.cpp">
+      <Filter>Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="CLightMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\RuntimeEditor\CRuntimeEditorManager.h" />
+    <ClInclude Include="CCustomFrameListener.h" />
+    <ClInclude Include="CMenuDirector.h" />
+    <ClInclude Include="CMeshMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CObjectsMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CPhysicsProfileMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CPhysicsSandboxOde.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CPlayerProperties.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CSoundProperties.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CVolumeMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CEditorHelper.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="EditorObjects.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CAStarMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CSpawnPoints.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CBuildingMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CMeshHierarchy.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="CMaterialHelper.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CLightMap.h">
+      <Filter>Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="CLightMenu.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{dbb5a735-4fee-4112-9950-b7d85cb718c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utility">
+      <UniqueIdentifier>{c07469f3-f062-49b2-908a-a889936e97a5}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="CAStarMenu.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

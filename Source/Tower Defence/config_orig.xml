@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<config>
+
+<!-- Application level options -->
+<app name="Core" version="0.1" />
+
+<audio switch="on" soundvolume="1.0" musicvolume="1.0" />
+<video driver="ogl" width="1024" height="768" depth="32" fullscreen="false" />
+<network servername="client" serverip="127.0.0.1" serverport="60005" clientport="60006" />
+<player nickname="Player" modeltype="soldier" />
+<script language="lua" path="../../Media" />
+<resources baseresourcename="General" baseaudioresourcename="Sound" />
+<database location="../../Media/" defaultname="core_db.scd" />
+<physics defaultstrategy="ODE" />
+
+<rendering>
+	<plugins>
+		<plugin name="Plugin_CgProgramManager" order="2" />
+		<plugin name="Plugin_OctreeSceneManager" order="3" />
+		<plugin name="Plugin_ParticleFX" order="1" />
+	</plugins>
+</rendering>
+
+<keybindings>
+	<key action="moveleft" key1="0x25" key2="0x41" />
+	<key action="moveright" key1="0x27" key2="0x44" />
+	<key action="moveforward" key1="0x26" key2="0x57" />
+	<key action="movebackward" key1="0x28" key2="0x53" />
+
+	<key action="jump" key1="0x20" key2="0x0" />
+	<key action="crouch" key1="0x11" key2="0x0" />
+
+	<key action="fire1" key1="0x1" key2="0x0" />
+	<key action="fire2" key1="0x2" key2="0x0" />
+</keybindings>
+
+<archive>
+	<FolderFileArchive dir="../../Media" group="General" />
+	<!--<FolderFileArchive dir="../../Media/Terrain" group="General" />-->
+	<FolderFileArchive dir="../../Media/Island" group="General" />
+</archive>
+
+<zip>
+	<ZipFileArchive zip="../../media/Sound.zip" group="Sound" />
+	<ZipFileArchive zip="../../media/Media.zip" group="General" />
+	<ZipFileArchive zip="../../media/GUI.zip" group="General" />
+	<ZipFileArchive zip="../../media/Sky.zip" group="Sky" />
+	<ZipFileArchive zip="../../media/hydrax.zip" group="Hydrax" />
+	<ZipFileArchive zip="../../media/TerrainTextures.zip" group="TerrainTextures" />
+</zip>
+
+<plugins>
+	<path dir="../../Bin/Release/Plugins" />
+</plugins>
+
+</config>

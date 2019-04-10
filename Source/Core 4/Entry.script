@@ -1,0 +1,44 @@
+function OnStart()
+	print("OnStart")
+	
+	local gameManager = Core.CGameManager:Instance();
+	print(gameManager);
+	
+	local gameObjManager = Core.CGameObjectManager:Instance();
+	print(gameObjManager);
+	
+	local pluginManager = Core.CPluginManager:Instance();
+	print(pluginManager);
+	
+	local inputManager = Core.CInputManager:Instance();
+	print(inputManager);
+	
+end
+
+function OnPreUpdateGame ( f1 )
+	--print("OnPreUpdateGame")
+end
+
+function OnPostUpdateGame ( f1 )
+	--print("OnPostUpdateGame")
+end
+
+function OnLoadLevel()
+	print("************************OnLoadLevel************************")
+	local gameManager = Core.CGameManager:Instance();
+	local gameObjManager = Core.CGameObjectManager:Instance()
+	local physicsStrategy = Core.Physics.CPhysicsManager:Instance():GetStrategy();
+	
+	--local player = gameObjManager:CreatePlayer("NINJA1", 2, "Player", physicsStrategy, true);
+	--player:SetPlayerPosition(50, 0, 50);
+
+	for i = 1, 20 do
+		local zombie = gameObjManager:CreatePlayer("ZOMBIE1", 1, "zombie_" .. i, physicsStrategy, false);
+		zombie:SetPlayerPosition(15 * i, 0, 15 * 1);
+	end
+
+end
+
+function OnUnLoadLevel()
+	--print("OnUnLoadLevel")
+end

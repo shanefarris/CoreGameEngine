@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="CCharacterController_Ode.cpp" />
+    <ClCompile Include="CPhysicsStrategy_Ode.cpp" />
+    <ClCompile Include="CPhysicsRagdoll_Ode.cpp" />
+    <ClCompile Include="Wrapper\Body.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Collision.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\DebugContact.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\DebugObject.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\EigenSolver.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\EntityInformer.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Geometry.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Joint.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Mass.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Space.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Stepper.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\TriangleMeshData.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\TriangleMeshDataManager.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Utility.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\World.cpp">
+      <Filter>Wrapper</Filter>
+    </ClCompile>
+    <ClCompile Include="Factories.cpp" />
+    <ClCompile Include="Exports.cpp" />
+    <ClCompile Include="Wrapper\tinyxml\tinystr.cpp">
+      <Filter>Wrapper\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\tinyxml\tinyxmlparser.cpp">
+      <Filter>Wrapper\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\tinyxml\tinyxml.cpp">
+      <Filter>Wrapper\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\tinyxml\tinyxmlerror.cpp">
+      <Filter>Wrapper\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Prefab\PrefabObject.cpp">
+      <Filter>Wrapper\Prefab</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Prefab\Ragdoll.cpp">
+      <Filter>Wrapper\Prefab</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Prefab\Vehicle.cpp">
+      <Filter>Wrapper\Prefab</Filter>
+    </ClCompile>
+    <ClCompile Include="Wrapper\Prefab\DotLoader.cpp">
+      <Filter>Wrapper\Prefab</Filter>
+    </ClCompile>
+    <ClCompile Include="CCustomListener_Ode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CCharacterController_Ode.h" />
+    <ClInclude Include="CCustomListener_Ode.h" />
+    <ClInclude Include="CPhysicsStrategy_Ode.h" />
+    <ClInclude Include="CPhysicsRagdoll_Ode.h" />
+    <ClInclude Include="CVolumeObjectCapsule_Ode.h" />
+    <ClInclude Include="Wrapper\Body.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Collision.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\World.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\DebugContact.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\DebugObject.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\EigenSolver.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\EntityInformer.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Geometry.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Joint.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Mass.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\PreReqs.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Space.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Stepper.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\TriangleMeshData.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\TriangleMeshDataManager.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Utility.h">
+      <Filter>Wrapper</Filter>
+    </ClInclude>
+    <ClInclude Include="Factories.h" />
+    <ClInclude Include="Exports.h" />
+    <ClInclude Include="Wrapper\tinyxml\tinystr.h">
+      <Filter>Wrapper\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\tinyxml\tinyxml.h">
+      <Filter>Wrapper\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Prefab\PrefabObject.h">
+      <Filter>Wrapper\Prefab</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Prefab\Ragdoll.h">
+      <Filter>Wrapper\Prefab</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Prefab\Vehicle.h">
+      <Filter>Wrapper\Prefab</Filter>
+    </ClInclude>
+    <ClInclude Include="Wrapper\Prefab\DotLoader.h">
+      <Filter>Wrapper\Prefab</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Wrapper">
+      <UniqueIdentifier>{dd155dbf-159d-4060-924b-57cf94718dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wrapper\tinyxml">
+      <UniqueIdentifier>{f0678710-e574-4d52-891f-461e9ad08f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Wrapper\Prefab">
+      <UniqueIdentifier>{2296864d-fabb-426d-8aaa-6a1449f7967e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

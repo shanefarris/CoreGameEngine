@@ -1,0 +1,927 @@
+vertex_program MONSTER_vs hlsl
+//change it to cg if you want OpenGL support
+{ 
+	source MONSTER_2.cg 
+ 
+    default_params 
+    { 
+		param_named_auto lightpos0 light_position_object_space 0
+		param_named_auto lightpos1 light_position_object_space 1
+		param_named_auto lightpos2 light_position_object_space 2
+		param_named_auto eyepos camera_position_object_space
+       	param_named_auto wvp worldviewproj_matrix
+ 
+    } 
+ 
+    entry_point MONSTER_vs 
+    //profiles vs_1_1 arbvp1 
+    target vs_1_1
+} 
+ 
+fragment_program MONSTER_ps hlsl
+//change it to cg if you want GLSL support
+{ 
+    source MONSTER_2.cg
+ 
+    default_params 
+    {
+		param_named_auto lightColor0 light_diffuse_colour 0
+		param_named_auto lightColor1 light_diffuse_colour 1
+		param_named_auto lightColor2 light_diffuse_colour 2
+		param_named scaleBias float2 0.08 -0.04
+		//TODO: put into shader as #define
+    } 
+ 
+    entry_point MONSTER_ps
+    //profiles ps_2_0 arbfp1 
+    target ps_2_0
+}
+
+
+vertex_program MONSTER_vs hlsl
+material MONSTER_2
+{ 
+    technique 
+    {
+		pass 
+		{
+			//scene_blend add	//for fadeout, but buggy, do not use
+ 
+			vertex_program_ref MONSTER_vs
+            {
+				param_named tile_factor float 10.0
+				param_named fade_start_dist float 1.0,
+				param_named fade_end_dist float 10.0,
+ 
+				//TODO: put into shader as #define
+            } 
+ 
+            fragment_program_ref MONSTER_ps
+            { 
+            } 
+ 
+			// diffuse map
+            texture_unit
+            {
+				tex_coord_set 0
+				texture diffuse_map.jpg
+				//filtering trilinear
+            }
+ 
+			//ao map
+            texture_unit
+            {
+				tex_coord_set 1
+				texture ambient_occlusion_map.dds
+				//filtering trilinear
+            }
+ 
+			//normalHeightMap map
+            texture_unit
+            {
+				tex_coord_set 0
+				texture normal_height_map.tga
+				//filtering trilinear
+            }
+	}
+    } 
+}
+
+
+
+// Title: 
+//			MONSTER v2.0
+ 
+ 
+// What is this? (for newcomers)
+//
+//			Ever wrote a shader to support one particular setup, then another for another setup,
+//			finally ending up with lots of shaders doing almost the same thing?
+//			With #define-s and other preproc. directives, you can have "branching" in compile-time,
+//			no need to slow the code down with conditional statements.
+//			This also allows to write ONE shader code that is VERY close to optimal for many situations.
+//			(Of course you need to recompile, but auto-generated versions are far easier this way.)
+//			That is what you'll find here.
+//			Check features below.
+ 
+// Notes:
+//			- mainly for outdoor rendering, due to hemispherical lighting
+//			  (I wanted to have offset-mapping on every side of an object, which is quite
+//			   hard with directional lights, also they are too stark for an ambient outdoor
+//			   lighting)
+//			- watch out for light positions rivalizing in distance from object's center:
+//			  a typical artifact source /closest light switches between 2 lights/
+//			- avoid crazy parameter combos
+//			- notice how shader instruction count varies with shader complexity:
+//				HLSL vertex:	a full-blown vs is 58, while it is 38 with no normal mapping
+//							and only 25 if light0-light2 are disabled also (hemi still on!)
+//							BTW the minimal possible with MONSTER_2 is 4 instr. :D
+//				HLSL pixel:	full-blown gets to 73, won't compile, just as expected,
+//							with no normal-mapping: 56.
+//							with light0-light2 disabled (hemi and offset on): 29.
+//							with just hemi (but fading, specular gloss, diffusetex): 12.
+//							BTW the minimal is 2 instr. Pretty useless :D.
+ 
+// Limitations:
+//
+//		As you will notice, many parameters are #define-s, for faster code, but if 
+//		real-time change is needed, they could be handed as uniforms as well.
+//		(This applies inversely as well, so some parameters might be #defined instead of passing
+//		 them as uniforms, for faster code.)
+//
+//		I also skipped the Ka, Kd, Ks, etc. constants present in many shaders, to
+//		be used as coefficient when summing lighting parts, obviously for performance.
+//		They can be 'faked' by properly adjusting the diffuse/gloss/AO textures' brighness
+//		in an image editor. Add them if you wish, but they slow MONSTER down.
+//		(Ka can be coded into AO map, Kd into diffuse map, Ks into gloss map)
+//		They also contribute to instruction count, so beware.
+//
+//		Also note that I placed no lighting restrictions on the user in this release.
+//		It's a free for all. You decide what you want, but do not expect any compiler to
+//		create you a shader that does *MAX* candy for *MAX* lights, given the instruction
+//		count limits of ps_2_0 / arbfp1.
+//
+//		No directional lights. Hemisphere is better, and leaving them makes syntax clearer too.
+//
+//		One more thing: all lights have diffuse color = specular color as an optimization.
+//		I believe it to be reasonable.
+//
+//		I use 2 UV sets for now, 1 is for auto-generated AOmap, and the other is
+//		for diffuse/normal maps. I you are skilled/lucky, you can go with 1 UV set as well.
+//		Artist/model dependant.
+ 
+// Features:
+//
+//		-	improved lighting accuracy on low-poly meshes (2 tri quad for ex)
+//
+//		-	clearer code
+//
+//		-	2 uv sets
+//
+//		-	faster attenuation
+//
+//		-	1 hemispheric skylight with specular
+//				/tune with: SKY_LIGHT_DIR, SKY_COLOR, GROUND_COLOR, SKY_EXPONENT/
+//
+//		-	max. 3 local lights
+//				/diffuse part, specular part, attenuation/
+//
+//		-	per-pixel lighting / normal-mapping / offset-mapping
+//
+//		-	texturing: (diffuse + gloss), (normal + height), ambient occlusion
+//
+//		-	buggy distance-fadeout effect (someone should fix it, I can't get it right)
+//
+//		-	oFusion compatibility as usual
+//
+//		-	some typos, as usual :D
+ 
+ 
+// GLSL users:
+//
+//		I do not compile this file as cg, because that way is not optimal.
+//		Cg compiler sometimes generates longer code than HLSL.
+//		If you need OpenGL, just change the definition in .material file to cg,
+//		and the "target" word to "profiles" like:
+//
+//		vertex_program Simple_Perpixel_Vert cg
+//		..
+//		profiles vs_1_1 arbvp1 
+//		//target vs_1_1
+//
+//		and of course do the same for fragment_program.
+//		Or, for real-time support of both HLSL and GLSL, create 2 versions of MONSTER,
+//		on with cg, one with HLSL, and use 2 techniques.
+//
+//		BTW interesting thing is that GLSL code has only ~2/3 instructions. Dunno why.
+//		This lets you have more complex version running with GLSL.
+ 
+ 
+ 
+// Want more lights?
+//
+//		What to do if you want *MORE* dynamic lights affecting a single static mesh?
+//		(obviously this works mainly for large meshes and small area, attenuated lights)
+//
+//		0. use deferred shading (needs a good card to be fast enough)
+//		1. use multiple passes (costy)
+//		2. use cheaper frag shader (looks less cool) or vertex-lights (ugly without tessellation)
+//		3. divide mesh to small parts in editor, bake it in static geometry, and you're done
+//		   (set up lots of lights swarming around the mesh, and each part will be affected by 2,
+//		    but the 2 closest, which will differ with the parts position)
+ 
+ 
+ 
+// ADDITIONAL DOCS:
+//
+//		check earlier versions of MONSTER in Ogre WIKI, write mail, etc.
+ 
+// TODO:
+//
+//		alpha-maps, environment-mapping, detail-texturing (both diffuse-map and offset-map)
+//		volume-lighting, lightmaps, emissive-texture mapping, spot-lights, fog (volumetric?),
+//		skinning, instancing,
+//		...
+//
+//		Future dream-plan:
+//		a demo app like GLSLdemo with texture/mesh browser, uniform sliders, and recompile option.
+ 
+// CONTACT:
+//
+//		the name is guilderstein, email: forgamedev@yahoo.com, insert OGRE into subject please,
+//		private message is better however
+//
+//		That's all for now, go and shade :D
+ 
+ 
+ 
+	//pre-defines for compiler, ignore them
+#define DIFFUSE_MAP 0
+#define EXTRA_GLOSS_MAP 0
+#define AMBIENT_OCC_MAP 0
+#define NORMAL_MAP 0
+#define EXTRA_HEIGHT_MAP 0
+#define LIGHT_0 0
+#define LIGHT_1 0
+#define LIGHT_2 0
+#define LIGHT_0_SPECULAR 0
+#define LIGHT_1_SPECULAR 0
+#define LIGHT_2_SPECULAR 0
+#define HEMI_SKYLIGHT 0
+#define HEMI_SKYLIGHT_SPECULAR 0
+#define ATTENUATION 0
+#define SPECULAR 0
+#define SKY_LIGHT_DIR 0
+#define GROUND_COLOR 0
+#define SKY_COLOR 0
+#define SKY_EXPONENT 0
+#define EXPONENT_0 0
+#define EXPONENT_1 0
+#define EXPONENT_2 0
+#define ATTEN_0 0
+#define ATTEN_1 0
+#define ATTEN_2 0
+ 
+ 
+ 
+	// general switches
+#define DISTANCE_FADING 0	//do not use fading, buggy
+#define TEXTURING 1
+#define LIGHTING 1
+ 
+#if TEXTURING
+  #define DIFFUSE_MAP 1
+  #if DIFFUSE_MAP
+    #define EXTRA_GLOSS_MAP 1
+  #endif
+  #define AMBIENT_OCC_MAP 1
+  #if LIGHTING
+    #define NORMAL_MAP 1
+    #if NORMAL_MAP
+      #define EXTRA_HEIGHT_MAP 1
+    #endif
+  #endif
+#endif
+ 
+//	ATTEN values are ~ 1/light range, larger value -> stronger atten.
+ 
+#if LIGHTING
+  #define ATTENUATION 1
+ 
+  #define SPECULAR 1
+  //diffuse in on if light is on
+ 
+  #define LIGHT_0 1
+  #if SPECULAR
+	#define LIGHT_0_SPECULAR 1
+  #endif
+ 
+  #define LIGHT_1 1
+  #if SPECULAR
+	#define LIGHT_1_SPECULAR 1
+  #endif
+ 
+  #define LIGHT_2 1
+  #if SPECULAR
+	#define LIGHT_2_SPECULAR 0
+  #endif
+ 
+  #define HEMI_SKYLIGHT 1
+  #if SPECULAR
+	#define HEMI_SKYLIGHT_SPECULAR 1
+  #endif
+#endif
+ 
+	// per-light switches
+#if HEMI_SKYLIGHT
+  #define SKY_LIGHT_DIR float3(0,1,0)
+  #define GROUND_COLOR float3(0.1,0.1,0.1)
+  #define SKY_COLOR    float3(0.9,0.9,1.0)
+  #if HEMI_SKYLIGHT_SPECULAR
+    #define SKY_EXPONENT 8
+  #endif
+#endif
+ 
+#if LIGHT_0
+  #if LIGHT_0_SPECULAR
+    #define EXPONENT_0 120
+  #endif
+  #if ATTENUATION
+    #define ATTEN_0 0.002
+  #endif
+#endif
+ 
+#if LIGHT_1
+  #if LIGHT_1_SPECULAR
+    #define EXPONENT_1 120
+  #endif
+  #if ATTENUATION
+    #define ATTEN_1 0.002
+  #endif
+#endif
+ 
+#if LIGHT_2
+  #if LIGHT_2_SPECULAR
+    #define EXPONENT_2 120
+  #endif
+  #if ATTENUATION
+    #define ATTEN_2 0.002
+  #endif
+#endif
+ 
+//diff: first texture (reg s0), uv1, UVs.xy, TEXCOORD0
+//AO:	second texture (reg s1), uv2, UVs.zw, TEXCOORD1
+//norm: third texture (reg s2), uv1, UVs.xy, TEXCOORD0
+ 
+//////////////////////////////////////////////////////////////////////////////////////////////
+//										VERTEX SHADER										//	
+//////////////////////////////////////////////////////////////////////////////////////////////
+void MONSTER_vs
+(
+///////////////////////
+//VS INPUT PARAMETERS//
+///////////////////////
+ 
+	//texturing
+		#if TEXTURING
+			#if DIFFUSE_MAP
+				float2 uv1		: TEXCOORD0,
+				uniform float tile_factor,
+				//tiles diffuse & normal maps via uv1
+			#elif NORMAL_MAP
+				float2 uv1		: TEXCOORD0,
+				uniform float tile_factor,
+				//you can have only 1 on, and both on as well
+			#endif
+				//both normal and diffuse uses uv1
+ 
+			#if AMBIENT_OCC_MAP
+				float2 uv2		: TEXCOORD1,	
+				//ao uses uv2
+			#endif
+ 
+			out float4 oUVs		: TEXCOORD1,				//oUVs: oT1
+				//texturing means oUVs on, and both uv1
+				//and uv2 get passed in oUVs
+ 
+			#if NORMAL_MAP
+				float3 tangent     	: TEXCOORD2,
+			#endif
+		#endif
+ 
+	//lighting
+		#if LIGHTING //lightposX is in object space
+			#if HEMI_SKYLIGHT
+				#if NORMAL_MAP
+					out float3 oSkyLightDir	: TEXCOORD2,	//oSkyDir: oT2
+				#endif
+				//if no normal mapping is used, ps can use
+				//the defined SKY_LIGHT_DIR otherwise we 
+				//need to transform it to tangent space
+			#endif
+ 
+			#if LIGHT_0
+				uniform float4 lightpos0, 
+				out float3 oLightDir0: TEXCOORD3,			//oLDir0: oT3
+				#if LIGHT_0_SPECULAR
+					out float3 oHalfAngle0: TEXCOORD6,		//oHA0:	oT6
+				#endif
+			#endif
+ 
+			#if LIGHT_1
+				uniform float4 lightpos1,	
+				out float3 oLightDir1: TEXCOORD4,			//oLDir1: oT4
+				#if LIGHT_1_SPECULAR
+					out float3 oHalfAngle1: TEXCOORD7,		//oHA1: oT7
+				#endif
+			#endif
+ 
+			#if LIGHT_2
+				uniform float4 lightpos2,	
+				out float3 oLightDir2: TEXCOORD5,			//oLDir2: oT5
+				#if LIGHT_2_SPECULAR
+					out float3 oHalfAngle2: TEXCOORD0,	
+				#endif
+			#endif
+				//I don't have more oTX space for oHalfAngle2,
+				//could interleave since many oTX uses only 3 float of 4,
+				//but that is messy, and ps might overrun its instr. limit, too,
+				//so LIGHT_2_SPECULAR is disabled by default
+		#endif
+ 
+	//eye/camera position in object space
+		#if DISTANCE_FADING
+			#if EXTRA_HEIGHT_MAP
+				out float3 oEyeDir     : TEXCOORD0,			//oEye: oT0
+			//if offset mapping is used, oT0 is free, normal does not go to ps
+			#endif
+			out float4 oFadeColor	: COLOR,
+			uniform float fade_start_dist,
+			uniform float fade_end_dist,
+			uniform float3 eyepos,
+			//we can have fading with offset mapping, and wo it
+		#elif EXTRA_HEIGHT_MAP
+			out float3 oEyeDir     : TEXCOORD0,				//oEye: oT0		
+			uniform float3 eyepos,
+		#elif SPECULAR				
+			uniform float3 eyepos,
+		#endif
+ 
+	//mixed basics
+		#if !NORMAL_MAP
+			#if LIGHTING
+				out float3 oNorm: TEXCOORD0,					//oNorm: oT0
+			#endif
+		#endif
+ 
+		float4 pos		: POSITION,
+		uniform float4x4 wvp,
+ 
+		float3 norm		: NORMAL,
+		out float4 oPos : POSITION
+) 
+{
+///////////////////////
+//VS CODE STARTS HERE//
+///////////////////////
+ 
+	//mixed basics
+		oPos = mul(wvp, pos);
+		#if !NORMAL_MAP
+			#if LIGHTING
+				oNorm = norm;
+			#endif
+		#endif
+ 
+	#if DISTANCE_FADING
+      float ratio = saturate(1-(distance(eyepos, pos.xyz)-fade_start_dist) / fade_end_dist); 
+ 	  oFadeColor =  float4(0,0,0,ratio);
+    #endif
+ 
+	//texturing
+		#if TEXTURING
+				oUVs = float4(0,0,0,0);
+			#if DIFFUSE_MAP
+				oUVs.xy = uv1 * tile_factor;
+			#elif NORMAL_MAP
+				oUVs.xy = uv1 * tile_factor;
+			#endif
+			#if AMBIENT_OCC_MAP
+				oUVs.zw = uv2;
+			#endif
+		#endif
+ 
+	//lighting & normal mapping
+		#if LIGHTING
+			#if NORMAL_MAP
+				float3 binormal = cross(tangent, norm);
+				float3x3 rotation = float3x3(tangent, binormal, norm);
+				#if HEMI_SKYLIGHT
+					oSkyLightDir = mul(rotation, SKY_LIGHT_DIR);
+				#endif
+				#if EXTRA_HEIGHT_MAP
+					float3 EyeDir = eyepos - pos.xyz;
+					EyeDir = mul(rotation, EyeDir);
+					oEyeDir = EyeDir;
+					#if SPECULAR
+						float3 normed_EyeDir = normalize(EyeDir);
+					#endif
+					//if I pass a vector un-normalized to frag shader,
+					//I get better interpolation, but normalization
+					//is needed for halfvectors
+				#elif SPECULAR
+					float3 normed_EyeDir = normalize(eyepos - pos.xyz);
+					//this allows having specular with only normal maps
+				#endif
+			#elif SPECULAR
+				float3 normed_EyeDir = normalize(eyepos - pos.xyz);
+			#endif
+ 
+			#if LIGHT_0
+				#if ATTENUATION
+					oLightDir0    = ATTEN_0 * (lightpos0 -  pos).xyz;
+				#else
+					oLightDir0    = (lightpos0 -  pos).xyz;
+				#endif
+				#if NORMAL_MAP
+					oLightDir0 = mul(rotation, oLightDir0);
+				#endif
+				#if LIGHT_0_SPECULAR
+					oHalfAngle0   = normalize(normalize(oLightDir0) + normed_EyeDir);
+				#endif
+			#endif
+ 
+			#if LIGHT_1
+				#if ATTENUATION
+					oLightDir1    = ATTEN_1 * (lightpos1 -  pos).xyz;
+				#else
+					oLightDir1    = (lightpos1 -  pos).xyz;
+				#endif
+				#if NORMAL_MAP
+					oLightDir1 = mul(rotation, oLightDir1);
+				#endif
+				#if LIGHT_1_SPECULAR
+					oHalfAngle1   = normalize(normalize(oLightDir1) + normed_EyeDir);
+				#endif
+			#endif
+ 
+			#if LIGHT_2
+				#if ATTENUATION
+					oLightDir2    = ATTEN_2 * (lightpos2 -  pos).xyz;
+				#else
+					oLightDir2    = (lightpos2 -  pos).xyz;
+				#endif
+				#if NORMAL_MAP
+					oLightDir2 = mul(rotation, oLightDir2);
+				#endif
+				#if LIGHT_2_SPECULAR
+					oHalfAngle2   = normalize(normalize(oLightDir2) + normed_EyeDir);
+				#endif
+			#endif
+		#endif
+} 
+ 
+ 
+ 
+// Note: instead of passing v2f the HalfAngle of each light, it (or reflection vector) could be calculated in fs!
+//	 oTx space vs. instr.count decision, and would make vs real fast!
+ 
+//////////////////////////////////////////////////////////////////////////////////////////////
+//										PIXEL SHADER										//	
+//////////////////////////////////////////////////////////////////////////////////////////////
+void MONSTER_ps
+(
+///////////////////////
+//PS INPUT PARAMETERS//
+///////////////////////
+ 
+	//mixed basics
+		#if !NORMAL_MAP
+			#if LIGHTING
+				float3 norm				:	TEXCOORD0,
+			#endif
+		#endif
+ 
+		#if DISTANCE_FADING
+			float opacity		:	COLOR,
+		#endif
+ 
+	//texturing
+		#if TEXTURING
+			float4 UVs				:	TEXCOORD1,	//uv2 AND already scaled uv1
+			#if DIFFUSE_MAP
+				uniform sampler2D   DiffuseGlossMap		: 	register(s0),	//first texture
+			#endif
+			#if AMBIENT_OCC_MAP
+				uniform sampler2D   AoMap		: 	register(s1),	//second texture
+			#endif
+			#if NORMAL_MAP
+				uniform sampler2D   NormalHeightMap	:	register(s2),	//third texture
+			#endif
+		#endif
+ 
+	//lighting
+		#if LIGHTING
+			#if HEMI_SKYLIGHT
+				#if NORMAL_MAP
+					float3 TSkyLightDir	:	TEXCOORD2,
+				#endif
+			//again, if I do no normal mapping with hemi, I can go with
+			//just using the #define-d SKY_LIGHT_DIR
+			#endif
+			#if LIGHT_0
+				uniform float3 lightColor0,
+				float3 LightDir0	:	TEXCOORD3,
+				#if LIGHT_0_SPECULAR
+					float3 HalfAngle0	:	TEXCOORD6,
+				#endif
+			#endif
+			#if LIGHT_1
+				uniform float3 lightColor1,
+				float3 LightDir1	:	TEXCOORD4,
+				#if LIGHT_1_SPECULAR
+					float3 HalfAngle1	:	TEXCOORD7,
+				#endif
+			#endif
+			#if LIGHT_2
+				uniform float3 lightColor2,
+				float3 LightDir2	:	TEXCOORD5,
+				#if LIGHT_2_SPECULAR
+					float3 HalfAngle2	:	TEXCOORD0,
+				#endif
+			#endif
+			#if EXTRA_HEIGHT_MAP
+				uniform float2 scaleBias,
+				float3 EyeDir		:	TEXCOORD0,
+				//offset mapping needs no normal from vs, hence T0 is free
+			#endif
+		#endif
+ 
+	//final color
+		out float4 oColor 	:	COLOR
+) 
+{
+///////////////////////
+//PS CODE STARTS HERE//
+///////////////////////
+ 
+	//lighting and texturing
+		#if LIGHTING
+ 
+			#if !NORMAL_MAP
+				float3 N = normalize(norm);
+			#else
+				#if EXTRA_HEIGHT_MAP
+					EyeDir	 = normalize(EyeDir);
+					//get offset uvs
+					float height = tex2D(NormalHeightMap, UVs.xy).a;
+					float2 newTexCoord = UVs.xy + EyeDir.xy * (height * scaleBias.x + scaleBias.y);
+					float3 bumpVec = tex2D(NormalHeightMap, newTexCoord ).xyz * 2 - 1; 
+					//lookup with texcoord 0, and expand from range comressed
+				#else
+					float3 bumpVec = tex2D(NormalHeightMap, UVs.xy ).xyz * 2 -1;
+					//same, but just normal-mapping
+				#endif
+				float3 N = normalize(bumpVec);
+			#endif
+			//okay, now we have a normal to do lighting
+ 
+	//TODO/?/:	send a HalfAngle_Sky from vs to get cheaper sky-specular, but that
+	//			would cost 1 additional texcoord, maybe taken from light_2
+	//			/again, interleaving is an option, since many times I use only 3
+	//			float values of texcoords to pass data vert2frag, but all texcoords
+	//			are float4 vectors; biggest problem is usage complexity/
+ 
+	//TODO:	Issues with SKY_SPECULAR, now sky can only have spec. if offset is on
+ 
+			#if HEMI_SKYLIGHT
+				#if NORMAL_MAP
+					float SKYdotN = dot(TSkyLightDir, N);
+					#if EXTRA_HEIGHT_MAP
+						#if HEMI_SKYLIGHT_SPECULAR
+							float SKYdotH = dot(normalize(EyeDir + TSkyLightDir), N);
+							float4 hemispec = pow(saturate(SKYdotH), SKY_EXPONENT);
+						//try with lit()!
+						#endif
+					#endif
+				#else
+					float SKYdotN = dot(SKY_LIGHT_DIR, N);
+				#endif
+				float3 hemi = lerp(GROUND_COLOR, SKY_COLOR, 0.5 + 0.5 * SKYdotN);
+			#endif
+ 
+			#if LIGHT_0
+				LightDir0 = normalize(LightDir0);
+				#if ATTENUATION
+					float atten0 = saturate(1 - dot(LightDir0, LightDir0));
+				#endif
+				float NdotL0 = dot(LightDir0, N);
+				#if LIGHT_0_SPECULAR
+					float NdotH0 = dot(HalfAngle0, N);
+					float4 Lit0 = lit(NdotL0,NdotH0,EXPONENT_0);
+				#endif
+			#endif
+ 
+			#if LIGHT_1
+				LightDir1 = normalize(LightDir1);
+				#if ATTENUATION
+					float atten1 = saturate(1 - dot(LightDir1, LightDir1));
+				#endif
+				float NdotL1 = dot(LightDir1, N);
+				#if LIGHT_1_SPECULAR
+					float NdotH1 = dot(HalfAngle1, N);
+					float4 Lit1 = lit(NdotL1,NdotH1,EXPONENT_1);
+				#endif
+			#endif
+ 
+			#if LIGHT_2
+				LightDir2 = normalize(LightDir2);
+				#if ATTENUATION
+					float atten2 = saturate(1 - dot(LightDir2, LightDir2));
+				#endif
+				float NdotL2 = dot(LightDir2, N);
+				#if LIGHT_2_SPECULAR
+					float NdotH2 = dot(float3(0,1,0), N);
+					float4 Lit2 = lit(NdotL2,NdotH2,EXPONENT_2);
+				#endif
+			#endif
+		#endif
+ 
+		//color texturing
+		#if TEXTURING
+			#if EXTRA_HEIGHT_MAP
+				#if EXTRA_GLOSS_MAP
+					float4 diff = tex2D(DiffuseGlossMap, newTexCoord).xyzw;
+					float3 diffusetex = diff.xyz;
+					float gloss_power = diff.w;
+				#elif DIFFUSE_MAP
+					float3 diffusetex = tex2D(DiffuseGlossMap, newTexCoord).xyz;
+					//lookup with offsetted texcoord 0
+				#endif
+			#else
+				#if EXTRA_GLOSS_MAP
+					float4 diff = tex2D(DiffuseGlossMap, UVs.xy).xyzw;
+					float3 diffusetex = diff.xyz;
+					float gloss_power = diff.w;
+				#elif DIFFUSE_MAP
+					float3 diffusetex = tex2D(DiffuseGlossMap, UVs.xy).xyz;
+				#endif
+				//lookup with texcoord 0
+			#endif
+			#if AMBIENT_OCC_MAP
+				float occlusionfactor = tex2D(AoMap, UVs.zw).x;	//lookup with texcoord 1
+				//Clumpsy solution, since it is a grayscale map anyway,
+				//it could go into for ex. diffuse's alpha channel if no
+				//specular gloss mapping is done
+				//Though you will need to have either 2 lookup with the 2 uv sets on
+				//the same texture, OR have 1 uv set for all maps, and go with 1 lookup
+			#endif
+		#endif
+ 
+	//All is set up, now comes the most complex part, final color computation:
+	//Though many variations are possible, I go with this one:
+	//	(at maximum, and in readable form)
+	//
+	//	oColor =	hemi * occlusionfactor			//-> ambient lighting
+	//			 +  sky_color * sky_specular_coeff	//-> ambient specular
+	//			 +	sum( atten[i] * lightcolor[i] * diffuse_coeff[i]) * diffusetex
+	//			 +	sum( atten[i] * lightcolor[i] * specular_coeff[i]) * gloss_power
+	//
+	//Try modulating (hemi * AO) also with diffusetex, etc.
+ 
+	//Though syntax might seem chaotic, compiler does a great job in optimizing out float3(0,0,0) for ex.
+	oColor = float4	(	float3(0,0,0)
+ 
+				#if !LIGHTING
+					#if TEXTURING
+						#if DIFFUSE_MAP
+							+ diffusetex
+							#if AMBIENT_OCC_MAP //just ao
+								* occlusionfactor.xxx
+							#endif
+						#elif AMBIENT_OCC_MAP
+							+ occlusionfactor.xxx
+						#endif
+						//TODO: add normal map output as diffuse for debug purposes
+					#endif
+				#endif
+ 
+				#if HEMI_SKYLIGHT
+					+ hemi
+					#if AMBIENT_OCC_MAP
+					* occlusionfactor
+					#endif
+					#if EXTRA_HEIGHT_MAP
+						#if HEMI_SKYLIGHT_SPECULAR
+							+ hemispec
+							#if EXTRA_GLOSS_MAP
+								* gloss_power
+							#endif
+						#endif
+					#endif
+				#endif
+ 
+				#if LIGHT_0
+						+ lightColor0 * (
+					#if ATTENUATION
+							atten0 * (
+						#if LIGHT_0_SPECULAR
+							Lit0.y
+							#if DIFFUSE_MAP
+								* diffusetex
+							#endif
+							+ Lit0.z
+							#if EXTRA_GLOSS_MAP
+								* gloss_power ))
+							#else
+								))
+							#endif
+						#else
+							NdotL0 ))
+						#endif
+					#elif LIGHT_0_SPECULAR	//no atten, but spec and diff
+						Lit0.y
+						#if DIFFUSE_MAP
+							* diffusetex
+						#endif
+						+ Lit0.z
+						#if EXTRA_GLOSS_MAP
+							* gloss_power)
+						#else
+							)
+						#endif
+					#else	//no. atten, just diffuse
+						NdotL0
+						#if DIFFUSE_MAP
+							* diffusetex )
+						#else
+							)
+						#endif
+					#endif
+				#endif
+ 
+				#if LIGHT_1
+						+ lightColor1 * (
+					#if ATTENUATION
+							atten1 * (
+						#if LIGHT_1_SPECULAR
+							Lit1.y
+							#if DIFFUSE_MAP
+								* diffusetex
+							#endif
+							+ Lit1.z
+							#if EXTRA_GLOSS_MAP
+								* gloss_power ))
+							#else
+								))
+							#endif
+						#else
+							NdotL1 ))
+						#endif
+					#elif LIGHT_1_SPECULAR	//no atten, but spec and diff
+						Lit1.y
+						#if DIFFUSE_MAP
+							* diffusetex
+						#endif
+						+ Lit1.z
+						#if EXTRA_GLOSS_MAP
+							* gloss_power)
+						#else
+							)
+						#endif
+					#else	//no. atten, just diffuse
+						NdotL1
+						#if DIFFUSE_MAP
+							* diffusetex )
+						#else
+							)
+						#endif
+					#endif
+				#endif
+ 
+				#if LIGHT_2
+						+ lightColor2 * (
+					#if ATTENUATION
+							atten2 * (
+						#if LIGHT_2_SPECULAR
+							Lit2.y
+							#if DIFFUSE_MAP
+								* diffusetex
+							#endif
+							+ Lit2.z
+							#if EXTRA_GLOSS_MAP
+								* gloss_power ))
+							#else
+								))
+							#endif
+						#else
+							NdotL2 ))
+						#endif
+					#elif LIGHT_2_SPECULAR	//no atten, but spec and diff
+						Lit2.y
+						#if DIFFUSE_MAP
+							* diffusetex
+						#endif
+						+ Lit2.z
+						#if EXTRA_GLOSS_MAP
+							* gloss_power)
+						#else
+							)
+						#endif
+					#else	//no. atten, just diffuse
+						NdotL2
+						#if DIFFUSE_MAP
+							* diffusetex )
+						#else
+							)
+						#endif
+					#endif
+				#endif
+			 ,
+			#if DISTANCE_FADING
+				opacity
+			#else
+				1
+			#endif
+			);	
+}

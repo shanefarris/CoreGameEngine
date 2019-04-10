@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Include">
+      <UniqueIdentifier>{38ec68f8-37d8-4665-9618-4254e4b33f0f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BatchedGeometry.h" />
+    <ClInclude Include="..\..\Include\Forest\BatchPage.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\GrassLoader.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\ImpostorPage.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\MersenneTwister.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\PagedGeometry.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\PagedGeometryConfig.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\PropertyMaps.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\RandomTable.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\StaticBillboardSet.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\TreeLoader2D.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\TreeLoader3D.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\TreeLoader3D_Physics.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\WindBatchedGeometry.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Include\Forest\WindBatchPage.h">
+      <Filter>Include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BatchedGeometry.cpp" />
+    <ClCompile Include="BatchPage.cpp" />
+    <ClCompile Include="GrassLoader.cpp" />
+    <ClCompile Include="ImpostorPage.cpp" />
+    <ClCompile Include="PagedGeometry.cpp" />
+    <ClCompile Include="PropertyMaps.cpp" />
+    <ClCompile Include="StaticBillboardSet.cpp" />
+    <ClCompile Include="TreeLoader2D.cpp" />
+    <ClCompile Include="TreeLoader3D.cpp" />
+    <ClCompile Include="WindBatchedGeometry.cpp" />
+    <ClCompile Include="WindBatchPage.cpp" />
+    <ClCompile Include="TreeLoader3D_Physics.cpp" />
+  </ItemGroup>
+</Project>

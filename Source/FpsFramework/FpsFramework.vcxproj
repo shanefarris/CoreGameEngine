@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{D3009A7D-CAAC-418A-A8C7-751596BE1BEB}</ProjectGuid>
+    <RootNamespace>OgreFPSCore</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v110</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\Bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\Bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)\Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(SolutionDir)\Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\Bin\$(Configuration)\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\Bin\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)\Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(SolutionDir)\Obj\$(ProjectName)\$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|x64'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|x64'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\Include;..\..\Include\Core;$(OGRE_INCLUDE);$(CORE_INCLUDE);$(CORE_INCLUDE)\OIS;$(CORE_INCLUDE)\AL;$(OGRE_INCLUDE)\Paging;$(CORE_INCLUDE)\MyGui;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;CORE_DLL;COMPILE_NETWORK;COMPILE_GORILLA;COMPILE_SCRIPT_false;COMPILE_OVERLAYS_false;COMPILE_EFFECT_FIRE_false;VDL_false;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <CallingConvention>Cdecl</CallingConvention>
+      <DisableSpecificWarnings>4503;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain_d.lib;OgreOverlay_d.lib;OgreTerrain_d.lib;caelum_d.lib;Hydrax_d.lib;ois_d.lib;IO.lib;Forest.lib;AIEngine.lib;FileDatabase.lib;SoundEngine.lib;ScriptEngine_d.lib;Gui3DLibrary.lib;NavMesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(CORE_32_DEB);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>.\winPostBuild32.bat</Command>
+    </PostBuildEvent>
+    <Bscmake>
+      <PreserveSBR>true</PreserveSBR>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\Include;..\..\Include\Core;$(OGRE_INCLUDE);$(OGRE_INCLUDE)\Paging;$(CORE_INCLUDE);$(CORE_INCLUDE)\OIS;$(CORE_INCLUDE)\AL;$(CORE_INCLUDE)\ToLua;$(CORE_INCLUDE)\MyGui;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;CORE_DLL;COMPILE_MYGUI;COMPILE_NETWORK;COMPILE_GORILLA;COMPILE_SCRIPT_false;COMPILE_OVERLAYS_false;COMPILE_EFFECT_FIRE_false;VDL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <OpenMPSupport>false</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain_d.lib;OgreOverlay_d.lib;OgreTerrain_d.lib;caelum_d.lib;Hydrax_d.lib;ois_d.lib;IO.lib;Forest.lib;AIEngine.lib;FileDatabase.lib;SoundEngine.lib;ScriptEngine_d.lib;Gui3DLibrary.lib;NavMesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(CORE_64_DEB);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PostBuildEvent>
+      <Command>.\winPostBuild64.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\Include;..\..\Include\Core;$(OGRE_INCLUDE);$(CORE_INCLUDE);$(CORE_INCLUDE)\OIS;$(CORE_INCLUDE)\AL;$(OGRE_INCLUDE)\Paging;$(CORE_INCLUDE)\ToLua;$(CORE_INCLUDE)\MyGui;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;CORE_DLL;COMPILE_MYGUI;COMPILE_NETWORK;COMPILE_GORILLA;COMPILE_SCRIPT_false;COMPILE_OVERLAYS_false;COMPILE_EFFECT_FIRE_false;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <DisableSpecificWarnings>4503</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain.lib;OgreOverlay.lib;OgreTerrain.lib;caelum.lib;Hydrax.lib;ois.lib;IO.lib;Forest.lib;AIEngine.lib;FileDatabase.lib;SoundEngine.lib;ScriptEngine.lib;Gui3DLibrary.lib;NavMesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(CORE_32_REL);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>.\winPostBuild32.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\Include;..\..\Include\Core;$(OGRE_INCLUDE);$(OGRE_INCLUDE)\Paging;$(CORE_INCLUDE);$(CORE_INCLUDE)\OIS;$(CORE_INCLUDE)\AL;$(CORE_INCLUDE)\ToLua;$(CORE_INCLUDE)\MyGui;./;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;CORE_DLL;COMPILE_MYGUI;COMPILE_NETWORK;COMPILE_GORILLA;COMPILE_SCRIPT_false;COMPILE_OVERLAYS_false;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <PreprocessSuppressLineNumbers>false</PreprocessSuppressLineNumbers>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <OpenMPSupport>true</OpenMPSupport>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>OgreMain.lib;OgreOverlay.lib;OgreTerrain.lib;caelum.lib;Hydrax.lib;ois.lib;IO.lib;Forest.lib;AIEngine.lib;FileDatabase.lib;SoundEngine.lib;ScriptEngine.lib;Gui3DLibrary.lib;NavMesh.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(OutDir);$(CORE_64_REL);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+    </Link>
+    <PostBuildEvent>
+      <Command>.\winPostBuild64.bat</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Include\Core\AnimationMapping.h" />
+    <ClInclude Include="..\..\Include\Core\CBuilding.h" />
+    <ClInclude Include="..\..\Include\Core\CEntityEffect.h" />
+    <ClInclude Include="..\..\Include\Core\CFpsFrameListener.h" />
+    <ClInclude Include="..\..\Include\Core\CFrameListenerFramework.h" />
+    <ClInclude Include="..\..\Include\Core\CGame.h" />
+    <ClInclude Include="..\..\Include\Core\CGameObject.h" />
+    <ClInclude Include="..\..\Include\Core\CGameObjectHierarchy.h" />
+    <ClInclude Include="..\..\Include\Core\CGameState.h" />
+    <ClInclude Include="..\..\Include\Core\CGuiStrategy_Default.h" />
+    <ClInclude Include="..\..\Include\Core\CInputEvent.h" />
+    <ClInclude Include="..\..\Include\Core\CInputListener.h" />
+    <ClInclude Include="..\..\Include\Core\CInventoryItem.h" />
+    <ClInclude Include="..\..\Include\Core\CItemProfile.h" />
+    <ClInclude Include="..\..\Include\Core\CLuaConsole.h" />
+    <ClInclude Include="..\..\Include\Core\CMenuState.h" />
+    <ClInclude Include="..\..\Include\Core\CNatureManager.h" />
+    <ClInclude Include="..\..\Include\Core\CNavMeshVehicle.h" />
+    <ClInclude Include="..\..\Include\Core\CNetworkManager.h" />
+    <ClInclude Include="..\..\Include\Core\CoreEngine.h" />
+    <ClInclude Include="..\..\Include\Core\CoreStructures.h" />
+    <ClInclude Include="..\..\Include\Core\CPhysicsProfile.h" />
+    <ClInclude Include="..\..\Include\Core\CPlayerPimpl.h" />
+    <ClInclude Include="..\..\Include\Core\CPrecisionTimer.h" />
+    <ClInclude Include="..\..\Include\Core\CUtility.h" />
+    <ClInclude Include="..\..\Include\Core\CWorldProfile.h" />
+    <ClInclude Include="..\..\Include\Core\Defines.h" />
+    <ClInclude Include="..\..\Include\Core\IAiReactionComponent.h" />
+    <ClInclude Include="..\..\Include\Core\ICamera.h" />
+    <ClInclude Include="..\..\Include\Core\IMission.h" />
+    <ClInclude Include="..\..\Include\Core\INetworkStrategy.h" />
+    <ClInclude Include="..\..\Include\Core\MissionEvents.h" />
+    <ClInclude Include="..\..\Include\Core\OgreConsole.h" />
+    <ClInclude Include="..\..\Include\Core\Structures.h" />
+    <ClInclude Include="CInputManagerPimpl.h" />
+    <ClInclude Include="CLineOfSightStrategy_Defaults.h" />
+    <ClInclude Include="CMelee.h" />
+    <ClInclude Include="CParserStrategies.h" />
+    <ClInclude Include="..\..\Include\Core\CRagdollBoneInformation.h" />
+    <ClInclude Include="..\..\Include\Core\CVolumeObject.h" />
+    <ClInclude Include="..\..\Include\Core\ICharacterController.h" />
+    <ClInclude Include="..\..\Include\Core\IPhysicsRagdoll.h" />
+    <ClInclude Include="..\..\Include\Core\IPhysicsStrategy.h" />
+    <ClInclude Include="..\..\Include\Core\PhysicsStructures.h" />
+    <ClInclude Include="..\..\Include\Core\IGuiStrategy.h" />
+    <ClInclude Include="..\..\Include\Core\CLoadingScreen.h" />
+    <ClInclude Include="..\..\Include\Core\CScrollingMessage.h" />
+    <ClInclude Include="..\..\Include\Core\CTextOutput.h" />
+    <ClInclude Include="..\..\Include\Core\CCharacterState.h" />
+    <ClInclude Include="..\..\Include\Core\CPlayer.h" />
+    <ClInclude Include="..\..\Include\Core\CPlayerAttributesComponent.h" />
+    <ClInclude Include="..\..\Include\Core\CPlayerSoundComponent.h" />
+    <ClInclude Include="CSceneImporter.h" />
+    <ClInclude Include="CSerializer.h" />
+    <ClInclude Include="CSkySystem.h" />
+    <ClInclude Include="CTerrainSystem.h" />
+    <ClInclude Include="CVegetationSystem.h" />
+    <ClInclude Include="CWaterSystem.h" />
+    <ClInclude Include="CWorld.h" />
+    <ClInclude Include="Effects\Fire\OgreAreaEmitter.h" />
+    <ClInclude Include="Effects\Fire\OgreBoxEmitter.h" />
+    <ClInclude Include="Effects\Fire\OgreParticleCustomParam.h" />
+    <ClInclude Include="Effects\Fire\OgreShaderParticleRenderer.h" />
+    <ClInclude Include="..\..\Include\Core\PlayerEnums.h" />
+    <ClInclude Include="..\..\Include\Core\CBillboardManager.h" />
+    <ClInclude Include="..\..\Include\Core\CCameraManager.h" />
+    <ClInclude Include="..\..\Include\Core\CCharacterStateManager.h" />
+    <ClInclude Include="..\..\Include\Core\CEffectsManager.h" />
+    <ClInclude Include="..\..\Include\Core\CGameManager.h" />
+    <ClInclude Include="..\..\Include\Core\CGameObjectManager.h" />
+    <ClInclude Include="..\..\Include\Core\CGuiManager.h" />
+    <ClInclude Include="..\..\Include\Core\CInputManager.h" />
+    <ClInclude Include="..\..\Include\Core\CItemsManager.h" />
+    <ClInclude Include="..\..\Include\Core\CMissionManager.h" />
+    <ClInclude Include="..\..\Include\Core\CPhysicsManager.h" />
+    <ClInclude Include="..\..\Include\Core\CPluginManager.h" />
+    <ClInclude Include="..\..\Include\Core\CScriptManager.h" />
+    <ClInclude Include="..\..\Include\Core\CSpawnManager.h" />
+    <ClInclude Include="..\..\Include\Core\CTrainingManager.h" />
+    <ClInclude Include="..\..\Include\Core\CParticleEffect.h" />
+    <ClInclude Include="..\..\Include\Core\CPostEffect.h" />
+    <ClInclude Include="..\..\Include\Core\CMagazine.h" />
+    <ClInclude Include="..\..\Include\Core\CProjectile.h" />
+    <ClInclude Include="..\..\Include\Core\CWeapon.h" />
+    <ClInclude Include="..\..\Include\Core\CWeaponProfile.h" />
+    <ClInclude Include="IEnvironment.h" />
+    <ClInclude Include="NetworkData.h" />
+    <ClInclude Include="QueryStrings.h" />
+    <ClInclude Include="RectLayoutManager.h" />
+    <ClInclude Include="Scripting\Core_lua.h" />
+    <ClInclude Include="Scripting\GeneralFunctions.hpp" />
+    <ClInclude Include="Scripting\Overlays_lua.h" />
+    <ClInclude Include="..\..\Include\Core\MovableTextOverlay.h" />
+    <ClInclude Include="CAiReactionComponent_Default.h" />
+    <ClInclude Include="CEnvironmentObserver.h" />
+    <ClInclude Include="CCameraBindedPlane.h" />
+    <ClInclude Include="CCameraChase.h" />
+    <ClInclude Include="CCameraFps.h" />
+    <ClInclude Include="CCameraGod.h" />
+    <ClInclude Include="CCameraSpring.h" />
+    <ClInclude Include="CDeferredShading.h" />
+    <ClInclude Include="CLightMaterialGenerator.h" />
+    <ClInclude Include="CMaterialGenerator.h" />
+    <ClInclude Include="CRayLight.h" />
+    <ClInclude Include="CBulletHole.h" />
+    <ClInclude Include="CConfiguration.h" />
+    <ClInclude Include="CompilerConfig.h" />
+    <ClInclude Include="..\..\Include\Core\SceneImporterPackage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CBuilding.cpp" />
+    <ClCompile Include="CDbParserStrategy.cpp" />
+    <ClCompile Include="CGameObject.cpp" />
+    <ClCompile Include="CGameObjectHierarchy.cpp" />
+    <ClCompile Include="CGuiStrategy_Default.cpp" />
+    <ClCompile Include="CInputManagerPimpl.cpp" />
+    <ClCompile Include="CInventoryItem.cpp" />
+    <ClCompile Include="CLineOfSightStrategy_Defaults.cpp" />
+    <ClCompile Include="CMelee.cpp" />
+    <ClCompile Include="CNatureManager.cpp" />
+    <ClCompile Include="CNavMeshVehicle.cpp" />
+    <ClCompile Include="CNetworkManager.cpp" />
+    <ClCompile Include="CPhysicsProfile.cpp" />
+    <ClCompile Include="CPlayerPimpl.cpp" />
+    <ClCompile Include="CSceneImporter.cpp" />
+    <ClCompile Include="CSkySystem.cpp" />
+    <ClCompile Include="CTerrainSystem.cpp" />
+    <ClCompile Include="CUtility.cpp" />
+    <ClCompile Include="CVegetationSystem.cpp" />
+    <ClCompile Include="CWaterSystem.cpp" />
+    <ClCompile Include="CWeaponProfile.cpp" />
+    <ClCompile Include="CWorld.cpp" />
+    <ClCompile Include="CXmlParserStrategy.cpp" />
+    <ClCompile Include="Effects\Fire\OgreAreaEmitter.cpp" />
+    <ClCompile Include="Effects\Fire\OgreBoxEmitter.cpp" />
+    <ClCompile Include="Effects\Fire\OgreShaderParticleRenderer.cpp" />
+    <ClCompile Include="NetworkData.cpp" />
+    <ClCompile Include="OgreConsole.cpp" />
+    <ClCompile Include="Scripting\Core_lua.cpp" />
+    <ClCompile Include="Scripting\Overlays_lua.cpp" />
+    <ClCompile Include="Scripting\Swig_CS_CompiledHeaders_wrap.cxx" />
+    <ClCompile Include="CLoadingScreen.cpp" />
+    <ClCompile Include="CScrollingMessage.cpp" />
+    <ClCompile Include="CTextOutput.cpp" />
+    <ClCompile Include="MovableTextOverlay.cpp" />
+    <ClCompile Include="CAiReactionComponent_Default.cpp" />
+    <ClCompile Include="CEnvironmentObserver.cpp" />
+    <ClCompile Include="CPlayer.cpp" />
+    <ClCompile Include="CPlayerAttributesComponent.cpp" />
+    <ClCompile Include="CPlayerSoundComponent.cpp" />
+    <ClCompile Include="CSerializer.cpp" />
+    <ClCompile Include="CBillboardManager.cpp" />
+    <ClCompile Include="CCameraManager.cpp" />
+    <ClCompile Include="CCharacterStateManager.cpp" />
+    <ClCompile Include="CEffectsManager.cpp" />
+    <ClCompile Include="CGameManager.cpp" />
+    <ClCompile Include="CGameObjectManager.cpp" />
+    <ClCompile Include="CGuiManager.cpp" />
+    <ClCompile Include="CInputManager.cpp" />
+    <ClCompile Include="CItemsManager.cpp" />
+    <ClCompile Include="CMissionManager.cpp" />
+    <ClCompile Include="CPhysicsManager.cpp" />
+    <ClCompile Include="CPluginManager.cpp" />
+    <ClCompile Include="CScriptManager.cpp" />
+    <ClCompile Include="CSpawnManager.cpp" />
+    <ClCompile Include="CTrainingManager.cpp" />
+    <ClCompile Include="CCameraChase.cpp" />
+    <ClCompile Include="CCameraFps.cpp" />
+    <ClCompile Include="CCameraGod.cpp" />
+    <ClCompile Include="CCameraSpring.cpp" />
+    <ClCompile Include="CLuaConsole.cpp" />
+    <ClCompile Include="CParticleEffect.cpp" />
+    <ClCompile Include="CPostEffect.cpp" />
+    <ClCompile Include="CDeferredShading.cpp" />
+    <ClCompile Include="CLightMaterialGenerator.cpp" />
+    <ClCompile Include="CMaterialGenerator.cpp" />
+    <ClCompile Include="CRayLight.cpp" />
+    <ClCompile Include="CBulletHole.cpp" />
+    <ClCompile Include="CMagazine.cpp" />
+    <ClCompile Include="CProjectile.cpp" />
+    <ClCompile Include="CWeapon.cpp" />
+    <ClCompile Include="CConfiguration.cpp" />
+    <ClCompile Include="CFpsFrameListener.cpp" />
+    <ClCompile Include="CFrameListenerFramework.cpp" />
+    <ClCompile Include="CGame.cpp" />
+    <ClCompile Include="CGameState.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
